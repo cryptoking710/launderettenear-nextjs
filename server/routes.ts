@@ -1,6 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { adminDb } from "./firebase-admin";
+import { firestoreBackend } from "./firestore-backend";
 import { requireAuth, AuthenticatedRequest } from "./middleware/auth";
 import { insertLaunderetteSchema } from "@shared/schema";
 
@@ -48,7 +48,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Public endpoint - Get all launderettes
   app.get("/api/launderettes", async (req, res) => {
     try {
-      const snapshot = await adminDb.collection("launderettes").get();
+      const snapshot = await firestoreBackend.collection("launderettes").get();
       const launderettes = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
@@ -65,7 +65,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/launderettes/:id", async (req, res) => {
     try {
       const { id } = req.params;
-      const doc = await adminDb.collection("launderettes").doc(id).get();
+      const doc = await firestoreBackend.collection("launderettes").doc(id).get();
       
       if (!doc.exists) {
         return res.status(404).json({ error: "Launderette not found" });
@@ -85,7 +85,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertLaunderetteSchema.parse(req.body);
       
-      const docRef = await adminDb.collection("launderettes").add({
+      const docRef = await firestoreBackend.collection("launderettes").add({
         ...validatedData,
         createdAt: Date.now(),
         createdBy: req.user?.uid,
@@ -110,7 +110,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const { id } = req.params;
       const validatedData = insertLaunderetteSchema.parse(req.body);
       
-      const docRef = adminDb.collection("launderettes").doc(id);
+      const docRef = firestoreBackend.collection("launderettes").doc(id);
       const doc = await docRef.get();
       
       if (!doc.exists) {
@@ -141,7 +141,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { id } = req.params;
       
-      const docRef = adminDb.collection("launderettes").doc(id);
+      const docRef = firestoreBackend.collection("launderettes").doc(id);
       const doc = await docRef.get();
       
       if (!doc.exists) {
