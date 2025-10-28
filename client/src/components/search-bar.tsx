@@ -29,7 +29,7 @@ export function SearchBar({ onSearch, isLoading, onUseLocation }: SearchBarProps
             placeholder="Enter Postcode or City (e.g., SW1A 0AA)"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 text-base"
+            className="border-0 bg-transparent text-foreground focus-visible:ring-0 focus-visible:ring-offset-0 text-base"
             disabled={isLoading}
             data-testid="input-search"
           />
