@@ -1,0 +1,257 @@
+import React, { useState, useEffect, useCallback } from 'react';
+import { initializeApp } from 'firebase/app';
+import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from 'firebase/auth';
+import { getFirestore, collection, query, onSnapshot, doc } from 'firebase/firestore';
+import { Search, MapPin, Loader2, Zap } from 'lucide-react'; // Using lucide-react for icons
+
+// --- 1. GLOBAL ENVIRONMENT SETUP ---
+// NOTE: These variables are provided by the Canvas environment.
+const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+// Initialize Firebase services outside the component or in a useEffect
+let app;
+let db;
+let auth;
+
+try {
+    if (Object.keys(firebaseConfig).length > 0) {
+        app = initializeApp(firebaseConfig);
+        db = getFirestore(app);
+        auth = getAuth(app);
+    }
+} catch (error) {
+    console.error("Firebase initialization failed:", error);
+}
+
+// --- 2. CORE UTILITY FUNCTION: DISTANCE CALCULATION (Haversine Formula) ---
+
+/**
+ * Calculates the distance between two geographical points using the Haversine formula.
+ * @param {number} lat1 Latitude of point 1
+ * @param {number} lon1 Longitude of point 1
+ * @param {number} lat2 Latitude of point 2
+ * @param {number} lon2 Longitude of point 2
+ * @returns {number} Distance in miles.
+ */
+const HaversineDistance = (lat1, lon1, lat2, lon2) => {
+    // Radius of the Earth in miles
+    const R = 3958.8;
+    const toRad = (x) => (x * Math.PI) / 180;
+
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lon2 - lon1);
+
+    const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    return R * c;
+};
+
+// --- 3. DUMMY LAUNDERETTE DATA FOR INITIAL UI DISPLAY (Will be replaced by Firestore) ---
+const dummyLaunderettes = [
+    { id: '1', name: 'Wash & Go Central', address: '12 High Street, London, SW1A 0AA', lat: 51.5074, lng: 0.1278, features: ['Self-Service', 'Free WiFi'], isPremium: true },
+    { id: '2', name: 'The Laundry Hub', address: '45 Church Rd, Manchester, M1 1AF', lat: 53.4808, lng: 2.2426, features: ['Service Wash', 'Drop-off'], isPremium: false },
+    { id: '3', name: 'Speedy Clean', address: '8 Park Lane, Glasgow, G1 1EW', lat: 55.8642, lng: 4.2518, features: ['Dry Cleaning', '24/7 Access'], isPremium: false },
+];
+
+// --- 4. LISTING CARD COMPONENT ---
+const ListingCard = ({ listing, userCoords }) => {
+    const distance = userCoords.lat && listing.lat
+        ? HaversineDistance(userCoords.lat, userCoords.lng, listing.lat, listing.lng).toFixed(1)
+        : null;
+
+    return (
+        <div className={`p-4 bg-white shadow-lg rounded-xl transition duration-300 hover:shadow-2xl ${listing.isPremium ? 'border-4 border-yellow-500' : 'border border-gray-100'}`}>
+            <div className="flex justify-between items-start">
+                <div>
+                    <h3 className="text-xl font-bold text-gray-800 flex items-center">
+                        {listing.name}
+                        {listing.isPremium && <Zap className="w-5 h-5 ml-2 text-yellow-500 fill-yellow-500" />}
+                    </h3>
+                    <p className="text-sm text-gray-500 mt-1">{listing.address}</p>
+                </div>
+                {distance && (
+                    <div className="text-right flex-shrink-0">
+                        <span className="text-2xl font-extrabold text-blue-600">{distance}</span>
+                        <span className="text-xs text-gray-600 block mt-[-4px]">miles</span>
+                    </div>
+                )}
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2">
+                {listing.features.map((feature, index) => (
+                    <span key={index} className="px-3 py-1 text-xs font-medium bg-blue-100 text-blue-700 rounded-full">
+                        {feature}
+                    </span>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+// --- 5. MAIN APPLICATION COMPONENT ---
+const App = () => {
+    const [userId, setUserId] = useState(null);
+    const [isAuthReady, setIsAuthReady] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
+    const [userLocation, setUserLocation] = useState({ lat: null, lng: null });
+
+    // --- Authentication and Initialization ---
+    useEffect(() => {
+        if (!auth) {
+            setIsAuthReady(true);
+            setIsLoading(false);
+            console.error("Firebase Auth not available.");
+            return;
+        }
+
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                setUserId(user.uid);
+            } else {
+                try {
+                    if (initialAuthToken) {
+                        const credential = await signInWithCustomToken(auth, initialAuthToken);
+                        setUserId(credential.user.uid);
+                    } else {
+                        const credential = await signInAnonymously(auth);
+                        setUserId(credential.user.uid);
+                    }
+                } catch (error) {
+                    console.error("Auth sign-in failed:", error);
+                }
+            }
+            setIsAuthReady(true);
+        });
+
+        return () => unsubscribe();
+    }, []);
+
+    // --- Geolocation and Data Fetching (Simulated) ---
+    useEffect(() => {
+        // 1. Get User Geolocation (Phase 2, Action 4)
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const coords = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    };
+                    setUserLocation(coords);
+                    console.log('User location found:', coords);
+                },
+                (error) => {
+                    console.warn('Geolocation failed, falling back to default:', error);
+                    // Fallback location (e.g., center of UK)
+                    setUserLocation({ lat: 54.0, lng: -2.0 });
+                }
+            );
+        } else {
+            console.warn('Geolocation not supported, falling back.');
+            setUserLocation({ lat: 54.0, lng: -2.0 });
+        }
+
+        // 2. Simulate Data Fetching
+        // In a real app, this is where we'd start an onSnapshot listener on the 'launderettes' collection.
+        // For now, we use dummy data and apply the distance sort using the fallback user location.
+        setTimeout(() => {
+            const tempResults = dummyLaunderettes.map(l => ({
+                ...l,
+                distance: HaversineDistance(54.0, -2.0, l.lat, l.lng) // Use fallback coords for initial sort
+            })).sort((a, b) => a.distance - b.distance);
+
+            setSearchResults(tempResults);
+            setIsLoading(false);
+        }, 1500);
+
+    }, []);
+
+
+    // Placeholder for the main search function (Phase 2, Action 4)
+    const handleSearch = () => {
+        if (!searchQuery.trim()) return;
+        // 1. In a real app, this is where we would geocode the 'searchQuery' (postcode/city).
+        // 2. Then, we would query Firestore and sort the results by distance.
+        alert(`Searching for listings near: ${searchQuery}... (Geocoding logic needed here)`);
+        setSearchQuery('');
+    };
+
+
+    if (isLoading || !isAuthReady) {
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-6">
+                <Loader2 className="w-10 h-10 text-blue-600 animate-spin" />
+                <p className="mt-4 text-gray-600">Loading directory foundation...</p>
+                <p className="text-sm mt-2 text-gray-400">User ID: {userId || 'Authenticating...'}</p>
+            </div>
+        );
+    }
+
+    return (
+        <div className="min-h-screen bg-gray-50 font-sans">
+            {/* Header and Hero */}
+            <header className="bg-blue-600 text-white shadow-xl p-6">
+                <h1 className="text-3xl font-extrabold text-center">
+                    <MapPin className="inline w-6 h-6 mr-2 mb-1" />
+                    LaunderetteNear.me
+                </h1>
+                <p className="text-center mt-1 text-blue-100 hidden sm:block">Find the closest UK launderettes with real-time features and reviews.</p>
+
+                {/* Search Bar - Phase 2, Action 4 */}
+                <div className="mt-6 flex w-full max-w-xl mx-auto bg-white rounded-xl shadow-2xl p-2">
+                    <input
+                        type="text"
+                        placeholder="Enter Postcode or City (e.g., SW1A 0AA)"
+                        className="flex-grow p-3 text-gray-800 bg-transparent focus:outline-none rounded-l-lg"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        onKeyPress={(e) => { if (e.key === 'Enter') handleSearch(); }}
+                    />
+                    <button
+                        onClick={handleSearch}
+                        className="flex items-center justify-center px-4 py-3 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition duration-150"
+                    >
+                        <Search className="w-5 h-5 mr-2" />
+                        Search
+                    </button>
+                </div>
+            </header>
+
+            {/* Main Content Area */}
+            <main className="p-4 sm:p-8 max-w-4xl mx-auto">
+                <h2 className="text-2xl font-bold text-gray-700 mb-6">
+                    Launderettes Near You ({searchResults.length} Results)
+                </h2>
+
+                {/* Listings Grid */}
+                <div className="grid grid-cols-1 gap-6">
+                    {searchResults.map(listing => (
+                        <ListingCard
+                            key={listing.id}
+                            listing={listing}
+                            userCoords={userLocation}
+                        />
+                    ))}
+                </div>
+
+                {/* Footer and User Info */}
+                <div className="mt-12 text-center text-xs text-gray-400 p-4 border-t border-gray-200">
+                    <p>Directory powered by React & Firestore | App ID: {appId}</p>
+                    <p>Current User ID: {userId}</p>
+                    <p className="mt-2 text-red-500">
+                        *Note: Distance calculation is currently simulated using a default UK center and dummy data. Real-time data from Firestore and Geocoding APIs are needed next!
+                    </p>
+                </div>
+            </main>
+        </div>
+    );
+};
+
+export default App;
