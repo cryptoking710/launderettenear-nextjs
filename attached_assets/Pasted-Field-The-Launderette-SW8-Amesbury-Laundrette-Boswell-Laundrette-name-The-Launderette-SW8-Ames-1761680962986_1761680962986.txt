@@ -1,0 +1,219 @@
+Field
+
+The Launderette SW8
+
+Amesbury Laundrette
+
+Boswell Laundrette
+
+name
+
+The Launderette SW8
+
+Amesbury Laundrette & Dry Cleaners
+
+Boswell Laundrette
+
+address
+
+137 South Lambeth Rd, London, SW8 1XB
+
+256 Amesbury Avenue, London, SW2 3BL
+
+Central London Area
+
+lat (Placeholder)
+
+51.5074
+
+51.5074
+
+51.5074
+
+lng (Placeholder)
+
+-0.1278
+
+-0.1278
+
+-0.1278
+
+features
+
+['Self-Service', 'Drop-Off Service Wash', 'Ironing Service', 'Linen Hire']
+
+['Self-Service', 'Service Wash', 'Dry Cleaning', 'Pick Up & Drop Off', 'Alterations']
+
+['Service Wash', 'Express Service', 'Collection & Delivery', 'Dry Cleaning']
+
+isPremium
+
+false
+
+false
+
+true
+
+reviewCount (Est)
+
+10
+
+8
+
+15
+
+rating (Est)
+
+4.2
+
+4.5
+
+4.6
+
+City: Manchester (Placeholder Lat/Lng: 53.4808, -2.2426)
+
+Field
+
+New York Launderette
+
+Bandbox Laundry
+
+Granada Dry Cleaners
+
+name
+
+New York Launderette
+
+Bandbox Laundry
+
+Granada Dry Cleaners
+
+address
+
+(General Manchester Area)
+
+(General Manchester Area)
+
+(General Manchester Area)
+
+lat (Placeholder)
+
+53.4808
+
+53.4808
+
+53.4808
+
+lng (Placeholder)
+
+-2.2426
+
+-2.2426
+
+-2.2426
+
+features
+
+['Self-Service', 'Ironing Service', 'Dry Cleaning']
+
+['Wash & Iron', 'Wash & Dry', 'Dry Cleaning', 'Alterations & Repairs', 'Same Day Service']
+
+['Dry Cleaning', 'Service Wash', 'Drop-off']
+
+isPremium
+
+false
+
+true
+
+false
+
+reviewCount (Est)
+
+5
+
+20
+
+7
+
+rating (Est)
+
+3.9
+
+4.7
+
+4.1
+
+City: Glasgow (Placeholder Lat/Lng: 55.8642, -4.2518)
+
+Field
+
+Majestic Laundrette
+
+Park Road Laundrette
+
+Laundry Hut
+
+name
+
+Majestic Laundrette
+
+Park Road Laundrette
+
+Laundry Hut
+
+address
+
+1110 Argyle St, Glasgow
+
+14 Park Road, Glasgow, G4 9JG
+
+423 Gallowgate, Glasgow, G40 2DY
+
+lat (Placeholder)
+
+55.8642
+
+55.8642
+
+55.8642
+
+lng (Placeholder)
+
+-4.2518
+
+-4.2518
+
+-4.2518
+
+features
+
+['Self-Serve Coin-Op', 'Service Wash', 'Dry Cleaning', 'Commercial Laundry']
+
+['Self-Service', 'Service Wash', 'Ironing Service', 'Dry Cleaning', 'Pick-up & Delivery']
+
+['Self-Service', 'Dry Cleaning', 'Ironing', 'Duvet Service']
+
+isPremium
+
+true
+
+false
+
+false
+
+reviewCount (Est)
+
+18
+
+25
+
+15
+
+rating (Est)
+
+4.5
+
+4.7
+
+4.3
