@@ -9,6 +9,8 @@ A comprehensive UK launderette directory service with geolocation-based search, 
 - **Database**: Firebase Firestore
 - **Authentication**: Firebase Authentication (Google Sign-In)
 - **Geocoding**: Nominatim (OpenStreetMap) - free alternative to Google Maps
+- **Maps**: React Leaflet 4.2.1 with marker clustering
+- **UI Components**: shadcn/ui, Radix UI
 
 ## Architecture
 
@@ -41,17 +43,23 @@ client/
 │   ├── components/         # Reusable UI components
 │   │   ├── ui/            # shadcn/ui components
 │   │   ├── search-bar.tsx
-│   │   └── listing-card.tsx
+│   │   ├── listing-card.tsx
+│   │   ├── reviews.tsx    # Review components
+│   │   ├── filter-panel.tsx # Advanced filtering
+│   │   └── map-view.tsx   # Map with markers & clustering
 │   ├── pages/             # Route pages
-│   │   ├── home.tsx       # Public directory
+│   │   ├── home.tsx       # Public directory with list/map views
+│   │   ├── launderette-detail.tsx # Detailed launderette page
 │   │   ├── admin-login.tsx
 │   │   ├── admin-dashboard.tsx
 │   │   ├── admin-listings.tsx
-│   │   └── admin-listing-form.tsx
+│   │   ├── admin-listing-form.tsx
+│   │   └── admin-analytics.tsx # Analytics dashboard
 │   ├── lib/
 │   │   ├── firebase.ts    # Firebase client SDK
 │   │   ├── api.ts         # API request helper
-│   │   └── distance.ts    # Haversine distance calculation
+│   │   ├── distance.ts    # Haversine distance calculation
+│   │   └── analytics.ts   # Analytics tracking helpers
 │   └── App.tsx            # Root with routing
 
 server/
@@ -73,6 +81,10 @@ shared/
 - Premium listings displayed at top with special badge
 - Responsive card-based layout
 - Automatic geolocation with fallback
+- **Advanced filtering** by features, price range, and opening hours
+- **List/Map view toggle** with interactive markers and clustering
+- **Detailed launderette pages** with full information, photos, and reviews
+- **User reviews and ratings** with star ratings and comments
 
 ### Admin Interface
 - Firebase Google authentication
@@ -81,6 +93,8 @@ shared/
 - Auto-geocoding from address input
 - Premium listing toggle
 - Feature tags management
+- **Analytics dashboard** with search trends and popular listings
+- **Review moderation** with delete functionality
 - Sidebar navigation
 
 ## Data Model
@@ -95,10 +109,47 @@ shared/
   lng: number;             // Longitude
   features: string[];      // e.g., ["Free WiFi", "24/7 Access"]
   isPremium: boolean;      // Premium listing flag
+  description?: string;    // Detailed description
+  phone?: string;          // Contact phone number
+  email?: string;          // Contact email
+  website?: string;        // Business website URL
+  photoUrls?: string[];    // Array of photo URLs
+  openingHours?: {         // Opening hours by day
+    monday?: string;
+    tuesday?: string;
+    // ... other days
+  };
+  priceRange?: string;     // "budget" | "moderate" | "premium"
   createdAt?: number;      // Timestamp
   createdBy?: string;      // User ID
   updatedAt?: number;      // Timestamp
   updatedBy?: string;      // User ID
+}
+```
+
+**Review Schema:**
+```typescript
+{
+  id: string;              // Firestore document ID
+  launderetteId: string;   // Reference to launderette
+  rating: number;          // 1-5 star rating
+  comment?: string;        // Review text
+  userName: string;        // Reviewer name
+  createdAt: number;       // Timestamp
+}
+```
+
+**Analytics Event Schema:**
+```typescript
+{
+  id: string;
+  type: "search" | "view";
+  searchQuery?: string;    // For search events
+  launderetteId?: string;  // For view events
+  launderetteName?: string;
+  userLat?: number;
+  userLng?: number;
+  timestamp: number;
 }
 ```
 
@@ -119,11 +170,16 @@ For production deployments, also set:
 - `GET /api/launderettes` - List all launderettes
 - `GET /api/launderettes/:id` - Get single launderette
 - `GET /api/geocode?address={address}` - Geocode address to lat/lng
+- `GET /api/reviews/:launderetteId` - Get reviews for a launderette
+- `POST /api/reviews` - Submit a new review
+- `POST /api/analytics` - Track analytics event (search/view)
 
 ### Protected Endpoints (Require Bearer Token)
 - `POST /api/launderettes` - Create new launderette
 - `PUT /api/launderettes/:id` - Update launderette
 - `DELETE /api/launderettes/:id` - Delete launderette
+- `DELETE /api/reviews/:id` - Delete a review (admin only)
+- `GET /api/analytics` - Get analytics data (admin only)
 
 ## Firebase Configuration Required
 
@@ -186,14 +242,48 @@ Uses Haversine formula for accurate distance between coordinates:
 
 ## Recent Changes
 
-### October 28, 2025
+### October 28, 2025 - Major Feature Release
+- ✅ **Reviews & Ratings System**
+  - Added review schema with star ratings (1-5) and comments
+  - Implemented review CRUD API endpoints
+  - Built ReviewList and ReviewForm components
+  - Integrated average rating display on listing cards
+  - Added review moderation for admins
+
+- ✅ **Detailed Launderette Pages**
+  - Extended schema with description, contact info (phone/email/website)
+  - Added opening hours and photo gallery support
+  - Created comprehensive detail page at `/launderette/:id`
+  - Integrated reviews section on detail pages
+  - Added analytics tracking for page views
+
+- ✅ **Advanced Filtering**
+  - Extended schema with `openingHours` and `priceRange` fields
+  - Built FilterPanel component with feature checkboxes
+  - Added price range selector (budget/moderate/premium)
+  - Implemented "Open Now" filter with time-based logic
+  - Filter state persists across view modes
+
+- ✅ **Analytics Dashboard**
+  - Created analytics event tracking schema
+  - Implemented event tracking for searches and views
+  - Built admin analytics page with statistics
+  - Added top searches and most viewed listings tables
+  - Tracks geographic distribution of user searches
+
+- ✅ **Map View with Clustering**
+  - Integrated react-leaflet for interactive maps
+  - Added marker clustering for dense areas
+  - Implemented list/map view toggle on home page
+  - User location marker shown separately
+  - Popup cards display launderette info with "View Details" link
+
+### Previous Updates
 - ✅ Implemented secure backend API with Firebase Admin SDK
 - ✅ Added authentication middleware for protected routes
 - ✅ Migrated all admin operations from client-side Firestore to backend API
-- ✅ Added individual launderette fetch endpoint (GET /api/launderettes/:id)
 - ✅ Improved error handling and logging throughout
 - ✅ Created comprehensive deployment documentation
-- ✅ Documented Firestore security rules requirements
 
 ### Architecture Evolution
 - **Initial**: Direct client-side Firestore access (insecure)
@@ -223,10 +313,13 @@ Before deploying to production:
 
 ## Future Enhancements
 
-- Add user reviews and ratings
-- Implement search filters (features, open now, etc.)
-- Add map view with markers
+- ✅ ~~Add user reviews and ratings~~ (Completed)
+- ✅ ~~Implement search filters (features, open now, etc.)~~ (Completed)
+- ✅ ~~Add map view with markers~~ (Completed)
+- ✅ ~~Analytics dashboard for admin~~ (Completed)
 - SMS/Email notifications for new listings
-- Analytics dashboard for admin
+- Push notifications for premium users
 - Multi-language support
 - Mobile app (React Native)
+- Advanced analytics charts and graphs
+- Email digest for admins
