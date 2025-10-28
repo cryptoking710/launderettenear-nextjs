@@ -9,6 +9,13 @@ export const launderetteSchema = z.object({
   lng: z.number(),
   features: z.array(z.string()).default([]),
   isPremium: z.boolean().default(false),
+  description: z.string().optional(),
+  phone: z.string().optional(),
+  email: z.string().email().optional().or(z.literal("")),
+  website: z.string().url().optional().or(z.literal("")),
+  photoUrls: z.array(z.string()).default([]),
+  openingHours: z.record(z.string()).optional(),
+  priceRange: z.enum(["budget", "moderate", "premium"]).optional(),
   createdAt: z.number().optional(),
 });
 
@@ -32,3 +39,22 @@ export interface UserLocation {
   lat: number | null;
   lng: number | null;
 }
+
+// Review schema
+export const reviewSchema = z.object({
+  id: z.string(),
+  launderetteId: z.string(),
+  userName: z.string().min(1, "Name is required"),
+  userEmail: z.string().email().optional(),
+  rating: z.number().min(1).max(5),
+  comment: z.string().min(1, "Comment is required"),
+  createdAt: z.number(),
+});
+
+export const insertReviewSchema = reviewSchema.omit({ 
+  id: true, 
+  createdAt: true 
+});
+
+export type Review = z.infer<typeof reviewSchema>;
+export type InsertReview = z.infer<typeof insertReviewSchema>;

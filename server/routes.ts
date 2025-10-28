@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { firestoreBackend } from "./firestore-backend";
 import { requireAuth, AuthenticatedRequest } from "./middleware/auth";
-import { insertLaunderetteSchema } from "@shared/schema";
+import { insertLaunderetteSchema, insertReviewSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Public endpoint - Geocoding using free Nominatim service
@@ -154,6 +154,72 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error deleting launderette:", error);
       res.status(500).json({ error: "Failed to delete launderette" });
+    }
+  });
+
+  // Review endpoints
+  
+  // Get all reviews for a launderette (public)
+  app.get("/api/launderettes/:id/reviews", async (req, res) => {
+    try {
+      const { id } = req.params;
+      const snapshot = await firestoreBackend.collection("reviews").get();
+      const allReviews = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      
+      // Filter reviews for this launderette
+      const reviews = allReviews.filter((r: any) => r.launderetteId === id);
+      
+      res.json(reviews);
+    } catch (error) {
+      console.error("Error fetching reviews:", error);
+      res.status(500).json({ error: "Failed to fetch reviews" });
+    }
+  });
+
+  // Create a review (public - anyone can review)
+  app.post("/api/reviews", async (req, res) => {
+    try {
+      const validatedData = insertReviewSchema.parse(req.body);
+      
+      const docRef = await firestoreBackend.collection("reviews").add({
+        ...validatedData,
+        createdAt: Date.now(),
+      });
+      
+      const doc = await docRef.get();
+      const review = { id: doc.id, ...doc.data() };
+      
+      res.status(201).json(review);
+    } catch (error: any) {
+      console.error("Error creating review:", error);
+      if (error.name === "ZodError") {
+        return res.status(400).json({ error: "Invalid data", details: error.errors });
+      }
+      res.status(500).json({ error: "Failed to create review" });
+    }
+  });
+
+  // Delete a review (admin only)
+  app.delete("/api/reviews/:id", requireAuth, async (req: AuthenticatedRequest, res) => {
+    try {
+      const { id } = req.params;
+      
+      const docRef = firestoreBackend.collection("reviews").doc(id);
+      const doc = await docRef.get();
+      
+      if (!doc.exists) {
+        return res.status(404).json({ error: "Review not found" });
+      }
+      
+      await docRef.delete();
+      
+      res.status(204).send();
+    } catch (error) {
+      console.error("Error deleting review:", error);
+      res.status(500).json({ error: "Failed to delete review" });
     }
   });
 
