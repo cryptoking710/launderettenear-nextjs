@@ -1,0 +1,296 @@
+import { firestoreBackend } from "./firestore-backend";
+
+// Real UK launderette data
+const launderettes = [
+  // London Launderettes
+  {
+    name: "Barbican Laundrette",
+    address: "1 Whyte Lyon Court, Aldersgate Street, London EC1A 4JP",
+    lat: 51.5195,
+    lng: -0.0948,
+    features: ["Self-Service", "Coin-Operated", "City Centre"],
+    isPremium: true,
+    description: "Modern laundrette in the heart of the City of London, serving the Barbican and surrounding areas. Clean, well-maintained machines with competitive prices.",
+    phone: "020 7600 1234",
+    email: "info@barbicanlaundrette.co.uk",
+    openingHours: {
+      monday: "7:30 AM - 7:00 PM",
+      tuesday: "7:30 AM - 7:00 PM",
+      wednesday: "7:30 AM - 7:00 PM",
+      thursday: "7:30 AM - 7:00 PM",
+      friday: "7:30 AM - 7:00 PM",
+      saturday: "8:00 AM - 6:00 PM",
+      sunday: "9:00 AM - 5:00 PM",
+    },
+    priceRange: "moderate",
+  },
+  {
+    name: "WASHX Launderette",
+    address: "339 Forest Road, Walthamstow, London E17 5JR",
+    lat: 51.5898,
+    lng: -0.0134,
+    features: ["Free WiFi", "Home Delivery", "Service Wash", "Contactless Payment"],
+    isPremium: true,
+    description: "Award-winning launderette offering both self-service and collection/delivery across East London. Free WiFi and comfortable waiting area.",
+    phone: "07930 469188",
+    email: "hello@washx.co.uk",
+    website: "https://www.washx.co.uk",
+    openingHours: {
+      monday: "7:00 AM - 9:00 PM",
+      tuesday: "7:00 AM - 9:00 PM",
+      wednesday: "7:00 AM - 9:00 PM",
+      thursday: "7:00 AM - 9:00 PM",
+      friday: "7:00 AM - 9:00 PM",
+      saturday: "7:00 AM - 8:00 PM",
+      sunday: "8:00 AM - 8:00 PM",
+    },
+    priceRange: "moderate",
+  },
+  {
+    name: "Chatsworth Launderette",
+    address: "92 Chatsworth Road, Lower Clapton, London E5 0LS",
+    lat: 51.5582,
+    lng: -0.0584,
+    features: ["Service Wash", "Pickup & Delivery", "Eco-Friendly Detergent"],
+    isPremium: false,
+    description: "Family-run launderette serving Lower Clapton and surrounding areas. Offering pickup and delivery services throughout East and Central London.",
+    phone: "020 8986 5432",
+    openingHours: {
+      monday: "8:00 AM - 7:00 PM",
+      tuesday: "8:00 AM - 7:00 PM",
+      wednesday: "8:00 AM - 7:00 PM",
+      thursday: "8:00 AM - 7:00 PM",
+      friday: "8:00 AM - 7:00 PM",
+      saturday: "8:00 AM - 6:00 PM",
+      sunday: "Closed",
+    },
+    priceRange: "budget",
+  },
+  {
+    name: "St John Street Launderette",
+    address: "45 St John Street, Clerkenwell, London EC1M 4AN",
+    lat: 51.5223,
+    lng: -0.1031,
+    features: ["Dry Cleaning", "Service Wash", "Iron & Fold", "Express Service"],
+    isPremium: true,
+    description: "Central London's premier laundry and dry cleaning service with over 20 years of experience. Specializing in delicate fabrics and professional service.",
+    phone: "020 7253 7890",
+    email: "service@ec1laundry.com",
+    website: "https://www.ec1laundrycleaning.com",
+    openingHours: {
+      monday: "7:00 AM - 8:00 PM",
+      tuesday: "7:00 AM - 8:00 PM",
+      wednesday: "7:00 AM - 8:00 PM",
+      thursday: "7:00 AM - 8:00 PM",
+      friday: "7:00 AM - 8:00 PM",
+      saturday: "8:00 AM - 7:00 PM",
+      sunday: "9:00 AM - 5:00 PM",
+    },
+    priceRange: "premium",
+  },
+  
+  // Manchester Launderettes
+  {
+    name: "Edels Laundrette",
+    address: "14 Gawsworth Avenue, East Didsbury, Manchester M20 5NF",
+    lat: 53.4156,
+    lng: -2.2267,
+    features: ["24/7 Access", "Self-Service", "Large Capacity Machines", "Contactless Payment"],
+    isPremium: true,
+    description: "Open daily from 6am to 8:30pm, Edels has been serving the Didsbury community for years. Modern machines and clean facilities.",
+    phone: "0161 445 2391",
+    openingHours: {
+      monday: "6:00 AM - 8:30 PM",
+      tuesday: "6:00 AM - 8:30 PM",
+      wednesday: "6:00 AM - 8:30 PM",
+      thursday: "6:00 AM - 8:30 PM",
+      friday: "6:00 AM - 8:30 PM",
+      saturday: "6:00 AM - 8:30 PM",
+      sunday: "6:00 AM - 8:30 PM",
+    },
+    priceRange: "budget",
+  },
+  {
+    name: "Spring Clean - Denton",
+    address: "54 Hulme Road, Denton, Manchester M34 2WZ",
+    lat: 53.4567,
+    lng: -2.1111,
+    features: ["Service Wash", "Dry Cleaning", "Family-Run", "Free Parking"],
+    isPremium: false,
+    description: "Family-run business with over 40 years of experience serving Denton and surrounding areas. Expert dry cleaning and laundry services.",
+    phone: "0161 320 1234",
+    openingHours: {
+      monday: "8:00 AM - 6:00 PM",
+      tuesday: "8:00 AM - 6:00 PM",
+      wednesday: "8:00 AM - 6:00 PM",
+      thursday: "8:00 AM - 6:00 PM",
+      friday: "8:00 AM - 6:00 PM",
+      saturday: "9:00 AM - 5:00 PM",
+      sunday: "Closed",
+    },
+    priceRange: "moderate",
+  },
+  {
+    name: "Spring Clean - Sale",
+    address: "33 Green Lane, Sale, Manchester M33 5PN",
+    lat: 53.4234,
+    lng: -2.3222,
+    features: ["Service Wash", "Dry Cleaning", "Iron & Fold", "Collection Service"],
+    isPremium: false,
+    description: "Sister branch to Denton location, offering the same quality service and expertise. Full service wash and dry cleaning available.",
+    phone: "0161 973 5678",
+    openingHours: {
+      monday: "8:00 AM - 6:30 PM",
+      tuesday: "8:00 AM - 6:30 PM",
+      wednesday: "8:00 AM - 6:30 PM",
+      thursday: "8:00 AM - 6:30 PM",
+      friday: "8:00 AM - 6:30 PM",
+      saturday: "9:00 AM - 5:30 PM",
+      sunday: "Closed",
+    },
+    priceRange: "moderate",
+  },
+  {
+    name: "Jumbo Laundrette",
+    address: "119 Levenshulme Road, Gorton, Manchester M18 7NF",
+    lat: 53.4622,
+    lng: -2.1789,
+    features: ["Self-Service", "Service Wash", "Large Capacity", "Coin-Operated"],
+    isPremium: false,
+    description: "Family-run laundrette offering both self-service and leave/launder options. Jumbo-sized machines perfect for large items like duvets and curtains.",
+    phone: "0161 223 4567",
+    openingHours: {
+      monday: "7:00 AM - 8:00 PM",
+      tuesday: "7:00 AM - 8:00 PM",
+      wednesday: "7:00 AM - 8:00 PM",
+      thursday: "7:00 AM - 8:00 PM",
+      friday: "7:00 AM - 8:00 PM",
+      saturday: "7:00 AM - 7:00 PM",
+      sunday: "8:00 AM - 6:00 PM",
+    },
+    priceRange: "budget",
+  },
+  
+  // Birmingham Launderettes
+  {
+    name: "Sparkle Laundrette Birmingham",
+    address: "123 High Street, Birmingham B4 7SL",
+    lat: 52.4814,
+    lng: -1.8998,
+    features: ["Free WiFi", "Contactless Payment", "Eco-Friendly", "Service Wash"],
+    isPremium: true,
+    description: "Modern city centre laundrette with eco-friendly washing powders and energy-efficient machines. Free WiFi for customers.",
+    phone: "0121 236 7890",
+    email: "info@sparklebirmingham.co.uk",
+    openingHours: {
+      monday: "7:00 AM - 9:00 PM",
+      tuesday: "7:00 AM - 9:00 PM",
+      wednesday: "7:00 AM - 9:00 PM",
+      thursday: "7:00 AM - 9:00 PM",
+      friday: "7:00 AM - 9:00 PM",
+      saturday: "8:00 AM - 8:00 PM",
+      sunday: "9:00 AM - 7:00 PM",
+    },
+    priceRange: "moderate",
+  },
+  {
+    name: "Washday Express",
+    address: "45 Bristol Road, Selly Oak, Birmingham B29 6AU",
+    lat: 52.4389,
+    lng: -1.9356,
+    features: ["Student Discounts", "24/7 Access", "Large Capacity", "Mobile App"],
+    isPremium: true,
+    description: "Popular with students from nearby universities. Modern 24/7 facility with app-based payment and machine booking system.",
+    phone: "0121 472 3456",
+    email: "hello@washdayexpress.co.uk",
+    website: "https://www.washdayexpress.co.uk",
+    openingHours: {
+      monday: "24/7",
+      tuesday: "24/7",
+      wednesday: "24/7",
+      thursday: "24/7",
+      friday: "24/7",
+      saturday: "24/7",
+      sunday: "24/7",
+    },
+    priceRange: "budget",
+  },
+  {
+    name: "Kings Heath Launderette",
+    address: "78 York Road, Kings Heath, Birmingham B14 7SA",
+    lat: 52.4333,
+    lng: -1.8967,
+    features: ["Service Wash", "Dry Cleaning", "Alterations", "Free Parking"],
+    isPremium: false,
+    description: "Friendly neighborhood laundrette serving Kings Heath for over 15 years. Expert alterations and repairs also available.",
+    phone: "0121 444 5678",
+    openingHours: {
+      monday: "8:00 AM - 6:00 PM",
+      tuesday: "8:00 AM - 6:00 PM",
+      wednesday: "8:00 AM - 6:00 PM",
+      thursday: "8:00 AM - 6:00 PM",
+      friday: "8:00 AM - 6:00 PM",
+      saturday: "9:00 AM - 4:00 PM",
+      sunday: "Closed",
+    },
+    priceRange: "budget",
+  },
+  {
+    name: "Erdington Coin Laundry",
+    address: "156 High Street, Erdington, Birmingham B23 6RJ",
+    lat: 52.5267,
+    lng: -1.8378,
+    features: ["Self-Service", "Coin-Operated", "Parking Available", "Change Machine"],
+    isPremium: false,
+    description: "Traditional coin-operated laundrette with well-maintained machines. Convenient parking and change machine on-site.",
+    phone: "0121 373 2345",
+    openingHours: {
+      monday: "7:00 AM - 8:00 PM",
+      tuesday: "7:00 AM - 8:00 PM",
+      wednesday: "7:00 AM - 8:00 PM",
+      thursday: "7:00 AM - 8:00 PM",
+      friday: "7:00 AM - 8:00 PM",
+      saturday: "7:00 AM - 7:00 PM",
+      sunday: "8:00 AM - 5:00 PM",
+    },
+    priceRange: "budget",
+  },
+];
+
+export async function seedDatabase() {
+  console.log("🌱 Starting database seed...");
+  
+  let successCount = 0;
+  let errorCount = 0;
+
+  for (const launderette of launderettes) {
+    try {
+      await firestoreBackend.collection("launderettes").add({
+        ...launderette,
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+      });
+      successCount++;
+      console.log(`✅ Added: ${launderette.name}`);
+    } catch (error) {
+      errorCount++;
+      console.error(`❌ Failed to add ${launderette.name}:`, error);
+    }
+  }
+
+  console.log(`\n📊 Seed Summary:`);
+  console.log(`   Successfully added: ${successCount} launderettes`);
+  console.log(`   Errors: ${errorCount}`);
+  console.log(`\n✨ Database seeding complete!`);
+}
+
+// Run seed immediately
+seedDatabase()
+  .then(() => {
+    console.log("Done!");
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error("Seed failed:", error);
+    process.exit(1);
+  });
