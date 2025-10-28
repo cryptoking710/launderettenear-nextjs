@@ -240,7 +240,31 @@ Uses Haversine formula for accurate distance between coordinates:
 - **Storage**: Firebase Firestore (cloud-based, real-time)
 - **Authentication**: Firebase Authentication with Google Sign-In
 
+## Database Status
+
+**Total Launderettes: 107** across 9 major UK cities
+
+### Geographic Coverage:
+- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 **England**: London (10+), Manchester (10+), Birmingham (14+), Liverpool (10), Bristol (10), Newcastle (10)
+- 🏴󠁧󠁢󠁷󠁬󠁳󠁿 **Wales**: Cardiff (10+)
+- 🏴󠁧󠁢󠁳󠁣󠁴󠁿 **Scotland**: Glasgow (10+), Edinburgh (10+)
+
+### Premium Listings by City:
+- London: 2 premium | Manchester: 1 premium | Glasgow: 1 premium
+- Birmingham: 1 premium | Cardiff: 3 premium | Edinburgh: 1 premium
+- Liverpool: 3 premium | Bristol: 4 premium | Newcastle: 3 premium
+
+**Total Premium Listings: 19** out of 107
+
 ## Recent Changes
+
+### October 28, 2025 - Expansion to 9 UK Cities (107 Total Launderettes)
+- ✅ **Liverpool Added** - 10 launderettes (3 premium: Kitty's, Daily Maids, Liverpool Laundry Club)
+- ✅ **Bristol Added** - 10 launderettes (4 premium: Waeshous, Kingsway, WashBox, Staffords)
+- ✅ **Newcastle Added** - 10 launderettes (3 premium: Laundry Worx, Barrington, T L C)
+- ✅ All new cities tested and verified working (search, maps, detail pages)
+- ✅ Import scripts handle opening hours parsing and empty website fields
+- ✅ Database now covers England, Wales, and Scotland comprehensively
 
 ### October 28, 2025 - Major Feature Release
 - ✅ **Reviews & Ratings System**
