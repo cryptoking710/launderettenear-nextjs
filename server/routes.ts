@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { firestoreBackend } from "./firestore-backend";
 import { requireAuth, AuthenticatedRequest } from "./middleware/auth";
-import { insertLaunderetteSchema, insertReviewSchema } from "@shared/schema";
+import { insertLaunderetteSchema, insertReviewSchema, insertAnalyticsEventSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Public endpoint - Geocoding using free Nominatim service
@@ -220,6 +220,44 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error deleting review:", error);
       res.status(500).json({ error: "Failed to delete review" });
+    }
+  });
+
+  // Analytics endpoints
+  
+  // Track an analytics event (public)
+  app.post("/api/analytics", async (req, res) => {
+    try {
+      const validatedData = insertAnalyticsEventSchema.parse(req.body);
+      
+      await firestoreBackend.collection("analytics").add({
+        ...validatedData,
+        timestamp: Date.now(),
+      });
+      
+      res.status(201).json({ success: true });
+    } catch (error: any) {
+      console.error("Error tracking analytics:", error);
+      if (error.name === "ZodError") {
+        return res.status(400).json({ error: "Invalid data", details: error.errors });
+      }
+      res.status(500).json({ error: "Failed to track analytics" });
+    }
+  });
+
+  // Get analytics data (admin only)
+  app.get("/api/analytics", requireAuth, async (req: AuthenticatedRequest, res) => {
+    try {
+      const snapshot = await firestoreBackend.collection("analytics").get();
+      const events = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      
+      res.json(events);
+    } catch (error) {
+      console.error("Error fetching analytics:", error);
+      res.status(500).json({ error: "Failed to fetch analytics" });
     }
   });
 

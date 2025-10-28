@@ -10,6 +10,7 @@ import AdminLayout from "@/pages/admin-layout";
 import AdminDashboard from "@/pages/admin-dashboard";
 import AdminListings from "@/pages/admin-listings";
 import AdminListingForm from "@/pages/admin-listing-form";
+import AdminAnalytics from "@/pages/admin-analytics";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -47,6 +48,14 @@ function Router() {
         {() => (
           <AdminLayout>
             <AdminListingForm />
+          </AdminLayout>
+        )}
+      </Route>
+      
+      <Route path="/admin/analytics">
+        {() => (
+          <AdminLayout>
+            <AdminAnalytics />
           </AdminLayout>
         )}
       </Route>

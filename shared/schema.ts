@@ -58,3 +58,23 @@ export const insertReviewSchema = reviewSchema.omit({
 
 export type Review = z.infer<typeof reviewSchema>;
 export type InsertReview = z.infer<typeof insertReviewSchema>;
+
+// Analytics event schema
+export const analyticsEventSchema = z.object({
+  id: z.string(),
+  type: z.enum(["search", "view"]),
+  searchQuery: z.string().optional(),
+  launderetteId: z.string().optional(),
+  launderetteName: z.string().optional(),
+  userLat: z.number().optional(),
+  userLng: z.number().optional(),
+  timestamp: z.number(),
+});
+
+export const insertAnalyticsEventSchema = analyticsEventSchema.omit({ 
+  id: true, 
+  timestamp: true 
+});
+
+export type AnalyticsEvent = z.infer<typeof analyticsEventSchema>;
+export type InsertAnalyticsEvent = z.infer<typeof insertAnalyticsEventSchema>;

@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { ArrowLeft, MapPin, Phone, Mail, Globe, Clock, Zap, Loader2 } from "lucide-react";
 import { calculateDistance } from "@/lib/distance";
+import { trackView } from "@/lib/analytics";
 import { useState, useEffect } from "react";
 
 export default function LaunderetteDetail() {
@@ -53,6 +54,13 @@ export default function LaunderetteDetail() {
       );
     }
   }, []);
+
+  // Track page view
+  useEffect(() => {
+    if (launderette) {
+      trackView(launderette.id, launderette.name);
+    }
+  }, [launderette]);
 
   if (isLoadingLaunderette) {
     return (
