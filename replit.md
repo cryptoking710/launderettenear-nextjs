@@ -242,10 +242,10 @@ Uses Haversine formula for accurate distance between coordinates:
 
 ## Database Status
 
-**Total Launderettes: 167** across 15 major UK cities
+**Total Launderettes: 192** across 18 major UK cities
 
 ### Geographic Coverage:
-- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 **England**: London (10+), Manchester (10+), Birmingham (14+), Liverpool (10), Bristol (10), Newcastle (10), Sheffield (10), Leeds (10), Southampton (10), Nottingham (10), Leicester (10)
+- 🏴󠁧󠁢󠁥󠁮󠁧󠁿 **England**: London (10+), Manchester (10+), Birmingham (14+), Liverpool (10), Bristol (10), Newcastle (10), Sheffield (10), Leeds (10), Southampton (10), Nottingham (10), Leicester (10), Bradford (10), Stoke-on-Trent (10), Reading (10)
 - 🏴󠁧󠁢󠁷󠁬󠁳󠁿 **Wales**: Cardiff (10+)
 - 🏴󠁧󠁢󠁳󠁣󠁴󠁿 **Scotland**: Glasgow (10+), Edinburgh (10+)
 - 🇮🇪 **Northern Ireland**: Belfast (10)
@@ -255,21 +255,23 @@ Uses Haversine formula for accurate distance between coordinates:
 - Cardiff: 3 premium | Edinburgh: 1 premium | Liverpool: 3 premium | Bristol: 4 premium
 - Newcastle: 3 premium | Sheffield: 3 premium | Leeds: 3 premium | Belfast: 4 premium
 - Southampton: 2 premium | Nottingham: 3 premium | Leicester: 2 premium
+- Bradford: 1 premium | Stoke-on-Trent: 1 premium | Reading: 1 premium
 
-**Total Premium Listings: 36** out of 167
+**Total Premium Listings: 39** out of 192
 
 ## Recent Changes
 
-### October 29, 2025 - Expansion to 15 UK Cities (167 Total Launderettes)
-- ✅ **Southampton Added** - 10 launderettes (2 premium: Woolston, Cove Dry Cleaners)
-- ✅ **Nottingham Added** - 10 launderettes (3 premium: Mainwise, It's Brilliant, Manor Laundry)
-- ✅ **Leicester Added** - 10 launderettes (2 premium: Clarendon, Welford)
-- ✅ East Midlands & South Coast coverage completed
+### October 29, 2025 - Expansion to 18 UK Cities (192 Total Launderettes)
+- ✅ **Bradford Added** - 10 launderettes (1 premium: Dry Clean Centre)
+- ✅ **Stoke-on-Trent Added** - 10 launderettes (1 premium: Posh Wash)
+- ✅ **Reading Added** - 10 launderettes (1 premium: Dry Clean & Press)
+- ✅ Yorkshire, Midlands & Southeast coverage expanded
+- ✅ Southampton, Nottingham, Leicester added earlier (30 more)
 - ✅ Sheffield, Leeds, Belfast added yesterday (30 more)
-- ✅ All 15 cities tested and verified working (search, maps, detail pages)
+- ✅ All 18 cities tested and verified working (search, maps, detail pages)
 - ✅ Import scripts handle opening hours parsing and empty website fields
 - ✅ Database now covers all four UK nations: England, Wales, Scotland, Northern Ireland
-- ✅ 5 perfect 5.0★ rated launderettes in new cities
+- ✅ Multiple 24/7 outdoor machines added (Revolution Laundry & Wash.ME)
 
 ### October 28, 2025 - Major Feature Release
 - ✅ **Reviews & Ratings System**
