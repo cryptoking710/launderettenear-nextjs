@@ -353,3 +353,31 @@
     inset: -1px;
   }
 }
+
+/* Custom Map Marker Styles */
+.custom-marker-regular,
+.custom-marker-premium,
+.custom-marker-user {
+  background: transparent !important;
+  border: none !important;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.custom-marker-regular:hover,
+.custom-marker-premium:hover,
+.custom-marker-user:hover {
+  transform: scale(1.1);
+  z-index: 1000 !important;
+}
+
+.custom-cluster-icon {
+  background: transparent !important;
+  border: none !important;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.custom-cluster-icon:hover {
+  transform: scale(1.05);
+}
