@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import heroImage from "@assets/generated_images/Modern_launderette_interior_scene_2912be0b.png";
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<UserLocation>({ lat: null, lng: null });
@@ -184,13 +185,57 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-50 bg-primary text-primary-foreground shadow-lg">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex justify-between items-center mb-6">
-            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight font-heading flex items-center gap-2">
-              <MapPin className="w-7 h-7 md:w-8 md:h-8" />
-              <span>LaunderetteNear.me</span>
+      {/* Hero Section with Integrated Search */}
+      <div 
+        className="relative min-h-[500px] md:min-h-[600px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroImage})` }}
+        data-testid="hero-section"
+      >
+        {/* Dark gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+        
+        {/* Hero Content */}
+        <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center py-16">
+          <div className="max-w-4xl mx-auto w-full">
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-4 font-heading">
+              LaunderetteNear.me
             </h1>
+            <p className="text-xl md:text-2xl text-white/95 mb-8 font-medium">
+              Find Your Nearest Launderette in Seconds
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-white/90 text-sm md:text-base mb-12">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md" data-testid="text-total-launderettes">
+                <MapPin className="w-5 h-5" />
+                <span className="font-semibold">277 Launderettes</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md" data-testid="text-total-cities">
+                <span className="font-semibold">26 UK Cities</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md" data-testid="text-total-nations">
+                <span className="font-semibold">All 4 Nations</span>
+              </div>
+            </div>
+            
+            {/* Search Bar in Hero */}
+            <div className="max-w-2xl mx-auto">
+              <SearchBar 
+                onSearch={handleSearch}
+                isLoading={isSearching}
+                onUseLocation={handleUseLocation}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Simplified Header */}
+      <header className="sticky top-0 z-50 bg-primary text-primary-foreground shadow-lg">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-2">
+              <MapPin className="w-6 h-6" />
+              <span className="text-xl font-bold font-heading">LaunderetteNear.me</span>
+            </div>
             
             <Link href="/admin">
               <Button 
@@ -202,16 +247,6 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-          
-          <p className="text-primary-foreground/90 text-center mb-6 hidden sm:block text-base leading-relaxed">
-            Find the closest UK launderettes with real-time features and reviews
-          </p>
-          
-          <SearchBar 
-            onSearch={handleSearch}
-            isLoading={isSearching}
-            onUseLocation={handleUseLocation}
-          />
         </div>
       </header>
 
