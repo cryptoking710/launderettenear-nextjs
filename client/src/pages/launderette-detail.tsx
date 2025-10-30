@@ -67,22 +67,32 @@ export default function LaunderetteDetail() {
       const pageTitle = `${launderette.name} - Launderette in ${launderette.city} | LaunderetteNear.me`;
       document.title = pageTitle;
       
+      // Calculate average rating for meta description
+      const avgRating = calculateAverageRating(reviews);
+      
       // Update meta description
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute('content', 
           `${launderette.name} in ${launderette.city}. ${launderette.features.slice(0, 3).join(', ')}. ` +
-          `${averageRating > 0 ? `${averageRating.toFixed(1)} star rating from ${reviews.length} reviews. ` : ''}` +
+          `${avgRating > 0 ? `${avgRating.toFixed(1)} star rating from ${reviews.length} reviews. ` : ''}` +
           `Opening hours, contact details & directions.`
         );
       }
     }
     
     return () => {
-      // Reset title when leaving page
+      // Reset title and meta description when leaving page
       document.title = "Launderette Near Me | Find 372+ UK Launderettes & Laundrettes | LaunderetteNear.me";
+      
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', 
+          "Find your nearest launderette in seconds. Search 372+ launderettes across 35 UK cities. Service wash, 24 hour, self-service & more. Real reviews, opening hours & prices."
+        );
+      }
     };
-  }, [launderette, averageRating, reviews.length]);
+  }, [launderette, reviews]);
 
   if (isLoadingLaunderette) {
     return (
@@ -306,8 +316,9 @@ export default function LaunderetteDetail() {
                   >
                     <img
                       src={url}
-                      alt={`${launderette.name} - Photo ${index + 1}`}
+                      alt={`${launderette.name} launderette in ${launderette.city} - Interior photo ${index + 1}`}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                 ))}

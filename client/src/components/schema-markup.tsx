@@ -7,6 +7,25 @@ interface SchemaMarkupProps {
   reviewCount?: number;
 }
 
+// Convert 12-hour time format to 24-hour format for Schema.org
+function convertTo24Hour(time12h: string): string {
+  const trimmed = time12h.trim();
+  const match = trimmed.match(/(\d+):(\d+)\s*(am|pm)/i);
+  
+  if (!match) return trimmed;
+  
+  let [, hours, minutes, period] = match;
+  let hour = parseInt(hours);
+  
+  if (period.toLowerCase() === 'pm' && hour !== 12) {
+    hour += 12;
+  } else if (period.toLowerCase() === 'am' && hour === 12) {
+    hour = 0;
+  }
+  
+  return `${hour.toString().padStart(2, '0')}:${minutes}`;
+}
+
 export function SchemaMarkup({ launderette, averageRating, reviewCount }: SchemaMarkupProps) {
   useEffect(() => {
     const schema = {
@@ -30,12 +49,19 @@ export function SchemaMarkup({ launderette, averageRating, reviewCount }: Schema
       email: launderette.email,
       url: launderette.website || `https://launderettenear.me/launderette/${launderette.id}`,
       priceRange: launderette.priceRange,
-      openingHoursSpecification: launderette.openingHours ? Object.entries(launderette.openingHours).map(([day, hours]) => ({
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: day.charAt(0).toUpperCase() + day.slice(1),
-        opens: hours.toLowerCase() !== 'closed' ? hours.split('-')[0]?.trim() : undefined,
-        closes: hours.toLowerCase() !== 'closed' ? hours.split('-')[1]?.trim() : undefined
-      })).filter(spec => spec.opens && spec.closes) : undefined,
+      openingHoursSpecification: launderette.openingHours ? Object.entries(launderette.openingHours).map(([day, hours]) => {
+        if (hours.toLowerCase() === 'closed') return null;
+        
+        const parts = hours.split('-');
+        if (parts.length !== 2) return null;
+        
+        return {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: day.charAt(0).toUpperCase() + day.slice(1),
+          opens: convertTo24Hour(parts[0]),
+          closes: convertTo24Hour(parts[1])
+        };
+      }).filter(spec => spec !== null) : undefined,
       aggregateRating: averageRating && reviewCount ? {
         "@type": "AggregateRating",
         ratingValue: averageRating.toFixed(1),
