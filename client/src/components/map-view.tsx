@@ -63,11 +63,14 @@ interface MapViewProps {
 }
 
 export function MapView({ launderettes, userLocation }: MapViewProps) {
-  // Calculate center of map - use user location or center of UK
-  const center: [number, number] = userLocation
+  // Calculate center of map - use centroid of launderettes if available, then user location, then UK center
+  const center: [number, number] = launderettes.length > 0
+    ? [
+        launderettes.reduce((sum, l) => sum + l.lat, 0) / launderettes.length,
+        launderettes.reduce((sum, l) => sum + l.lng, 0) / launderettes.length
+      ]
+    : userLocation
     ? [userLocation.lat, userLocation.lng]
-    : launderettes.length > 0
-    ? [launderettes[0].lat, launderettes[0].lng]
     : [54.0, -2.0]; // Center of UK
 
   // Custom cluster icon creation
@@ -100,11 +103,14 @@ export function MapView({ launderettes, userLocation }: MapViewProps) {
     });
   };
 
+  // Determine appropriate zoom level
+  const zoom = launderettes.length > 0 && launderettes.length <= 50 ? 11 : 6;
+
   return (
     <div className="h-full w-full rounded-lg overflow-hidden border border-border" data-testid="map-view">
       <MapContainer
         center={center}
-        zoom={userLocation ? 12 : 6}
+        zoom={zoom}
         style={{ height: "100%", width: "100%" }}
         scrollWheelZoom={true}
       >
