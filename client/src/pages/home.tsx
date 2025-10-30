@@ -350,7 +350,7 @@ export default function Home() {
                       listing={listing}
                       distance={listing.distance}
                     />
-                    {(index + 1) % 4 === 0 && index < filteredAndSortedLaunderettes.length - 1 && (
+                    {(index + 1) % 3 === 0 && index < filteredAndSortedLaunderettes.length - 1 && (
                       <InFeedAd slot="1234567890" className="my-4" />
                     )}
                   </div>
