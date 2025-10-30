@@ -151,14 +151,14 @@ export default function Home() {
   // Apply filters and calculate distances
   const filteredAndSortedLaunderettes = launderettes
     .filter((l) => {
-      // Filter by search query (text match on name, address, or city)
+      // Filter by search query (text match on name or city only)
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
         const matchesName = l.name?.toLowerCase().includes(query);
-        const matchesAddress = l.address?.toLowerCase().includes(query);
         const matchesCity = l.city?.toLowerCase().includes(query);
         
-        if (!matchesName && !matchesAddress && !matchesCity) {
+        // Only match on name or city (not address to avoid false positives like "Wisbech Road" in March)
+        if (!matchesName && !matchesCity) {
           return false;
         }
       }
