@@ -13,7 +13,7 @@ import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import heroImage from "@assets/generated_images/Modern_launderette_interior_scene_2912be0b.png";
-import { InFeedAd, BannerAd } from "@/components/ad-sense";
+import { InFeedAd, BannerAd, ResponsiveAd } from "@/components/ad-sense";
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<UserLocation>({ lat: null, lng: null });
@@ -302,32 +302,35 @@ export default function Home() {
         <BannerAd slot="1111222233" className="mb-6" />
       </div>
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
-          Launderettes Near You ({filteredAndSortedLaunderettes.length} {filteredAndSortedLaunderettes.length === 1 ? 'Result' : 'Results'})
-        </h2>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
+          {/* Main Content */}
+          <main>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
+              Launderettes Near You ({filteredAndSortedLaunderettes.length} {filteredAndSortedLaunderettes.length === 1 ? 'Result' : 'Results'})
+            </h2>
 
-        <FilterPanel
-          availableFeatures={availableFeatures}
-          filters={filters}
-          onFilterChange={setFilters}
-          onClearFilters={handleClearFilters}
-        />
+            <FilterPanel
+              availableFeatures={availableFeatures}
+              filters={filters}
+              onFilterChange={setFilters}
+              onClearFilters={handleClearFilters}
+            />
 
-        {/* View Toggle */}
-        <Tabs value={viewMode} onValueChange={(value) => setViewMode(value as "list" | "map")} className="mb-6">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
-            <TabsTrigger value="list" data-testid="tab-list-view">
-              <List className="w-4 h-4 mr-2" />
-              List View
-            </TabsTrigger>
-            <TabsTrigger value="map" data-testid="tab-map-view">
-              <Map className="w-4 h-4 mr-2" />
-              Map View
-            </TabsTrigger>
-          </TabsList>
+            {/* View Toggle */}
+            <Tabs value={viewMode} onValueChange={(value) => setViewMode(value as "list" | "map")} className="mb-6">
+              <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
+                <TabsTrigger value="list" data-testid="tab-list-view">
+                  <List className="w-4 h-4 mr-2" />
+                  List View
+                </TabsTrigger>
+                <TabsTrigger value="map" data-testid="tab-map-view">
+                  <Map className="w-4 h-4 mr-2" />
+                  Map View
+                </TabsTrigger>
+              </TabsList>
 
-          <TabsContent value="list" className="mt-6">
+              <TabsContent value="list" className="mt-6">
             {isLoading ? (
               <div className="flex items-center justify-center py-12">
                 <Loader2 className="w-8 h-8 animate-spin text-primary" />
@@ -357,28 +360,38 @@ export default function Home() {
                 ))}
               </div>
             )}
-          </TabsContent>
+              </TabsContent>
 
-          <TabsContent value="map" className="mt-6">
-            {isLoading ? (
-              <div className="flex items-center justify-center py-12">
-                <Loader2 className="w-8 h-8 animate-spin text-primary" />
-              </div>
-            ) : (
-              <div className="h-[600px]">
-                <MapView
-                  launderettes={filteredAndSortedLaunderettes}
-                  userLocation={
-                    isUsingGpsLocation && userLocation.lat && userLocation.lng
-                      ? { lat: userLocation.lat, lng: userLocation.lng }
-                      : null
-                  }
-                />
-              </div>
-            )}
-          </TabsContent>
-        </Tabs>
-      </main>
+              <TabsContent value="map" className="mt-6">
+                {isLoading ? (
+                  <div className="flex items-center justify-center py-12">
+                    <Loader2 className="w-8 h-8 animate-spin text-primary" />
+                  </div>
+                ) : (
+                  <div className="h-[600px]">
+                    <MapView
+                      launderettes={filteredAndSortedLaunderettes}
+                      userLocation={
+                        isUsingGpsLocation && userLocation.lat && userLocation.lng
+                          ? { lat: userLocation.lat, lng: userLocation.lng }
+                          : null
+                      }
+                    />
+                  </div>
+                )}
+              </TabsContent>
+            </Tabs>
+          </main>
+
+          {/* Sidebar - Desktop Only */}
+          <aside className="hidden lg:block">
+            <div className="sticky top-24 space-y-6">
+              <ResponsiveAd slot="3344556677" />
+              <ResponsiveAd slot="7788990011" />
+            </div>
+          </aside>
+        </div>
+      </div>
 
       <footer className="mt-12 border-t border-border py-6">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
