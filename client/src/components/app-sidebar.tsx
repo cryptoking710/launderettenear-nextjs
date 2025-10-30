@@ -10,7 +10,7 @@ import {
   SidebarMenuItem,
   SidebarHeader,
 } from "@/components/ui/sidebar";
-import { LayoutDashboard, MapPin, LogOut, BarChart3 } from "lucide-react";
+import { LayoutDashboard, MapPin, LogOut, BarChart3, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { signOut } from "firebase/auth";
 import { auth } from "@/lib/firebase";
@@ -26,6 +26,11 @@ const menuItems = [
     title: "Listings",
     url: "/admin/listings",
     icon: MapPin,
+  },
+  {
+    title: "Corrections",
+    url: "/admin/corrections",
+    icon: AlertCircle,
   },
   {
     title: "Analytics",
