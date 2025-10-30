@@ -95,7 +95,7 @@ export default function LaunderetteDetail() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-5xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-8">
         <Link href="/">
           <Button variant="ghost" className="mb-6" data-testid="button-back">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -103,7 +103,9 @@ export default function LaunderetteDetail() {
           </Button>
         </Link>
 
-        <div className="grid gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
+          {/* Main Content */}
+          <div className="space-y-8">
           {/* Main Info Card */}
           <Card className="p-8">
             <div className="flex justify-between items-start mb-4">
@@ -256,8 +258,8 @@ export default function LaunderetteDetail() {
             )}
           </Card>
 
-          {/* Ad Block */}
-          <ResponsiveAd slot="9876543210" className="my-6" />
+          {/* Ad Block - Above the fold */}
+          <ResponsiveAd slot="9876543210" />
 
           {/* Correction Form */}
           <div>
@@ -286,8 +288,8 @@ export default function LaunderetteDetail() {
             </Card>
           )}
 
-          {/* Ad Block */}
-          <ResponsiveAd slot="5544332211" className="my-6" />
+          {/* Ad Block - Before reviews (high engagement) */}
+          <ResponsiveAd slot="5544332211" />
 
           {/* Reviews Section */}
           <div className="space-y-6">
@@ -302,6 +304,15 @@ export default function LaunderetteDetail() {
               <ReviewList launderetteId={id!} />
             </div>
           </div>
+          </div>
+
+          {/* Sidebar - Desktop Only */}
+          <aside className="hidden lg:block">
+            <div className="sticky top-24 space-y-6">
+              <ResponsiveAd slot="2233445566" />
+              <ResponsiveAd slot="6677889900" />
+            </div>
+          </aside>
         </div>
       </div>
     </div>
