@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { firestoreBackend } from "./firestore-backend";
 import { requireAuth, AuthenticatedRequest } from "./middleware/auth";
-import { insertLaunderetteSchema, insertReviewSchema, insertAnalyticsEventSchema } from "@shared/schema";
+import { insertLaunderetteSchema, insertReviewSchema, insertAnalyticsEventSchema, insertCorrectionSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Public endpoint - Geocoding using free Nominatim service
@@ -258,6 +258,122 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error fetching analytics:", error);
       res.status(500).json({ error: "Failed to fetch analytics" });
+    }
+  });
+
+  // Correction endpoints
+  
+  // Submit a correction (public - anyone can submit)
+  app.post("/api/corrections", async (req, res) => {
+    try {
+      const validatedData = insertCorrectionSchema.parse(req.body);
+      
+      const docRef = await firestoreBackend.collection("corrections").add({
+        ...validatedData,
+        status: "pending",
+        createdAt: Date.now(),
+      });
+      
+      const doc = await docRef.get();
+      const correction = { id: doc.id, ...doc.data() };
+      
+      res.status(201).json(correction);
+    } catch (error: any) {
+      console.error("Error creating correction:", error);
+      if (error.name === "ZodError") {
+        return res.status(400).json({ error: "Invalid data", details: error.errors });
+      }
+      res.status(500).json({ error: "Failed to submit correction" });
+    }
+  });
+
+  // Get all corrections (admin only)
+  app.get("/api/corrections", requireAuth, async (req: AuthenticatedRequest, res) => {
+    try {
+      const snapshot = await firestoreBackend.collection("corrections").get();
+      const corrections = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      
+      res.json(corrections);
+    } catch (error) {
+      console.error("Error fetching corrections:", error);
+      res.status(500).json({ error: "Failed to fetch corrections" });
+    }
+  });
+
+  // Approve a correction (admin only)
+  app.put("/api/corrections/:id/approve", requireAuth, async (req: AuthenticatedRequest, res) => {
+    try {
+      const { id } = req.params;
+      
+      const docRef = firestoreBackend.collection("corrections").doc(id);
+      const doc = await docRef.get();
+      
+      if (!doc.exists) {
+        return res.status(404).json({ error: "Correction not found" });
+      }
+      
+      const correction = doc.data();
+      
+      // Update the correction status
+      await docRef.update({
+        status: "approved",
+        reviewedAt: Date.now(),
+        reviewedBy: req.user?.email || req.user?.uid,
+      });
+
+      // Apply the correction to the launderette
+      const launderetteRef = firestoreBackend.collection("launderettes").doc(correction?.launderetteId);
+      const launderetteDoc = await launderetteRef.get();
+      
+      if (launderetteDoc.exists) {
+        const updateData: any = {
+          updatedAt: Date.now(),
+        };
+        
+        // Apply the proposed value to the correct field
+        updateData[correction?.fieldName] = correction?.proposedValue;
+        
+        await launderetteRef.update(updateData);
+      }
+      
+      const updatedDoc = await docRef.get();
+      const updatedCorrection = { id: updatedDoc.id, ...updatedDoc.data() };
+      
+      res.json(updatedCorrection);
+    } catch (error) {
+      console.error("Error approving correction:", error);
+      res.status(500).json({ error: "Failed to approve correction" });
+    }
+  });
+
+  // Reject a correction (admin only)
+  app.put("/api/corrections/:id/reject", requireAuth, async (req: AuthenticatedRequest, res) => {
+    try {
+      const { id } = req.params;
+      
+      const docRef = firestoreBackend.collection("corrections").doc(id);
+      const doc = await docRef.get();
+      
+      if (!doc.exists) {
+        return res.status(404).json({ error: "Correction not found" });
+      }
+      
+      await docRef.update({
+        status: "rejected",
+        reviewedAt: Date.now(),
+        reviewedBy: req.user?.email || req.user?.uid,
+      });
+      
+      const updatedDoc = await docRef.get();
+      const updatedCorrection = { id: updatedDoc.id, ...updatedDoc.data() };
+      
+      res.json(updatedCorrection);
+    } catch (error) {
+      console.error("Error rejecting correction:", error);
+      res.status(500).json({ error: "Failed to reject correction" });
     }
   });
 

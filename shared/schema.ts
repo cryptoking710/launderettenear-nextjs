@@ -79,3 +79,32 @@ export const insertAnalyticsEventSchema = analyticsEventSchema.omit({
 
 export type AnalyticsEvent = z.infer<typeof analyticsEventSchema>;
 export type InsertAnalyticsEvent = z.infer<typeof insertAnalyticsEventSchema>;
+
+// Correction schema for user-submitted corrections
+export const correctionSchema = z.object({
+  id: z.string(),
+  launderetteId: z.string(),
+  launderetteName: z.string(),
+  submitterName: z.string().min(1, "Name is required"),
+  submitterEmail: z.string().email("Valid email is required"),
+  fieldName: z.string().min(1, "Field name is required"),
+  currentValue: z.string(),
+  proposedValue: z.string().min(1, "Proposed value is required"),
+  additionalNotes: z.string().optional(),
+  status: z.enum(["pending", "approved", "rejected"]).default("pending"),
+  createdAt: z.number(),
+  reviewedAt: z.number().optional(),
+  reviewedBy: z.string().optional(),
+});
+
+export const insertCorrectionSchema = correctionSchema.omit({ 
+  id: true, 
+  createdAt: true,
+  reviewedAt: true,
+  reviewedBy: true,
+}).extend({
+  status: z.enum(["pending", "approved", "rejected"]).default("pending").optional(),
+});
+
+export type Correction = z.infer<typeof correctionSchema>;
+export type InsertCorrection = z.infer<typeof insertCorrectionSchema>;
