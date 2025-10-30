@@ -299,7 +299,7 @@ export default function Home() {
 
       {/* Banner Ad - Above the fold */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <BannerAd slot="1111222233" className="mb-6" />
+        <BannerAd slot="9763433271" className="mb-6" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
@@ -354,7 +354,7 @@ export default function Home() {
                       distance={listing.distance}
                     />
                     {(index + 1) % 3 === 0 && index < filteredAndSortedLaunderettes.length - 1 && (
-                      <InFeedAd slot="1234567890" className="my-4" />
+                      <InFeedAd slot="6982191410" className="my-4" />
                     )}
                   </div>
                 ))}
@@ -386,8 +386,8 @@ export default function Home() {
           {/* Sidebar - Desktop Only */}
           <aside className="hidden lg:block">
             <div className="sticky top-24 space-y-6">
-              <ResponsiveAd slot="3344556677" />
-              <ResponsiveAd slot="7788990011" />
+              <ResponsiveAd slot="8977142822" />
+              <ResponsiveAd slot="6454921261" />
             </div>
           </aside>
         </div>

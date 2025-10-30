@@ -259,7 +259,7 @@ export default function LaunderetteDetail() {
           </Card>
 
           {/* Ad Block - Above the fold */}
-          <ResponsiveAd slot="9876543210" />
+          <ResponsiveAd slot="2411734474" />
 
           {/* Correction Form */}
           <div>
@@ -289,7 +289,7 @@ export default function LaunderetteDetail() {
           )}
 
           {/* Ad Block - Before reviews (high engagement) */}
-          <ResponsiveAd slot="5544332211" />
+          <ResponsiveAd slot="5991886839" />
 
           {/* Reviews Section */}
           <div className="space-y-6">
@@ -309,8 +309,8 @@ export default function LaunderetteDetail() {
           {/* Sidebar - Desktop Only */}
           <aside className="hidden lg:block">
             <div className="sticky top-24 space-y-6">
-              <ResponsiveAd slot="2233445566" />
-              <ResponsiveAd slot="6677889900" />
+              <ResponsiveAd slot="1240578443" />
+              <ResponsiveAd slot="3365723499" />
             </div>
           </aside>
         </div>
