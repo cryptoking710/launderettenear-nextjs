@@ -13,6 +13,7 @@ import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import heroImage from "@assets/generated_images/Modern_launderette_interior_scene_2912be0b.png";
+import { InFeedAd } from "@/components/ad-sense";
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<UserLocation>({ lat: null, lng: null });
@@ -338,12 +339,16 @@ export default function Home() {
               </div>
             ) : (
               <div className="grid grid-cols-1 gap-6">
-                {filteredAndSortedLaunderettes.map((listing) => (
-                  <ListingCard
-                    key={listing.id}
-                    listing={listing}
-                    distance={listing.distance}
-                  />
+                {filteredAndSortedLaunderettes.map((listing, index) => (
+                  <div key={listing.id}>
+                    <ListingCard
+                      listing={listing}
+                      distance={listing.distance}
+                    />
+                    {(index + 1) % 4 === 0 && index < filteredAndSortedLaunderettes.length - 1 && (
+                      <InFeedAd slot="1234567890" className="my-4" />
+                    )}
+                  </div>
                 ))}
               </div>
             )}

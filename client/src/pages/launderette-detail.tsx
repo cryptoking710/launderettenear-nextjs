@@ -11,6 +11,7 @@ import { ArrowLeft, MapPin, Phone, Mail, Globe, Clock, Zap, Loader2 } from "luci
 import { calculateDistance } from "@/lib/distance";
 import { trackView } from "@/lib/analytics";
 import { useState, useEffect } from "react";
+import { ResponsiveAd } from "@/components/ad-sense";
 
 export default function LaunderetteDetail() {
   const { id } = useParams();
@@ -255,6 +256,9 @@ export default function LaunderetteDetail() {
             )}
           </Card>
 
+          {/* Ad Block */}
+          <ResponsiveAd slot="9876543210" className="my-6" />
+
           {/* Correction Form */}
           <div>
             <CorrectionForm launderette={launderette} />
@@ -281,6 +285,9 @@ export default function LaunderetteDetail() {
               </div>
             </Card>
           )}
+
+          {/* Ad Block */}
+          <ResponsiveAd slot="5544332211" className="my-6" />
 
           {/* Reviews Section */}
           <div className="space-y-6">
