@@ -14,6 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import heroImage from "@assets/generated_images/Modern_launderette_interior_scene_2912be0b.png";
 import { InFeedAd, BannerAd, ResponsiveAd } from "@/components/ad-sense";
+import { WebsiteSchema } from "@/components/schema-markup";
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<UserLocation>({ lat: null, lng: null });
@@ -232,6 +233,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Schema.org Structured Data for SEO */}
+      <WebsiteSchema totalLaunderettes={launderettes.length} />
+      
       {/* Hero Section with Integrated Search */}
       <div 
         className="relative min-h-[500px] md:min-h-[600px] bg-cover bg-center"
@@ -245,10 +249,10 @@ export default function Home() {
         <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center py-16">
           <div className="max-w-4xl mx-auto w-full">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-4 font-heading">
-              LaunderetteNear.me
+              Launderette Near Me | UK Laundrette Directory
             </h1>
             <p className="text-xl md:text-2xl text-white/95 mb-8 font-medium">
-              Find Your Nearest Launderette in Seconds
+              Find Your Nearest Launderette in Seconds - 372+ UK Launderettes
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-white/90 text-sm md:text-base mb-12">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md" data-testid="text-total-launderettes">

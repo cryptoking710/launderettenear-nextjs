@@ -14,7 +14,7 @@ export function SchemaMarkup({ launderette, averageRating, reviewCount }: Schema
       "@type": "Laundromat",
       name: launderette.name,
       description: launderette.description || `Launderette in ${launderette.city} offering professional laundry services`,
-      image: launderette.photoUrl || launderette.photoUrls?.[0],
+      image: launderette.photoUrls?.[0],
       address: {
         "@type": "PostalAddress",
         streetAddress: launderette.address.split(',')[0],
