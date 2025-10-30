@@ -5,6 +5,7 @@ export const launderetteSchema = z.object({
   id: z.string(),
   name: z.string().min(1, "Name is required"),
   address: z.string().min(1, "Address is required"),
+  city: z.string().optional(),
   lat: z.number(),
   lng: z.number(),
   features: z.array(z.string()).default([]),

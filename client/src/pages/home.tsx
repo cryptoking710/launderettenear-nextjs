@@ -31,6 +31,18 @@ export default function Home() {
     queryKey: ["/api/launderettes"],
   });
 
+  // Debug logging
+  useEffect(() => {
+    if (launderettes.length > 0) {
+      const wisbechCount = launderettes.filter(l => l.city === 'Wisbech').length;
+      console.log(`📍 Total launderettes loaded: ${launderettes.length}`);
+      console.log(`📍 Wisbech launderettes: ${wisbechCount}`);
+      if (wisbechCount > 0) {
+        console.log(`📍 First Wisbech:`, launderettes.find(l => l.city === 'Wisbech'));
+      }
+    }
+  }, [launderettes]);
+
   // Get user's current location on mount
   useEffect(() => {
     if (navigator.geolocation) {
