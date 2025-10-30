@@ -12,6 +12,7 @@ import { calculateDistance } from "@/lib/distance";
 import { trackView } from "@/lib/analytics";
 import { useState, useEffect } from "react";
 import { ResponsiveAd } from "@/components/ad-sense";
+import { SchemaMarkup } from "@/components/schema-markup";
 
 export default function LaunderetteDetail() {
   const { id } = useParams();
@@ -57,12 +58,31 @@ export default function LaunderetteDetail() {
     }
   }, []);
 
-  // Track page view
+  // Track page view and update page title for SEO
   useEffect(() => {
     if (launderette) {
       trackView(launderette.id, launderette.name);
+      
+      // Update document title for SEO
+      const pageTitle = `${launderette.name} - Launderette in ${launderette.city} | LaunderetteNear.me`;
+      document.title = pageTitle;
+      
+      // Update meta description
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', 
+          `${launderette.name} in ${launderette.city}. ${launderette.features.slice(0, 3).join(', ')}. ` +
+          `${averageRating > 0 ? `${averageRating.toFixed(1)} star rating from ${reviews.length} reviews. ` : ''}` +
+          `Opening hours, contact details & directions.`
+        );
+      }
     }
-  }, [launderette]);
+    
+    return () => {
+      // Reset title when leaving page
+      document.title = "Launderette Near Me | Find 372+ UK Launderettes & Laundrettes | LaunderetteNear.me";
+    };
+  }, [launderette, averageRating, reviews.length]);
 
   if (isLoadingLaunderette) {
     return (
@@ -95,6 +115,13 @@ export default function LaunderetteDetail() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Schema.org Structured Data for Local Business SEO */}
+      <SchemaMarkup 
+        launderette={launderette} 
+        averageRating={averageRating} 
+        reviewCount={reviews.length} 
+      />
+      
       <div className="max-w-7xl mx-auto px-4 py-8">
         <Link href="/">
           <Button variant="ghost" className="mb-6" data-testid="button-back">
