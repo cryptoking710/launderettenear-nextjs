@@ -119,15 +119,6 @@ export function MapView({ launderettes, userLocation }: MapViewProps) {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {/* User location marker (outside cluster group) */}
-        {userLocation && (
-          <Marker position={[userLocation.lat, userLocation.lng]} icon={userIcon}>
-            <Popup>
-              <div className="text-sm font-semibold">Your Location</div>
-            </Popup>
-          </Marker>
-        )}
-
         {/* Clustered launderette markers */}
         <MarkerClusterGroup
           chunkedLoading
