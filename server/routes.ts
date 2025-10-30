@@ -268,10 +268,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertCorrectionSchema.parse(req.body);
       
+      // Force status to pending and strip any reviewer metadata for security
       const docRef = await firestoreBackend.collection("corrections").add({
         ...validatedData,
         status: "pending",
         createdAt: Date.now(),
+        // Explicitly ensure these are not set
+        reviewedAt: null,
+        reviewedBy: null,
       });
       
       const doc = await docRef.get();
@@ -317,6 +321,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       const correction = doc.data();
       
+      // Security: Only allow pending corrections to be approved
+      if (correction?.status !== "pending") {
+        return res.status(400).json({ error: "Only pending corrections can be approved" });
+      }
+      
+      // Validate the field name is an allowed launderette field
+      const allowedFields = ["name", "address", "phone", "email", "website"];
+      if (!allowedFields.includes(correction?.fieldName)) {
+        return res.status(400).json({ error: "Invalid field name for correction" });
+      }
+      
       // Update the correction status
       await docRef.update({
         status: "approved",
@@ -359,6 +374,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       if (!doc.exists) {
         return res.status(404).json({ error: "Correction not found" });
+      }
+      
+      const correction = doc.data();
+      
+      // Security: Only allow pending corrections to be rejected
+      if (correction?.status !== "pending") {
+        return res.status(400).json({ error: "Only pending corrections can be rejected" });
       }
       
       await docRef.update({

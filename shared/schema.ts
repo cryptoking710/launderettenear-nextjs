@@ -102,8 +102,7 @@ export const insertCorrectionSchema = correctionSchema.omit({
   createdAt: true,
   reviewedAt: true,
   reviewedBy: true,
-}).extend({
-  status: z.enum(["pending", "approved", "rejected"]).default("pending").optional(),
+  status: true,
 });
 
 export type Correction = z.infer<typeof correctionSchema>;
