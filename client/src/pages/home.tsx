@@ -18,6 +18,7 @@ export default function Home() {
   const [userLocation, setUserLocation] = useState<UserLocation>({ lat: null, lng: null });
   const [searchLocation, setSearchLocation] = useState<UserLocation>({ lat: null, lng: null });
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [isUsingGpsLocation, setIsUsingGpsLocation] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [filters, setFilters] = useState<FilterOptions>({
     selectedFeatures: [],
@@ -55,12 +56,14 @@ export default function Home() {
           };
           setUserLocation(coords);
           setSearchLocation(coords);
+          setIsUsingGpsLocation(true);
         },
         (error) => {
           console.warn("Geolocation failed:", error);
           const fallback = { lat: 54.0, lng: -2.0 };
           setUserLocation(fallback);
           setSearchLocation(fallback);
+          setIsUsingGpsLocation(false);
         }
       );
     }
@@ -69,6 +72,7 @@ export default function Home() {
   const handleSearch = async (query: string) => {
     setIsSearching(true);
     setSearchQuery(query);
+    setIsUsingGpsLocation(false); // Disable GPS marker when searching by text
     try {
       const response = await fetch(`/api/geocode?address=${encodeURIComponent(query)}`);
       if (!response.ok) throw new Error("Geocoding failed");
@@ -98,6 +102,7 @@ export default function Home() {
     if (userLocation.lat && userLocation.lng) {
       setSearchLocation(userLocation);
       setSearchQuery("");
+      setIsUsingGpsLocation(true); // Enable GPS marker when using actual location
       toast({
         title: "Using your location",
         description: "Showing nearest launderettes",
@@ -354,8 +359,8 @@ export default function Home() {
                 <MapView
                   launderettes={filteredAndSortedLaunderettes}
                   userLocation={
-                    searchLocation.lat && searchLocation.lng
-                      ? { lat: searchLocation.lat, lng: searchLocation.lng }
+                    isUsingGpsLocation && userLocation.lat && userLocation.lng
+                      ? { lat: userLocation.lat, lng: userLocation.lng }
                       : null
                   }
                 />
