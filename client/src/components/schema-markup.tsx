@@ -1,0 +1,128 @@
+import { Launderette } from "@shared/schema";
+import { useEffect } from "react";
+
+interface SchemaMarkupProps {
+  launderette: Launderette;
+  averageRating?: number;
+  reviewCount?: number;
+}
+
+export function SchemaMarkup({ launderette, averageRating, reviewCount }: SchemaMarkupProps) {
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Laundromat",
+      name: launderette.name,
+      description: launderette.description || `Launderette in ${launderette.city} offering professional laundry services`,
+      image: launderette.photoUrl || launderette.photoUrls?.[0],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: launderette.address.split(',')[0],
+        addressLocality: launderette.city,
+        addressCountry: "GB"
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: launderette.lat,
+        longitude: launderette.lng
+      },
+      telephone: launderette.phone,
+      email: launderette.email,
+      url: launderette.website || `https://launderettenear.me/launderette/${launderette.id}`,
+      priceRange: launderette.priceRange,
+      openingHoursSpecification: launderette.openingHours ? Object.entries(launderette.openingHours).map(([day, hours]) => ({
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: day.charAt(0).toUpperCase() + day.slice(1),
+        opens: hours.toLowerCase() !== 'closed' ? hours.split('-')[0]?.trim() : undefined,
+        closes: hours.toLowerCase() !== 'closed' ? hours.split('-')[1]?.trim() : undefined
+      })).filter(spec => spec.opens && spec.closes) : undefined,
+      aggregateRating: averageRating && reviewCount ? {
+        "@type": "AggregateRating",
+        ratingValue: averageRating.toFixed(1),
+        reviewCount: reviewCount,
+        bestRating: "5",
+        worstRating: "1"
+      } : undefined,
+      amenityFeature: launderette.features?.map(feature => ({
+        "@type": "LocationFeatureSpecification",
+        name: feature,
+        value: true
+      }))
+    };
+
+    const scriptId = `schema-${launderette.id}`;
+    let scriptTag = document.getElementById(scriptId) as HTMLScriptElement;
+    
+    if (!scriptTag) {
+      scriptTag = document.createElement('script');
+      scriptTag.id = scriptId;
+      scriptTag.type = 'application/ld+json';
+      document.head.appendChild(scriptTag);
+    }
+    
+    scriptTag.textContent = JSON.stringify(schema);
+
+    return () => {
+      const existingScript = document.getElementById(scriptId);
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, [launderette, averageRating, reviewCount]);
+
+  return null;
+}
+
+interface WebsiteSchemaProps {
+  totalLaunderettes: number;
+}
+
+export function WebsiteSchema({ totalLaunderettes }: WebsiteSchemaProps) {
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "LaunderetteNear.me",
+      alternateName: "Launderette Near Me",
+      url: "https://launderettenear.me",
+      description: `Find your nearest launderette in the UK. Search ${totalLaunderettes}+ launderettes across 35 UK cities with reviews, opening hours, and prices.`,
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: "https://launderettenear.me/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      inLanguage: "en-GB",
+      audience: {
+        "@type": "Audience",
+        geographicArea: {
+          "@type": "Country",
+          name: "United Kingdom"
+        }
+      }
+    };
+
+    const scriptId = 'website-schema';
+    let scriptTag = document.getElementById(scriptId) as HTMLScriptElement;
+    
+    if (!scriptTag) {
+      scriptTag = document.createElement('script');
+      scriptTag.id = scriptId;
+      scriptTag.type = 'application/ld+json';
+      document.head.appendChild(scriptTag);
+    }
+    
+    scriptTag.textContent = JSON.stringify(schema);
+
+    return () => {
+      const existingScript = document.getElementById(scriptId);
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, [totalLaunderettes]);
+
+  return null;
+}
