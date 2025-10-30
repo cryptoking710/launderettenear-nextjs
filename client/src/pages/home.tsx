@@ -17,6 +17,7 @@ import heroImage from "@assets/generated_images/Modern_launderette_interior_scen
 export default function Home() {
   const [userLocation, setUserLocation] = useState<UserLocation>({ lat: null, lng: null });
   const [searchLocation, setSearchLocation] = useState<UserLocation>({ lat: null, lng: null });
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [isSearching, setIsSearching] = useState(false);
   const [filters, setFilters] = useState<FilterOptions>({
     selectedFeatures: [],
@@ -67,6 +68,7 @@ export default function Home() {
 
   const handleSearch = async (query: string) => {
     setIsSearching(true);
+    setSearchQuery(query);
     try {
       const response = await fetch(`/api/geocode?address=${encodeURIComponent(query)}`);
       if (!response.ok) throw new Error("Geocoding failed");
@@ -95,6 +97,7 @@ export default function Home() {
   const handleUseLocation = () => {
     if (userLocation.lat && userLocation.lng) {
       setSearchLocation(userLocation);
+      setSearchQuery("");
       toast({
         title: "Using your location",
         description: "Showing nearest launderettes",
@@ -143,6 +146,18 @@ export default function Home() {
   // Apply filters and calculate distances
   const filteredAndSortedLaunderettes = launderettes
     .filter((l) => {
+      // Filter by search query (text match on name, address, or city)
+      if (searchQuery) {
+        const query = searchQuery.toLowerCase();
+        const matchesName = l.name?.toLowerCase().includes(query);
+        const matchesAddress = l.address?.toLowerCase().includes(query);
+        const matchesCity = l.city?.toLowerCase().includes(query);
+        
+        if (!matchesName && !matchesAddress && !matchesCity) {
+          return false;
+        }
+      }
+
       // Filter by selected features
       if (filters.selectedFeatures.length > 0) {
         const hasAllFeatures = filters.selectedFeatures.every((feature) =>
@@ -191,14 +206,15 @@ export default function Home() {
   useEffect(() => {
     if (launderettes.length > 0) {
       const wisbechFiltered = filteredAndSortedLaunderettes.filter(l => l.city === 'Wisbech');
-      console.log(`🔍 Filtered Wisbech results: ${wisbechFiltered.length} of ${filteredAndSortedLaunderettes.length} total`);
+      console.log(`🔍 Search query: "${searchQuery}"`);
+      console.log(`🔍 Filtered results: ${filteredAndSortedLaunderettes.length} total (Wisbech: ${wisbechFiltered.length})`);
       console.log(`🔍 Active filters:`, filters);
       console.log(`🔍 Search location:`, searchLocation);
       if (wisbechFiltered.length > 0) {
         console.log(`🔍 First filtered Wisbech with distance:`, wisbechFiltered[0]);
       }
     }
-  }, [filteredAndSortedLaunderettes, filters, searchLocation, launderettes.length]);
+  }, [filteredAndSortedLaunderettes, filters, searchLocation, searchQuery, launderettes.length]);
 
   const handleClearFilters = () => {
     setFilters({
