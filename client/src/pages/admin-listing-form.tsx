@@ -17,6 +17,7 @@ import { useLocation, useRoute } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
+import { CoordinatePicker } from "@/components/coordinate-picker";
 
 export default function AdminListingForm() {
   const [user, loading] = useAuthState(auth);
@@ -300,6 +301,15 @@ export default function AdminListingForm() {
                 )}
               />
             </div>
+
+            <CoordinatePicker
+              lat={form.watch("lat")}
+              lng={form.watch("lng")}
+              onCoordinatesChange={(lat, lng) => {
+                form.setValue("lat", lat);
+                form.setValue("lng", lng);
+              }}
+            />
 
             <FormItem>
               <FormLabel>Features</FormLabel>
