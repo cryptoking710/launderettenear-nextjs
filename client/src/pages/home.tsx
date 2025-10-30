@@ -13,7 +13,7 @@ import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import heroImage from "@assets/generated_images/Modern_launderette_interior_scene_2912be0b.png";
-import { InFeedAd } from "@/components/ad-sense";
+import { InFeedAd, BannerAd } from "@/components/ad-sense";
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<UserLocation>({ lat: null, lng: null });
@@ -297,7 +297,12 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {/* Banner Ad - Above the fold */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <BannerAd slot="1111222233" className="mb-6" />
+      </div>
+
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
           Launderettes Near You ({filteredAndSortedLaunderettes.length} {filteredAndSortedLaunderettes.length === 1 ? 'Result' : 'Results'})
         </h2>
