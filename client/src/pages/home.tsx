@@ -187,6 +187,19 @@ export default function Home() {
       return 0;
     });
 
+  // Debug filtered results
+  useEffect(() => {
+    if (launderettes.length > 0) {
+      const wisbechFiltered = filteredAndSortedLaunderettes.filter(l => l.city === 'Wisbech');
+      console.log(`🔍 Filtered Wisbech results: ${wisbechFiltered.length} of ${filteredAndSortedLaunderettes.length} total`);
+      console.log(`🔍 Active filters:`, filters);
+      console.log(`🔍 Search location:`, searchLocation);
+      if (wisbechFiltered.length > 0) {
+        console.log(`🔍 First filtered Wisbech with distance:`, wisbechFiltered[0]);
+      }
+    }
+  }, [filteredAndSortedLaunderettes, filters, searchLocation, launderettes.length]);
+
   const handleClearFilters = () => {
     setFilters({
       selectedFeatures: [],
