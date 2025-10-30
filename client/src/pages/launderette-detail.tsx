@@ -2,6 +2,7 @@ import { useParams, Link, useLocation } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { Launderette, Review } from "@shared/schema";
 import { ReviewList, ReviewForm, StarRating, calculateAverageRating } from "@/components/reviews";
+import { CorrectionForm } from "@/components/correction-form";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -253,6 +254,11 @@ export default function LaunderetteDetail() {
               </>
             )}
           </Card>
+
+          {/* Correction Form */}
+          <div>
+            <CorrectionForm launderette={launderette} />
+          </div>
 
           {/* Photos */}
           {launderette.photoUrls && launderette.photoUrls.length > 0 && (
