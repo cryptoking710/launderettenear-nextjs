@@ -14,7 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import heroImage from "@assets/generated_images/Modern_launderette_interior_scene_2912be0b.png";
 import { InFeedAd, BannerAd, ResponsiveAd } from "@/components/ad-sense";
-import { WebsiteSchema } from "@/components/schema-markup";
+import { WebsiteSchema, ItemListSchema } from "@/components/schema-markup";
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<UserLocation>({ lat: null, lng: null });
@@ -238,6 +238,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* Schema.org Structured Data for SEO */}
       <WebsiteSchema totalLaunderettes={launderettes.length} />
+      <ItemListSchema launderettes={filteredAndSortedLaunderettes} />
       
       {/* Hero Section with Integrated Search */}
       <div 

@@ -111,7 +111,7 @@ export function WebsiteSchema({ totalLaunderettes }: WebsiteSchemaProps) {
       name: "LaunderetteNear.me",
       alternateName: "Launderette Near Me",
       url: "https://launderettenear.me",
-      description: `Find your nearest launderette in the UK. Search ${totalLaunderettes}+ launderettes across 35 UK cities with reviews, opening hours, and prices.`,
+      description: `Find your nearest launderette in the UK. Search ${totalLaunderettes}+ launderettes across 59 UK cities with reviews, opening hours, and prices.`,
       potentialAction: {
         "@type": "SearchAction",
         target: {
@@ -149,6 +149,67 @@ export function WebsiteSchema({ totalLaunderettes }: WebsiteSchemaProps) {
       }
     };
   }, [totalLaunderettes]);
+
+  return null;
+}
+
+interface ItemListSchemaProps {
+  launderettes: Launderette[];
+}
+
+export function ItemListSchema({ launderettes }: ItemListSchemaProps) {
+  useEffect(() => {
+    const itemsToShow = launderettes.slice(0, 100);
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "UK Launderette Directory",
+      description: "Complete directory of launderettes across the United Kingdom",
+      numberOfItems: itemsToShow.length,
+      itemListElement: itemsToShow.map((launderette, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Laundromat",
+          "@id": `https://launderettenear.me/launderette/${launderette.id}`,
+          name: launderette.name,
+          description: launderette.description || `Launderette in ${launderette.city}`,
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: launderette.address.split(',')[0],
+            addressLocality: launderette.city,
+            addressCountry: "GB"
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: launderette.lat,
+            longitude: launderette.lng
+          },
+          url: launderette.website || `https://launderettenear.me/launderette/${launderette.id}`,
+          priceRange: launderette.priceRange
+        }
+      }))
+    };
+
+    const scriptId = 'itemlist-schema';
+    let scriptTag = document.getElementById(scriptId) as HTMLScriptElement;
+    
+    if (!scriptTag) {
+      scriptTag = document.createElement('script');
+      scriptTag.id = scriptId;
+      scriptTag.type = 'application/ld+json';
+      document.head.appendChild(scriptTag);
+    }
+    
+    scriptTag.textContent = JSON.stringify(schema);
+
+    return () => {
+      const existingScript = document.getElementById(scriptId);
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, [launderettes]);
 
   return null;
 }
