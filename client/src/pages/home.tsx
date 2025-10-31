@@ -75,15 +75,15 @@ export default function Home() {
   const handleSearch = async (query: string) => {
     setIsSearching(true);
     setSearchQuery(query);
-    setIsUsingGpsLocation(false); // Disable GPS marker when searching by text
+    setIsUsingGpsLocation(false);
     try {
       const response = await fetch(`/api/geocode?address=${encodeURIComponent(query)}`);
       if (!response.ok) throw new Error("Geocoding failed");
       
       const data = await response.json();
       setSearchLocation({ lat: data.lat, lng: data.lng });
+      setIsGeocodedSearch(true);
       
-      // Track search event
       trackSearch(query, data.lat, data.lng);
       
       toast({
@@ -91,6 +91,7 @@ export default function Home() {
         description: `Showing results near ${data.formattedAddress}`,
       });
     } catch (error) {
+      setIsGeocodedSearch(false);
       toast({
         title: "Search failed",
         description: "Could not find that location. Please try again.",
@@ -105,7 +106,8 @@ export default function Home() {
     if (userLocation.lat && userLocation.lng) {
       setSearchLocation(userLocation);
       setSearchQuery("");
-      setIsUsingGpsLocation(true); // Enable GPS marker when using actual location
+      setIsGeocodedSearch(false);
+      setIsUsingGpsLocation(true);
       toast({
         title: "Using your location",
         description: "Showing nearest launderettes",
