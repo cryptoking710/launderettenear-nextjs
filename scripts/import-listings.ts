@@ -140,7 +140,7 @@ async function main() {
   console.log(`   ❌ Errors: ${errorCount}`);
   console.log(`   📍 Total: ${listings.length}`);
   console.log(`\n🏙️  Cities added: Ipswich, Colchester, Chelmsford`);
-  console.log(`📈 Total listings now: ${402 + successCount}`);
+  console.log(`📈 Total listings now: ${432 + successCount}`);
   
   // Exit process
   process.exit(0);
