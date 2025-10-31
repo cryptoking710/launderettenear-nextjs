@@ -1,7 +1,7 @@
 # LaunderetteNear.me
 
 ## Overview
-LaunderetteNear.me is a comprehensive UK launderette directory service designed to help users find nearby launderettes using geolocation. It features a public-facing directory with advanced search capabilities, distance calculation, premium listings, and an administrative interface for managing launderette data. The project aims to provide a user-friendly experience for finding laundry services across the UK, offering detailed information and user reviews, while also providing robust tools for administrators to maintain the directory. The project currently covers 77 major UK cities with 792 launderette listings, including premium listings, and has ambitions for further expansion.
+LaunderetteNear.me is a comprehensive UK launderette directory service designed to help users find nearby launderettes using geolocation. It features a public-facing directory with advanced search capabilities, distance calculation, premium listings, and an administrative interface for managing launderette data. The project aims to provide a user-friendly experience for finding laundry services across the UK, offering detailed information and user reviews, while also providing robust tools for administrators to maintain the directory. The project currently covers 80 major UK cities with 822 launderette listings, including premium listings, and has ambitions for further expansion.
 
 ## User Preferences
 - **Design Style**: Hybrid approach inspired by Airbnb (card-based, clean) and Google Maps (functional search)
