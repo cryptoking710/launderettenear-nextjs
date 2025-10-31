@@ -259,7 +259,7 @@ export default function Home() {
               Launderette Near Me | UK Laundrette Directory
             </h1>
             <p className="text-xl md:text-2xl text-white/95 mb-8 font-medium">
-              Find Your Nearest Launderette in Seconds - 822+ UK Launderettes
+              Find Your Nearest Launderette in Seconds - 852+ UK Launderettes
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-white/90 text-sm md:text-base mb-12">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md" data-testid="text-total-launderettes">
