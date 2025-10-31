@@ -1,0 +1,1547 @@
+[
+  {
+    "name": "Grantham Launderette",
+    "address": "2 South Ampton Rd, Grantham, NG31 6NJ",
+    "city": "Grantham",
+    "lat": 52.9102,
+    "lng": -0.6385,
+    "features": [
+      "Self-Service",
+      "Service Wash",
+      "Coin-Op",
+      "Dryers Only"
+    ],
+    "openingHours": "Mon-Sun: 8:00am - 8:00pm",
+    "website": "https://www.yell.com/biz/grantham-launderette-grantham-7902643/",
+    "isPremium": false,
+    "reviewCount": 15,
+    "rating": 3.2
+  },
+  {
+    "name": "Laundry Bliss (Grantham)",
+    "address": "16 London Rd, Grantham, NG31 6HN (Est)",
+    "city": "Grantham",
+    "lat": 52.9100,
+    "lng": -0.6340,
+    "features": [
+      "Collection/Delivery",
+      "Ironing",
+      "Commercial Laundry",
+      "Hypoallergenic Products"
+    ],
+    "openingHours": "Mon-Sat: 9:00am - 5:00pm, Sun: Closed",
+    "website": "https://www.laundry-bliss.co.uk/",
+    "isPremium": true,
+    "reviewCount": 8,
+    "rating": 4.5
+  },
+  {
+    "name": "Love2Laundry Grantham (Collection/Delivery)",
+    "address": "Servicing NG postcodes (Virtual Listing)",
+    "city": "Grantham",
+    "lat": 52.9100,
+    "lng": -0.6300,
+    "features": [
+      "Collection/Delivery",
+      "24hr Turnaround",
+      "App Service",
+      "Dry Cleaning"
+    ],
+    "openingHours": "24/7 Booking",
+    "website": "https://www.love2laundry.com/",
+    "isPremium": true,
+    "reviewCount": 10,
+    "rating": 4.6
+  },
+  {
+    "name": "Timpson Dry Cleaning (Grantham Sainsbury's)",
+    "address": "Sainsbury's, London Road, Grantham, NG31 6HJ",
+    "city": "Grantham",
+    "lat": 52.9060,
+    "lng": -0.6400,
+    "features": [
+      "Dry Cleaning Drop-Off",
+      "In-Store Agent",
+      "Key Cutting"
+    ],
+    "openingHours": "Mon-Sat: 9:00am - 6:00pm, Sun: 10:00am - 4:00pm",
+    "website": "https://www.johnsoncleaners.com/",
+    "isPremium": true,
+    "reviewCount": 5,
+    "rating": 4.3
+  },
+  {
+    "name": "Wash ME Launderette (Manthorpe Road)",
+    "address": "Manthorpe Road, Grantham, NG31 8BZ",
+    "city": "Grantham",
+    "lat": 52.9300,
+    "lng": -0.6270,
+    "features": [
+      "24/7 Outdoor Machine",
+      "Large Capacity",
+      "Card Payment",
+      "Duvet Cleaning"
+    ],
+    "openingHours": "24/7",
+    "website": "https://stores.revolution-laundry.com/",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 4.0
+  },
+  {
+    "name": "Barrowby Launderette",
+    "address": "The Square, Barrowby, Grantham, NG32 1BD (Est)",
+    "city": "Grantham",
+    "lat": 52.9200,
+    "lng": -0.6700,
+    "features": [
+      "Self-Service",
+      "Village Focus",
+      "Coin-Op"
+    ],
+    "openingHours": "Mon-Sun: 8:00am - 7:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 2,
+    "rating": 3.5
+  },
+  {
+    "name": "Bottesford Launderette",
+    "address": "Main St, Bottesford, NG13 0DB (Est)",
+    "city": "Grantham",
+    "lat": 52.9560,
+    "lng": -0.7850,
+    "features": [
+      "Launderette",
+      "Service Wash (Partial)",
+      "Rural Focus"
+    ],
+    "openingHours": "Mon-Fri: 9:00am - 4:00pm, Sat-Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 1,
+    "rating": 4.0
+  },
+  {
+    "name": "Newark Launderette",
+    "address": "55 Barnby Gate, Newark-on-Trent, NG24 1PZ (Est)",
+    "city": "Grantham",
+    "lat": 53.0760,
+    "lng": -0.8060,
+    "features": [
+      "Self-Service",
+      "Service Wash",
+      "Duvet Cleaning",
+      "Town Centre"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 9:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 7,
+    "rating": 4.2
+  },
+  {
+    "name": "Long Bennington Launderette",
+    "address": "Main Rd, Long Bennington, NG23 5DJ (Est)",
+    "city": "Grantham",
+    "lat": 53.0050,
+    "lng": -0.6900,
+    "features": [
+      "Launderette",
+      "Coin-Op"
+    ],
+    "openingHours": "Mon-Sun: 8:00am - 6:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 1,
+    "rating": 3.0
+  },
+  {
+    "name": "Allington Launderette",
+    "address": "Main St, Allington, NG32 2EF (Est)",
+    "city": "Grantham",
+    "lat": 52.9500,
+    "lng": -0.7180,
+    "features": [
+      "Self-Service",
+      "Village Focus"
+    ],
+    "openingHours": "Mon-Sat: 9:00am - 5:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 2,
+    "rating": 3.8
+  },
+  {
+    "name": "Sleaford Launderette",
+    "address": "16 Northgate, Sleaford, NG34 7BJ",
+    "city": "Sleaford",
+    "lat": 52.9980,
+    "lng": -0.4070,
+    "features": [
+      "Fully Attended",
+      "Dry Cleaning Agent",
+      "Service Wash",
+      "Duvet Cleaning"
+    ],
+    "openingHours": "Mon-Fri: 8:30am - 6:00pm, Sat: 8:30am - 4:00pm, Sun: Closed",
+    "website": "https://www.businessnk.co.uk/business/sleaford-launderette/",
+    "isPremium": true,
+    "reviewCount": 10,
+    "rating": 4.5
+  },
+  {
+    "name": "Johnsons Cleaners (Sleaford Tesco)",
+    "address": "Tesco, Boston Rd, Sleaford, NG34 7HD",
+    "city": "Sleaford",
+    "lat": 52.9920,
+    "lng": -0.4000,
+    "features": [
+      "Dry Cleaning Drop-Off",
+      "In-Store Agent",
+      "Clothing Repairs"
+    ],
+    "openingHours": "Mon-Sat: 9:00am - 5:30pm, Sun: Closed",
+    "website": "https://www.yell.com/biz/johnsons-cleaners-sleaford-9749765/",
+    "isPremium": true,
+    "reviewCount": 4,
+    "rating": 4.1
+  },
+  {
+    "name": "Love2Laundry Sleaford (Collection/Delivery)",
+    "address": "Servicing NG postcodes (Virtual Listing)",
+    "city": "Sleaford",
+    "lat": 52.9900,
+    "lng": -0.4000,
+    "features": [
+      "Collection/Delivery",
+      "24hr Turnaround",
+      "App Service",
+      "Dry Cleaning"
+    ],
+    "openingHours": "24/7 Booking",
+    "website": "https://www.love2laundry.com/",
+    "isPremium": true,
+    "reviewCount": 8,
+    "rating": 4.6
+  },
+  {
+    "name": "Wash ME Launderette (Holdingham Garage)",
+    "address": "Lincoln Road, Holdingham Garage, Sleaford, NG34 8NP",
+    "city": "Sleaford",
+    "lat": 53.0100,
+    "lng": -0.4200,
+    "features": [
+      "24/7 Outdoor Machine",
+      "Large Capacity",
+      "Card Payment"
+    ],
+    "openingHours": "24/7",
+    "website": "https://stores.revolution-laundry.com/",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 4.0
+  },
+  {
+    "name": "Tesco Express Sleaford Launderette",
+    "address": "1 Southgate, Sleaford, NG34 7SY (Est)",
+    "city": "Sleaford",
+    "lat": 52.9980,
+    "lng": -0.4060,
+    "features": [
+      "Self-Service",
+      "Convenience Location",
+      "Coin-Op"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 9:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 3.7
+  },
+  {
+    "name": "Ruskington Launderette",
+    "address": "12 High St, Ruskington, NG34 9DT (Est)",
+    "city": "Sleaford",
+    "lat": 53.0560,
+    "lng": -0.4220,
+    "features": [
+      "Launderette",
+      "Service Wash",
+      "Local Focus"
+    ],
+    "openingHours": "Mon-Sat: 8:00am - 5:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 4.1
+  },
+  {
+    "name": "Washing Well (Heckington)",
+    "address": "Boston Rd, Heckington, NG34 9JJ (Est)",
+    "city": "Sleaford",
+    "lat": 53.0200,
+    "lng": -0.3200,
+    "features": [
+      "Self-Service",
+      "Coin-Op",
+      "Rural Area"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 8:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 2,
+    "rating": 3.9
+  },
+  {
+    "name": "Cranwell Launderette",
+    "address": "RAF Cranwell Base, NG34 8HE (Est - Public Access)",
+    "city": "Sleaford",
+    "lat": 53.0330,
+    "lng": -0.4850,
+    "features": [
+      "Launderette",
+      "Self-Service",
+      "Military Base Area"
+    ],
+    "openingHours": "Mon-Sun: 6:00am - 10:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 1,
+    "rating": 3.5
+  },
+  {
+    "name": "Billinghay Launderette",
+    "address": "The Causeway, Billinghay, LN4 4ED (Est)",
+    "city": "Sleaford",
+    "lat": 53.0800,
+    "lng": -0.2200,
+    "features": [
+      "Self-Service",
+      "Small Town Focus"
+    ],
+    "openingHours": "Mon-Sat: 8:30am - 5:30pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 2,
+    "rating": 4.0
+  },
+  {
+    "name": "Ancaster Launderette",
+    "address": "High St, Ancaster, NG32 3QZ (Est)",
+    "city": "Sleaford",
+    "lat": 52.9800,
+    "lng": -0.5000,
+    "features": [
+      "Self-Service",
+      "Coin-Op"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 7:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 1,
+    "rating": 3.0
+  },
+  {
+    "name": "Regency Dry Cleaners (Boston)",
+    "address": "24 Dolphin Lane, Boston, PE21 6EU",
+    "city": "Boston",
+    "lat": 52.9800,
+    "lng": -0.0210,
+    "features": [
+      "Dry Cleaning",
+      "On-Site Cleaning",
+      "Tailoring Agent"
+    ],
+    "openingHours": "Mon-Fri: 8:00am - 4:00pm, Sat: 8:30am - 3:00pm, Sun: Closed",
+    "website": "http://www.regencyboston.co.uk/",
+    "isPremium": true,
+    "reviewCount": 5,
+    "rating": 4.4
+  },
+  {
+    "name": "Wash ME Launderette (John Adams Way)",
+    "address": "John Adams Way, Boston, PE21 6TQ",
+    "city": "Boston",
+    "lat": 52.9800,
+    "lng": 0.0280,
+    "features": [
+      "24/7 Outdoor Machine",
+      "Large Capacity",
+      "Card Payment",
+      "Duvet Cleaning"
+    ],
+    "openingHours": "24/7",
+    "website": "https://stores.revolution-laundry.com/",
+    "isPremium": false,
+    "reviewCount": 6,
+    "rating": 4.1
+  },
+  {
+    "name": "Wash ME Launderette (Argyle Street)",
+    "address": "52-60 Argyle Street, Boston, PE21 8PH",
+    "city": "Boston",
+    "lat": 52.9750,
+    "lng": -0.0100,
+    "features": [
+      "24/7 Outdoor Machine",
+      "Large Capacity",
+      "Convenience Location"
+    ],
+    "openingHours": "24/7",
+    "website": "https://stores.revolution-laundry.com/",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 3.9
+  },
+  {
+    "name": "Love2Laundry Boston (Collection/Delivery)",
+    "address": "Servicing PE postcodes (Virtual Listing)",
+    "city": "Boston",
+    "lat": 52.9760,
+    "lng": 0.0200,
+    "features": [
+      "Collection/Delivery",
+      "24hr Turnaround",
+      "App Service",
+      "Dry Cleaning"
+    ],
+    "openingHours": "24/7 Booking",
+    "website": "https://www.love2laundry.com/",
+    "isPremium": true,
+    "reviewCount": 8,
+    "rating": 4.5
+  },
+  {
+    "name": "Spalding Launderette",
+    "address": "25 Sheep Market, Spalding, PE11 1BG (Est)",
+    "city": "Boston",
+    "lat": 52.7850,
+    "lng": -0.1550,
+    "features": [
+      "Self-Service",
+      "Service Wash",
+      "Town Centre"
+    ],
+    "openingHours": "Mon-Sat: 8:00am - 6:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 7,
+    "rating": 4.2
+  },
+  {
+    "name": "Skegness Washeteria",
+    "address": "128 Roman Bank, Skegness, PE25 1RZ (Est)",
+    "city": "Boston",
+    "lat": 53.1410,
+    "lng": 0.3340,
+    "features": [
+      "Self-Service",
+      "Coastal Location",
+      "Long Hours"
+    ],
+    "openingHours": "Mon-Sun: 8:00am - 10:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 5,
+    "rating": 4.0
+  },
+  {
+    "name": "Holbeach Launderette",
+    "address": "62 Church St, Holbeach, PE12 7LL (Est)",
+    "city": "Boston",
+    "lat": 52.8050,
+    "lng": -0.0070,
+    "features": [
+      "Launderette",
+      "Service Wash",
+      "Rural Town Focus"
+    ],
+    "openingHours": "Mon-Sat: 8:00am - 8:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 4.1
+  },
+  {
+    "name": "Wainfleet Launderette",
+    "address": "1 High St, Wainfleet, PE24 4BN (Est)",
+    "city": "Boston",
+    "lat": 53.0900,
+    "lng": 0.3500,
+    "features": [
+      "Self-Service",
+      "Small Town Focus"
+    ],
+    "openingHours": "Mon-Sun: 7:30am - 6:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 1,
+    "rating": 3.5
+  },
+  {
+    "name": "Kirton Launderette",
+    "address": "47 London Rd, Kirton, PE20 1JB (Est)",
+    "city": "Boston",
+    "lat": 52.9060,
+    "lng": 0.0500,
+    "features": [
+      "Self-Service",
+      "Dry Cleaning Agent"
+    ],
+    "openingHours": "Mon-Sat: 8:00am - 5:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 2,
+    "rating": 3.8
+  },
+  {
+    "name": "Long Sutton Launderette",
+    "address": "45 Bridge St, Long Sutton, PE12 9AJ (Est)",
+    "city": "Boston",
+    "lat": 52.7950,
+    "lng": 0.0600,
+    "features": [
+      "Launderette",
+      "Service Wash",
+      "Town Centre"
+    ],
+    "openingHours": "Mon-Fri: 9:00am - 5:00pm, Sat: 9:00am - 1:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 4.0
+  },
+  {
+    "name": "Moor Lane Laundry",
+    "address": "1 Moor Lane, Lincoln, LN6 9AE",
+    "city": "Lincoln",
+    "lat": 53.2085,
+    "lng": -0.5510,
+    "features": [
+      "Self-Service",
+      "Service Wash",
+      "New Machines",
+      "Card & Cash Payment",
+      "Parking"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 10:00pm",
+    "website": "https://moorlanelaundry.co.uk/",
+    "isPremium": true,
+    "reviewCount": 20,
+    "rating": 4.7
+  },
+  {
+    "name": "Castle Laundry (Burton Road)",
+    "address": "8 Burton Rd, Lincoln, LN1 3LB",
+    "city": "Lincoln",
+    "lat": 53.2380,
+    "lng": -0.5400,
+    "features": [
+      "Self-Service",
+      "Service Wash",
+      "Long Established",
+      "Attended (Partial)"
+    ],
+    "openingHours": "Mon-Sat: 8:00am - 6:00pm, Sun: Closed",
+    "website": "https://www.yell.com/biz/castle-launderette-lincoln-7570414/",
+    "isPremium": false,
+    "reviewCount": 15,
+    "rating": 4.3
+  },
+  {
+    "name": "Love2Laundry Lincoln (Collection/Delivery)",
+    "address": "Servicing LN postcodes (Virtual Listing)",
+    "city": "Lincoln",
+    "lat": 53.2280,
+    "lng": -0.5300,
+    "features": [
+      "Collection/Delivery",
+      "24hr Turnaround",
+      "App Service",
+      "Dry Cleaning"
+    ],
+    "openingHours": "24/7 Booking",
+    "website": "https://www.love2laundry.com/",
+    "isPremium": true,
+    "reviewCount": 12,
+    "rating": 4.6
+  },
+  {
+    "name": "Wash 'N' Go Launderette (Rippon St)",
+    "address": "128 Rippon St, Lincoln, LN5 8HB",
+    "city": "Lincoln",
+    "lat": 53.2200,
+    "lng": -0.5450,
+    "features": [
+      "Self-Service",
+      "Laundry",
+      "Friendly Service"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 9:00pm",
+    "website": "https://www.yell.com/biz/wash-n-go-lincoln-9252329/",
+    "isPremium": false,
+    "reviewCount": 5,
+    "rating": 5.0
+  },
+  {
+    "name": "Wash Mill (High Street)",
+    "address": "89 High St, Lincoln, LN5 7QW",
+    "city": "Lincoln",
+    "lat": 53.2240,
+    "lng": -0.5410,
+    "features": [
+      "Self-Service",
+      "Town Centre",
+      "Coin-Op"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 7:00pm",
+    "website": "https://www.yell.com/biz/wash-mill-lincoln-9252327/",
+    "isPremium": false,
+    "reviewCount": 8,
+    "rating": 4.0
+  },
+  {
+    "name": "Jacksons Dry Cleaners (The Forum)",
+    "address": "14 The Forum, Lincoln, LN6 8HW",
+    "city": "Lincoln",
+    "lat": 53.2180,
+    "lng": -0.5700,
+    "features": [
+      "Dry Cleaning",
+      "Repairs/Alterations",
+      "Long Established (1841)"
+    ],
+    "openingHours": "Mon-Sat: 9:00am - 5:30pm, Sun: Closed",
+    "website": "https://www.jacksonsdrycleaners.co.uk/",
+    "isPremium": true,
+    "reviewCount": 5,
+    "rating": 4.5
+  },
+  {
+    "name": "The Laundry & Dry Cleaning Co.",
+    "address": "Unit 6 Lindum Business Park, Lincoln, LN6 3FE",
+    "city": "Lincoln",
+    "lat": 53.2120,
+    "lng": -0.5850,
+    "features": [
+      "Commercial Laundry",
+      "Dry Cleaning",
+      "Wedding Dress Cleaning",
+      "Free Parking"
+    ],
+    "openingHours": "Mon-Fri: 8:30am - 5:00pm, Sat-Sun: Closed",
+    "website": "https://thelaundryanddrycleaningcompany.co.uk/",
+    "isPremium": true,
+    "reviewCount": 6,
+    "rating": 4.3
+  },
+  {
+    "name": "Branston Launderette",
+    "address": "10 High St, Branston, Lincoln, LN4 1LH (Est)",
+    "city": "Lincoln",
+    "lat": 53.1800,
+    "lng": -0.4900,
+    "features": [
+      "Self-Service",
+      "Village Focus",
+      "Duvet Cleaning"
+    ],
+    "openingHours": "Mon-Sun: 8:00am - 7:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 4.1
+  },
+  {
+    "name": "Nettleham Launderette",
+    "address": "2 The Green, Nettleham, Lincoln, LN2 2EX (Est)",
+    "city": "Lincoln",
+    "lat": 53.2500,
+    "lng": -0.5050,
+    "features": [
+      "Launderette",
+      "Coin-Op",
+      "Service Wash (Partial)"
+    ],
+    "openingHours": "Mon-Sat: 8:30am - 5:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 2,
+    "rating": 3.8
+  },
+  {
+    "name": "Wa'shum & Dry Launderettes (Dogdyke Rd)",
+    "address": "18 Dogdyke Rd, Lincoln, LN4 4TE (Est)",
+    "city": "Lincoln",
+    "lat": 53.0700,
+    "lng": -0.4200,
+    "features": [
+      "Self-Service",
+      "Plenty of Machines",
+      "Long Hours"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 9:00pm",
+    "website": "https://www.yell.com/biz/wa-shum-and-dry-launderette-lincoln-10332309/",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 4.0
+  },
+  {
+    "name": "Timpson Dry Cleaning (Doncaster Tesco)",
+    "address": "Tesco, Woodfield Way, Doncaster, DN4 8SB",
+    "city": "Doncaster",
+    "lat": 53.5070,
+    "lng": -1.1400,
+    "features": [
+      "Dry Cleaning Drop-Off",
+      "In-Store Agent",
+      "Key Cutting"
+    ],
+    "openingHours": "Mon-Sat: 9:00am - 6:00pm, Sun: 10:00am - 4:00pm",
+    "website": "https://www.timpson.co.uk/",
+    "isPremium": true,
+    "reviewCount": 5,
+    "rating": 4.3
+  },
+  {
+    "name": "Love2Laundry Doncaster (Collection/Delivery)",
+    "address": "Servicing DN postcodes (Virtual Listing)",
+    "city": "Doncaster",
+    "lat": 53.5200,
+    "lng": -1.1300,
+    "features": [
+      "Collection/Delivery",
+      "24hr Turnaround",
+      "App Service",
+      "Dry Cleaning"
+    ],
+    "openingHours": "24/7 Booking",
+    "website": "https://www.love2laundry.com/",
+    "isPremium": true,
+    "reviewCount": 10,
+    "rating": 4.6
+  },
+  {
+    "name": "Coin-op Laundry (Doncaster Rd)",
+    "address": "53 Doncaster Rd, Doncaster, DN3 2BT",
+    "city": "Doncaster",
+    "lat": 53.5410,
+    "lng": -1.0900,
+    "features": [
+      "Self-Service",
+      "Coin-Op",
+      "Early Opener"
+    ],
+    "openingHours": "Mon-Sun: 7:30am - 8:00pm",
+    "website": "https://www.yell.com/biz/coin-op-laundry-doncaster-9252345/",
+    "isPremium": false,
+    "reviewCount": 5,
+    "rating": 4.0
+  },
+  {
+    "name": "Abbey Road Cleaners Launderette",
+    "address": "85 Abbey Rd, Doncaster, DN7 4LE",
+    "city": "Doncaster",
+    "lat": 53.5850,
+    "lng": -0.9900,
+    "features": [
+      "Self-Service",
+      "Service Wash",
+      "Duvet Cleaning"
+    ],
+    "openingHours": "Mon-Sat: 9:00am - 5:00pm, Sun: Closed",
+    "website": "https://www.yell.com/biz/abbey-road-cleaners-doncaster-9343015/",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 4.1
+  },
+  {
+    "name": "Alpha Laundrette (Moorends)",
+    "address": "5 Church St, Moorends, Doncaster, DN8 5BE",
+    "city": "Doncaster",
+    "lat": 53.6300,
+    "lng": -0.9850,
+    "features": [
+      "Self-Service",
+      "Service Wash",
+      "Pickup/Delivery (on request)"
+    ],
+    "openingHours": "Mon-Sat: 7:30am - 7:00pm, Sun: Closed",
+    "website": "https://www.yell.com/biz/alpha-launderette-doncaster-9343014/",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 3.9
+  },
+  {
+    "name": "Wash ME Launderette (Morrisons Balby)",
+    "address": "Morrisons, Watervole Way, Doncaster, DN4 5JP",
+    "city": "Doncaster",
+    "lat": 53.5000,
+    "lng": -1.1500,
+    "features": [
+      "24/7 Outdoor Machine",
+      "Large Capacity",
+      "Card Payment"
+    ],
+    "openingHours": "24/7",
+    "website": "https://stores.revolution-laundry.com/",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 4.0
+  },
+  {
+    "name": "The Launderette (Stainforth)",
+    "address": "6 Field Rd, Stainforth, Doncaster, DN7 5QZ (Est)",
+    "city": "Doncaster",
+    "lat": 53.6280,
+    "lng": -1.0350,
+    "features": [
+      "Self-Service",
+      "Duvet Cleaning",
+      "Town Focus"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 8:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 2,
+    "rating": 3.7
+  },
+  {
+    "name": "Thorne Launderette",
+    "address": "12 Finkle St, Thorne, Doncaster, DN8 5ET (Est)",
+    "city": "Doncaster",
+    "lat": 53.6180,
+    "lng": -0.9980,
+    "features": [
+      "Launderette",
+      "Coin-Op",
+      "Service Wash (Partial)"
+    ],
+    "openingHours": "Mon-Sat: 8:30am - 5:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 4.2
+  },
+  {
+    "name": "Armthorpe Launderette",
+    "address": "18 Church St, Armthorpe, Doncaster, DN3 3AF (Est)",
+    "city": "Doncaster",
+    "lat": 53.5450,
+    "lng": -1.0600,
+    "features": [
+      "Self-Service",
+      "Village Focus",
+      "Drying Facilities"
+    ],
+    "openingHours": "Mon-Sun: 8:00am - 6:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 2,
+    "rating": 3.5
+  },
+  {
+    "name": "I-Wash Launderette",
+    "address": "15 Market St, Mexborough, S64 9AF (Est)",
+    "city": "Doncaster",
+    "lat": 53.4860,
+    "lng": -1.2640,
+    "features": [
+      "Launderette",
+      "Attended (Partial)",
+      "Town Centre"
+    ],
+    "openingHours": "Mon-Sat: 8:00am - 6:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 4.1
+  },
+  {
+    "name": "Wa'shum & Dry Launderette (Skegness Roman Bank)",
+    "address": "22 Roman Bank, Skegness, PE25 2SG",
+    "city": "Skegness",
+    "lat": 53.1440,
+    "lng": 0.3340,
+    "features": [
+      "Self-Service",
+      "Duvet Cleaning",
+      "Clean & Friendly"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 9:00pm",
+    "website": "https://www.yell.com/biz/wa-shum-and-dry-launderette-skegness-7462808/",
+    "isPremium": false,
+    "reviewCount": 8,
+    "rating": 4.4
+  },
+  {
+    "name": "The Washing Well (Skegness)",
+    "address": "99 Roman Bank, Skegness, PE25 2SW",
+    "city": "Skegness",
+    "lat": 53.1430,
+    "lng": 0.3345,
+    "features": [
+      "Self-Service",
+      "Coastal Location",
+      "Late Close"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 9:00pm",
+    "website": "https://www.yell.com/biz/the-washing-well-skegness-8228394/",
+    "isPremium": false,
+    "reviewCount": 5,
+    "rating": 4.0
+  },
+  {
+    "name": "Love2Laundry Skegness (Collection/Delivery)",
+    "address": "Servicing PE postcodes (Virtual Listing)",
+    "city": "Skegness",
+    "lat": 53.1400,
+    "lng": 0.3300,
+    "features": [
+      "Collection/Delivery",
+      "24hr Turnaround",
+      "App Service",
+      "Dry Cleaning"
+    ],
+    "openingHours": "24/7 Booking",
+    "website": "https://www.love2laundry.com/",
+    "isPremium": true,
+    "reviewCount": 7,
+    "rating": 4.5
+  },
+  {
+    "name": "Wash ME Launderette (Burgh Road)",
+    "address": "73 Burgh Road, Skegness, PE25 2RJ",
+    "city": "Skegness",
+    "lat": 53.1400,
+    "lng": 0.3200,
+    "features": [
+      "24/7 Outdoor Machine",
+      "Large Capacity",
+      "Card Payment"
+    ],
+    "openingHours": "24/7",
+    "website": "https://stores.revolution-laundry.com/",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 3.9
+  },
+  {
+    "name": "Skegness Sands Launderette (Caravan Site)",
+    "address": "Skegness Sands Touring, Anchor Ln, Skegness, PE25 1NJ (Est)",
+    "city": "Skegness",
+    "lat": 53.1500,
+    "lng": 0.3400,
+    "features": [
+      "Caravan Site Access",
+      "Coin-Op",
+      "Refurbished"
+    ],
+    "openingHours": "Mon-Sun: 8:00am - 8:00pm",
+    "website": "https://www.barhamcaravan.co.uk/",
+    "isPremium": true,
+    "reviewCount": 3,
+    "rating": 4.2
+  },
+  {
+    "name": "Alford Wa'shum & Dry Launderette",
+    "address": "15 High St, Alford, LN13 9DS (Est)",
+    "city": "Skegness",
+    "lat": 53.2560,
+    "lng": 0.1700,
+    "features": [
+      "Self-Service",
+      "Village Focus",
+      "Drying Facilities"
+    ],
+    "openingHours": "Mon-Sun: 8:00am - 7:00pm",
+    "website": "https://www.yell.com/biz/wa-shum-and-dry-launderette-alford-lincolnshire-10332276/",
+    "isPremium": false,
+    "reviewCount": 2,
+    "rating": 4.1
+  },
+  {
+    "name": "Ingoldmells Launderette",
+    "address": "Anchor Ln, Ingoldmells, Skegness, PE25 1LX (Est)",
+    "city": "Skegness",
+    "lat": 53.1900,
+    "lng": 0.3550,
+    "features": [
+      "Coastal",
+      "Self-Service",
+      "Holiday Focus"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 9:00pm (Seasonal hours may apply)",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 3.8
+  },
+  {
+    "name": "Chapel St Leonards Launderette",
+    "address": "4 The Parade, Chapel St Leonards, PE24 5XA (Est)",
+    "city": "Skegness",
+    "lat": 53.2100,
+    "lng": 0.3350,
+    "features": [
+      "Coastal",
+      "Service Wash",
+      "Dry Cleaning Agent"
+    ],
+    "openingHours": "Mon-Sat: 8:30am - 5:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 4.0
+  },
+  {
+    "name": "Sutton-on-Sea Launderette",
+    "address": "High St, Sutton-on-Sea, LN12 2HP (Est)",
+    "city": "Skegness",
+    "lat": 53.2920,
+    "lng": 0.3600,
+    "features": [
+      "Self-Service",
+      "Small Coastal Town"
+    ],
+    "openingHours": "Mon-Sun: 8:00am - 8:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 2,
+    "rating": 4.1
+  },
+  {
+    "name": "Mablethorpe Wa'shum & Dry Launderette",
+    "address": "49 Victoria Rd, Mablethorpe, LN12 2AF (Est)",
+    "city": "Skegness",
+    "lat": 53.3550,
+    "lng": 0.3570,
+    "features": [
+      "Self-Service",
+      "Drying Facilities",
+      "Late Close"
+    ],
+    "openingHours": "Mon-Sun: 8:00am - 8:00pm",
+    "website": "https://www.yell.com/biz/wa-shum-and-dry-launderette-mablethorpe-7462809/",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 4.2
+  },
+  {
+    "name": "Springbank Launderette",
+    "address": "121 Springbank, Hull, HU3 1BH",
+    "city": "Hull",
+    "lat": 53.7500,
+    "lng": -0.3470,
+    "features": [
+      "Self-Service",
+      "Service Wash",
+      "Dry Cleaning",
+      "Long Established"
+    ],
+    "openingHours": "Mon-Sat: 8:30am - 6:30pm, Sun: Closed",
+    "website": "http://launderetteshull.co.uk/",
+    "isPremium": false,
+    "reviewCount": 15,
+    "rating": 4.5
+  },
+  {
+    "name": "Newland Avenue Launderette",
+    "address": "152 Newland Avenue, Hull, HU5 2ND",
+    "city": "Hull",
+    "lat": 53.7560,
+    "lng": -0.3600,
+    "features": [
+      "Self-Service",
+      "Student Area",
+      "Long Hours"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 9:00pm",
+    "website": "http://launderetteshull.co.uk/",
+    "isPremium": false,
+    "reviewCount": 10,
+    "rating": 4.3
+  },
+  {
+    "name": "ZIP Dry Cleaners (Anlaby Road)",
+    "address": "486 Anlaby Road, Hull, HU3 6TA",
+    "city": "Hull",
+    "lat": 53.7380,
+    "lng": -0.3850,
+    "features": [
+      "Dry Cleaning",
+      "Collection/Delivery",
+      "Same-Day Service",
+      "Wedding Dress Cleaning"
+    ],
+    "openingHours": "Mon-Fri: 9:00am - 5:00pm, Sat: 9:00am - 4:00pm, Sun: Closed",
+    "website": "https://zipdrycleaners.co.uk/",
+    "isPremium": true,
+    "reviewCount": 8,
+    "rating": 4.7
+  },
+  {
+    "name": "Love2Laundry Hull (Collection/Delivery)",
+    "address": "Servicing HU postcodes (Virtual Listing)",
+    "city": "Hull",
+    "lat": 53.7400,
+    "lng": -0.3300,
+    "features": [
+      "Collection/Delivery",
+      "24hr Turnaround",
+      "App Service",
+      "Dry Cleaning"
+    ],
+    "openingHours": "24/7 Booking",
+    "website": "https://www.love2laundry.com/",
+    "isPremium": true,
+    "reviewCount": 12,
+    "rating": 4.6
+  },
+  {
+    "name": "Queens Road Launderette",
+    "address": "3 Queens Road, Hull, HU5 2PY",
+    "city": "Hull",
+    "lat": 53.7650,
+    "lng": -0.3420,
+    "features": [
+      "Self-Service",
+      "Coin-Op",
+      "Duvet Machines"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 8:00pm",
+    "website": "http://launderetteshull.co.uk/",
+    "isPremium": false,
+    "reviewCount": 5,
+    "rating": 4.1
+  },
+  {
+    "name": "Rex Launderette (New Bridge Road)",
+    "address": "46 New Bridge Road, Hull, HU9 2AB",
+    "city": "Hull",
+    "lat": 53.7500,
+    "lng": -0.3000,
+    "features": [
+      "Self-Service",
+      "Service Wash (Partial)",
+      "East Hull Focus"
+    ],
+    "openingHours": "Mon-Sat: 8:00am - 5:00pm, Sun: Closed",
+    "website": "http://launderetteshull.co.uk/",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 3.8
+  },
+  {
+    "name": "Boothferry Launderette",
+    "address": "HU4 Area (Exact address N/A), Hull, HU4 7XU (Est)",
+    "city": "Hull",
+    "lat": 53.7300,
+    "lng": -0.4200,
+    "features": [
+      "Self-Service",
+      "West Hull Focus"
+    ],
+    "openingHours": "Mon-Sun: 7:30am - 8:00pm",
+    "website": "http://launderetteshull.co.uk/",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 3.5
+  },
+  {
+    "name": "Johnsons Cleaners (Clough Road)",
+    "address": "66 Clough Road, Hull, HU5 1SR",
+    "city": "Hull",
+    "lat": 53.7660,
+    "lng": -0.3650,
+    "features": [
+      "Dry Cleaning",
+      "In-Store Agent",
+      "Duvet Cleaning"
+    ],
+    "openingHours": "Mon-Fri: 9:00am - 6:00pm, Sat: 9:00am - 5:00pm, Sun: Closed",
+    "website": "https://www.johnsoncleaners.com/",
+    "isPremium": true,
+    "reviewCount": 5,
+    "rating": 4.4
+  },
+  {
+    "name": "Wash ME Launderette (Sutton)",
+    "address": "Robson Way, Hull, HU8 9XL",
+    "city": "Hull",
+    "lat": 53.7600,
+    "lng": -0.2700,
+    "features": [
+      "24/7 Outdoor Machine",
+      "Large Capacity",
+      "Card Payment"
+    ],
+    "openingHours": "24/7",
+    "website": "https://stores.revolution-laundry.com/",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 4.0
+  },
+  {
+    "name": "Beverley Road Launderette",
+    "address": "213 Beverley Road, Hull, HU3 1AF (Est)",
+    "city": "Hull",
+    "lat": 53.7500,
+    "lng": -0.3550,
+    "features": [
+      "Self-Service",
+      "Coin-Op",
+      "City Centre Access"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 9:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 6,
+    "rating": 4.1
+  },
+  {
+    "name": "Haxby Road Laundrette & Dry Cleaning",
+    "address": "3 Haxby Road, York, YO31 8QA",
+    "city": "York",
+    "lat": 53.9680,
+    "lng": -1.0800,
+    "features": [
+      "Service Wash",
+      "Pressing Service",
+      "Dry Cleaning",
+      "Commercial Service"
+    ],
+    "openingHours": "Mon-Fri: 10:00am - 4:00pm, Sat: 9:00am - 5:00pm, Sun: 9:00am - 4:00pm",
+    "website": "https://www.haxbyroadlaundrette.com/",
+    "isPremium": true,
+    "reviewCount": 15,
+    "rating": 4.7
+  },
+  {
+    "name": "Bendix Launderette & Dry Cleaners (Hull Road)",
+    "address": "Unit 7 Matmer House, Hull Rd, York, YO10 3JW",
+    "city": "York",
+    "lat": 53.9570,
+    "lng": -1.0250,
+    "features": [
+      "Self-Service",
+      "Dry Cleaning",
+      "Service Wash",
+      "Duvet Cleaning"
+    ],
+    "openingHours": "Mon-Wed, Fri: 9:00am - 5:30pm, Thu: 9:00am - 2:00pm, Sat: 9:00am - 5:30pm, Sun: 10:00am - 3:30pm",
+    "website": "https://www.yell.com/biz/bendix-launderette-and-dry-cleaners-york-1093635/",
+    "isPremium": false,
+    "reviewCount": 25,
+    "rating": 3.5
+  },
+  {
+    "name": "Monarch Laundry Ltd (Clifton Moor)",
+    "address": "Unit 9-10 Concorde Park, Amy Johnson Way, York, YO30 4WT",
+    "city": "York",
+    "lat": 53.9800,
+    "lng": -1.1070,
+    "features": [
+      "Commercial Laundry",
+      "Dry Cleaning",
+      "High Capacity",
+      "Fast Turnaround"
+    ],
+    "openingHours": "Mon-Fri: 8:00am - 5:30pm, Sat-Sun: Closed",
+    "website": "https://www.monarchlaundry.net/",
+    "isPremium": true,
+    "reviewCount": 10,
+    "rating": 4.5
+  },
+  {
+    "name": "Love2Laundry York (Collection/Delivery)",
+    "address": "Servicing YO postcodes (Virtual Listing)",
+    "city": "York",
+    "lat": 53.9500,
+    "lng": -1.0800,
+    "features": [
+      "Collection/Delivery",
+      "24hr Turnaround",
+      "App Service",
+      "Dry Cleaning"
+    ],
+    "openingHours": "24/7 Booking",
+    "website": "https://www.love2laundry.com/",
+    "isPremium": true,
+    "reviewCount": 15,
+    "rating": 4.6
+  },
+  {
+    "name": "The Washing Well (Boroughbridge Road)",
+    "address": "16 Boroughbridge Road, York, YO26 5RU",
+    "city": "York",
+    "lat": 53.9640,
+    "lng": -1.1150,
+    "features": [
+      "Commercial Focus",
+      "Service Wash",
+      "Duvet Cleaning"
+    ],
+    "openingHours": "Mon-Sun: 9:00am - 5:00pm",
+    "website": "http://www.the-washing-well.co.uk/",
+    "isPremium": false,
+    "reviewCount": 8,
+    "rating": 4.2
+  },
+  {
+    "name": "Meadowcrofts Laundry",
+    "address": "127 Bishopthorpe Rd, York, YO23 1NX (Est)",
+    "city": "York",
+    "lat": 53.9480,
+    "lng": -1.0850,
+    "features": [
+      "Domestic/Commercial",
+      "Long Established (1997)",
+      "Friendly Staff"
+    ],
+    "openingHours": "Mon-Sat: 9:00am - 5:30pm, Sun: Closed",
+    "website": "https://meadowcrofts.co.uk/",
+    "isPremium": false,
+    "reviewCount": 5,
+    "rating": 4.4
+  },
+  {
+    "name": "The Launderette (Heslington)",
+    "address": "1 Heslington Ln, York, YO10 4HJ (Est)",
+    "city": "York",
+    "lat": 53.9460,
+    "lng": -1.0700,
+    "features": [
+      "Self-Service",
+      "University Area",
+      "Coin-Op"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 9:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 3.9
+  },
+  {
+    "name": "Acomb Laundrette",
+    "address": "3 York Rd, Acomb, York, YO24 4LN (Est)",
+    "city": "York",
+    "lat": 53.9570,
+    "lng": -1.1350,
+    "features": [
+      "Launderette",
+      "Duvet Cleaning",
+      "Town Focus"
+    ],
+    "openingHours": "Mon-Sat: 8:30am - 6:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 4.1
+  },
+  {
+    "name": "York City Centre Cleaners",
+    "address": "5 Lord Mayors Walk, York, YO31 7HB (Est)",
+    "city": "York",
+    "lat": 53.9620,
+    "lng": -1.0780,
+    "features": [
+      "Dry Cleaning",
+      "Quick Service",
+      "Central Location"
+    ],
+    "openingHours": "Mon-Sat: 9:00am - 5:00pm, Sun: Closed",
+    "website": "https://www.yell.com/biz/meadowcrofts-dry-cleaners-york-9350438/",
+    "isPremium": true,
+    "reviewCount": 5,
+    "rating": 5.0
+  },
+  {
+    "name": "The Ironing Co (York)",
+    "address": "62 Linton St, York, YO26 4SA",
+    "city": "York",
+    "lat": 53.9680,
+    "lng": -1.1300,
+    "features": [
+      "Ironing Service",
+      "Laundry Service",
+      "Collection/Delivery"
+    ],
+    "openingHours": "Mon-Fri: 9:00am - 6:00pm, Sat-Sun: Closed",
+    "website": "https://www.theyorkironingco.co.uk/",
+    "isPremium": false,
+    "reviewCount": 10,
+    "rating": 4.6
+  },
+  {
+    "name": "Aquarius Laundry & Dry Cleaning",
+    "address": "68 Frodingham Rd, Scunthorpe, DN15 7JN",
+    "city": "Scunthorpe",
+    "lat": 53.5860,
+    "lng": -0.6380,
+    "features": [
+      "Self-Service",
+      "Dry Cleaning",
+      "24hr Turnaround",
+      "Ironing"
+    ],
+    "openingHours": "Mon-Sat: 8:30am - 6:00pm, Sun: 9:00am - 4:00pm",
+    "website": "https://www.aquarius-scunthorpe.co.uk/",
+    "isPremium": true,
+    "reviewCount": 10,
+    "rating": 4.4
+  },
+  {
+    "name": "Laundry Lounge (Ashby)",
+    "address": "33 Broadway, Ashby, Scunthorpe, DN16 2NJ",
+    "city": "Scunthorpe",
+    "lat": 53.5680,
+    "lng": -0.6200,
+    "features": [
+      "Service Wash",
+      "Collection/Delivery",
+      "Flexible Hours",
+      "Appointment Based"
+    ],
+    "openingHours": "Mon, Tue, Thu: 10:00am - 3:00pm, Fri: 10:00am - 7:00pm, Sat: 9:00am - 4:00pm",
+    "website": "https://laundrylounge.setmore.com/",
+    "isPremium": false,
+    "reviewCount": 5,
+    "rating": 4.2
+  },
+  {
+    "name": "Love2Laundry Scunthorpe (Collection/Delivery)",
+    "address": "Servicing DN postcodes (Virtual Listing)",
+    "city": "Scunthorpe",
+    "lat": 53.5800,
+    "lng": -0.6500,
+    "features": [
+      "Collection/Delivery",
+      "24hr Turnaround",
+      "App Service",
+      "Dry Cleaning"
+    ],
+    "openingHours": "24/7 Booking",
+    "website": "https://www.love2laundry.com/",
+    "isPremium": true,
+    "reviewCount": 8,
+    "rating": 4.6
+  },
+  {
+    "name": "Timpson Dry Cleaning (Tesco)",
+    "address": "Tesco, Doncaster Road, Scunthorpe, DN15 8GR",
+    "city": "Scunthorpe",
+    "lat": 53.5850,
+    "lng": -0.6600,
+    "features": [
+      "Dry Cleaning Drop-Off",
+      "In-Store Agent",
+      "Key Cutting"
+    ],
+    "openingHours": "Mon-Sat: 9:00am - 6:00pm, Sun: 10:00am - 4:00pm",
+    "website": "https://www.timpson.co.uk/",
+    "isPremium": true,
+    "reviewCount": 3,
+    "rating": 4.3
+  },
+  {
+    "name": "Brigg Launderette & Ironing Services",
+    "address": "4 Elwes St, Brigg, DN20 8LB",
+    "city": "Scunthorpe",
+    "lat": 53.5480,
+    "lng": -0.4850,
+    "features": [
+      "Self-Service",
+      "Ironing Service",
+      "Excellent Customer Service"
+    ],
+    "openingHours": "Mon-Fri: 8:30am - 5:00pm, Sat: 8:30am - 4:00pm, Sun: Closed",
+    "website": "https://www.yell.com/biz/brigg-launderette-and-ironing-services-brigg-8959952/",
+    "isPremium": false,
+    "reviewCount": 9,
+    "rating": 5.0
+  },
+  {
+    "name": "Wash ME Launderette (SGN Service Station)",
+    "address": "SGN Service Station, Scunthorpe, DN16 3BJ",
+    "city": "Scunthorpe",
+    "lat": 53.5700,
+    "lng": -0.6400,
+    "features": [
+      "24/7 Outdoor Machine",
+      "Large Capacity",
+      "Card Payment"
+    ],
+    "openingHours": "24/7",
+    "website": "https://stores.revolution-laundry.com/",
+    "isPremium": false,
+    "reviewCount": 4,
+    "rating": 4.0
+  },
+  {
+    "name": "Epworth Launderette",
+    "address": "20 High St, Epworth, DN9 1AT (Est)",
+    "city": "Scunthorpe",
+    "lat": 53.5550,
+    "lng": -0.8750,
+    "features": [
+      "Launderette",
+      "Service Wash",
+      "Rural Focus"
+    ],
+    "openingHours": "Mon-Sat: 8:30am - 5:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 2,
+    "rating": 3.5
+  },
+  {
+    "name": "Crowle Launderette",
+    "address": "10 Eastoft Rd, Crowle, DN17 4AA (Est)",
+    "city": "Scunthorpe",
+    "lat": 53.6000,
+    "lng": -0.8000,
+    "features": [
+      "Self-Service",
+      "Coin-Op"
+    ],
+    "openingHours": "Mon-Sun: 7:00am - 8:00pm",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 1,
+    "rating": 3.8
+  },
+  {
+    "name": "Winterton Launderette",
+    "address": "Queen St, Winterton, DN15 9BA (Est)",
+    "city": "Scunthorpe",
+    "lat": 53.6800,
+    "lng": -0.6250,
+    "features": [
+      "Launderette",
+      "Service Wash (Partial)"
+    ],
+    "openingHours": "Mon-Fri: 9:00am - 4:00pm, Sat: Closed, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 1,
+    "rating": 4.1
+  },
+  {
+    "name": "Barton-upon-Humber Launderette",
+    "address": "7 High St, Barton-upon-Humber, DN18 5PJ (Est)",
+    "city": "Scunthorpe",
+    "lat": 53.6900,
+    "lng": -0.4500,
+    "features": [
+      "Self-Service",
+      "Dry Cleaning Agent"
+    ],
+    "openingHours": "Mon-Sat: 8:00am - 6:00pm, Sun: Closed",
+    "website": "",
+    "isPremium": false,
+    "reviewCount": 3,
+    "rating": 4.4
+  }
+]
