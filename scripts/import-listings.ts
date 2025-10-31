@@ -86,7 +86,7 @@ function parseOpeningHours(hoursStr: string): Record<string, string> {
 }
 
 async function main() {
-  const filePath = path.join(process.cwd(), 'attached_assets/Pasted--name-Thetford-Launderette-Icknield-Way-address-39-Icknield-Way-Thetfor-1761910420365_1761910420366.txt');
+  const filePath = path.join(process.cwd(), 'scripts/new-listings.json');
   const rawData = fs.readFileSync(filePath, 'utf-8');
   const listings = JSON.parse(rawData);
   
@@ -139,8 +139,8 @@ async function main() {
   console.log(`   ✅ Success: ${successCount}`);
   console.log(`   ❌ Errors: ${errorCount}`);
   console.log(`   📍 Total: ${listings.length}`);
-  console.log(`\n🏙️  Cities added: Thetford, Great Yarmouth, Ely`);
-  console.log(`📈 Total listings now: ${372 + successCount}`);
+  console.log(`\n🏙️  Cities added: Ipswich, Colchester, Chelmsford`);
+  console.log(`📈 Total listings now: ${402 + successCount}`);
   
   // Exit process
   process.exit(0);
