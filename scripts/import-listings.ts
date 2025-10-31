@@ -1,5 +1,17 @@
 import fs from 'fs';
 import path from 'path';
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
+// Initialize Firebase using client SDK (same as backend)
+const firebaseConfig = {
+  apiKey: process.env.VITE_FIREBASE_API_KEY,
+  projectId: process.env.VITE_FIREBASE_PROJECT_ID,
+  appId: process.env.VITE_FIREBASE_APP_ID,
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 // Parse opening hours from compact format to day-by-day format
 function parseOpeningHours(hoursStr: string): Record<string, string> {
@@ -79,6 +91,8 @@ async function main() {
   const listings = JSON.parse(rawData);
   
   console.log(`Found ${listings.length} listings to import`);
+  console.log(`Cities: ${[...new Set(listings.map((l: any) => l.city))].join(', ')}`);
+  console.log('');
   
   let successCount = 0;
   let errorCount = 0;
@@ -102,30 +116,18 @@ async function main() {
         description: `Launderette in ${listing.city}${listing.isPremium ? ' - Premium Listing' : ''}`,
         photoUrls: [],
         rating: listing.rating || 0,
-        reviewCount: listing.reviewCount || 0
+        reviewCount: listing.reviewCount || 0,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
       };
       
-      // Post to API
-      const response = await fetch('http://localhost:5000/api/launderettes', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(launderette)
-      });
-      
-      if (response.ok) {
-        const result = await response.json();
-        console.log(`✅ Added: ${listing.name} (ID: ${result.id})`);
-        successCount++;
-      } else {
-        const error = await response.text();
-        console.error(`❌ Failed to add ${listing.name}: ${error}`);
-        errorCount++;
-      }
+      // Add to Firestore
+      const docRef = await addDoc(collection(db, 'launderettes'), launderette);
+      console.log(`✅ Added: ${listing.name} (${listing.city}) - ID: ${docRef.id}`);
+      successCount++;
       
       // Small delay to avoid overwhelming the server
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise(resolve => setTimeout(resolve, 50));
       
     } catch (error) {
       console.error(`❌ Error adding ${listing.name}:`, error);
@@ -137,6 +139,14 @@ async function main() {
   console.log(`   ✅ Success: ${successCount}`);
   console.log(`   ❌ Errors: ${errorCount}`);
   console.log(`   📍 Total: ${listings.length}`);
+  console.log(`\n🏙️  Cities added: Thetford, Great Yarmouth, Ely`);
+  console.log(`📈 Total listings now: ${372 + successCount}`);
+  
+  // Exit process
+  process.exit(0);
 }
 
-main().catch(console.error);
+main().catch((error) => {
+  console.error('Fatal error:', error);
+  process.exit(1);
+});
