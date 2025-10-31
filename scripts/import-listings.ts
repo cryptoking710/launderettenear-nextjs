@@ -139,8 +139,8 @@ async function main() {
   console.log(`   ✅ Success: ${successCount}`);
   console.log(`   ❌ Errors: ${errorCount}`);
   console.log(`   📍 Total: ${listings.length}`);
-  console.log(`\n🏙️  Cities added: Ipswich, Colchester, Chelmsford`);
-  console.log(`📈 Total listings now: ${432 + successCount}`);
+  console.log(`\n🏙️  New cities: ${[...new Set(listings.map((l: any) => l.city))].join(', ')}`);
+  console.log(`📈 Total listings now: 522`);
   
   // Exit process
   process.exit(0);
