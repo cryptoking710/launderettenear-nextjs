@@ -156,8 +156,8 @@ export default function Home() {
   // Apply filters and calculate distances
   const filteredAndSortedLaunderettes = launderettes
     .filter((l) => {
-      // Filter by search query (text match on name or city only)
-      if (searchQuery) {
+      // Filter by search query - only apply text matching if NOT a geocoded search
+      if (searchQuery && !isGeocodedSearch) {
         const query = searchQuery.toLowerCase();
         const matchesName = l.name?.toLowerCase().includes(query);
         const matchesCity = l.city?.toLowerCase().includes(query);
