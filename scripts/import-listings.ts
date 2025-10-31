@@ -86,7 +86,9 @@ function parseOpeningHours(hoursStr: string): Record<string, string> {
 }
 
 async function main() {
-  const filePath = path.join(process.cwd(), 'scripts/new-listings.json');
+  // Get file path from command line args or use default
+  const inputFile = process.argv[2] || 'scripts/new-listings.json';
+  const filePath = path.join(process.cwd(), inputFile);
   const rawData = fs.readFileSync(filePath, 'utf-8');
   const listings = JSON.parse(rawData);
   
@@ -140,7 +142,7 @@ async function main() {
   console.log(`   ❌ Errors: ${errorCount}`);
   console.log(`   📍 Total: ${listings.length}`);
   console.log(`\n🏙️  New cities: ${[...new Set(listings.map((l: any) => l.city))].join(', ')}`);
-  console.log(`📈 Total listings now: 522`);
+  console.log(`📈 Successfully imported ${successCount} new listings`);
   
   // Exit process
   process.exit(0);
