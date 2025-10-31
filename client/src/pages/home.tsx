@@ -20,6 +20,7 @@ export default function Home() {
   const [userLocation, setUserLocation] = useState<UserLocation>({ lat: null, lng: null });
   const [searchLocation, setSearchLocation] = useState<UserLocation>({ lat: null, lng: null });
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [isGeocodedSearch, setIsGeocodedSearch] = useState(false);
   const [isUsingGpsLocation, setIsUsingGpsLocation] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [filters, setFilters] = useState<FilterOptions>({
