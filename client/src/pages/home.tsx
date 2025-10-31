@@ -246,7 +246,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
         
         {/* Hero Content */}
-        <div className="relative h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center py-16">
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center py-16">
           <div className="max-w-4xl mx-auto w-full">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-4 font-heading">
               Launderette Near Me | UK Laundrette Directory
@@ -268,7 +268,7 @@ export default function Home() {
             </div>
             
             {/* Search Bar in Hero */}
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-2xl mx-auto relative z-20">
               <SearchBar 
                 onSearch={handleSearch}
                 isLoading={isSearching}
