@@ -354,6 +354,43 @@
   }
 }
 
+/* Leaflet Map Fixes for Mobile */
+.leaflet-container {
+  font-family: var(--font-sans);
+  z-index: 1;
+}
+
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.leaflet-marker-pane {
+  z-index: 600 !important;
+}
+
+.leaflet-shadow-pane {
+  z-index: 500 !important;
+}
+
+.leaflet-popup-pane {
+  z-index: 700 !important;
+}
+
+.leaflet-tile-pane {
+  z-index: 200 !important;
+}
+
 /* Custom Map Marker Styles */
 .custom-marker-regular,
 .custom-marker-premium,
@@ -362,6 +399,16 @@
   border: none !important;
   transition: transform 0.2s ease;
   cursor: pointer;
+  z-index: 600 !important;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+}
+
+.custom-marker-regular > div,
+.custom-marker-premium > div,
+.custom-marker-user > div {
+  pointer-events: auto !important;
+  display: block !important;
 }
 
 .custom-marker-regular:hover,
@@ -376,8 +423,27 @@
   border: none !important;
   transition: transform 0.2s ease;
   cursor: pointer;
+  z-index: 600 !important;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
 }
 
 .custom-cluster-icon:hover {
   transform: scale(1.05);
+}
+
+/* Fix for mobile touch targets */
+@media (max-width: 768px) {
+  .leaflet-marker-icon {
+    touch-action: manipulation !important;
+    pointer-events: auto !important;
+  }
+  
+  .custom-marker-regular,
+  .custom-marker-premium,
+  .custom-marker-user,
+  .custom-cluster-icon {
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
 }
