@@ -101,9 +101,10 @@ export function SchemaMarkup({ launderette, averageRating, reviewCount }: Schema
 
 interface WebsiteSchemaProps {
   totalLaunderettes: number;
+  totalCities: number;
 }
 
-export function WebsiteSchema({ totalLaunderettes }: WebsiteSchemaProps) {
+export function WebsiteSchema({ totalLaunderettes, totalCities }: WebsiteSchemaProps) {
   useEffect(() => {
     const schema = {
       "@context": "https://schema.org",
@@ -111,7 +112,7 @@ export function WebsiteSchema({ totalLaunderettes }: WebsiteSchemaProps) {
       name: "LaunderetteNear.me",
       alternateName: "Launderette Near Me",
       url: "https://launderettenear.me",
-      description: `Find your nearest launderette in the UK. Search ${totalLaunderettes}+ launderettes across 59 UK cities with reviews, opening hours, and prices.`,
+      description: `Find your nearest launderette in the UK. Search ${totalLaunderettes}+ launderettes across ${totalCities} UK cities with reviews, opening hours, and prices.`,
       potentialAction: {
         "@type": "SearchAction",
         target: {
@@ -148,7 +149,7 @@ export function WebsiteSchema({ totalLaunderettes }: WebsiteSchemaProps) {
         existingScript.remove();
       }
     };
-  }, [totalLaunderettes]);
+  }, [totalLaunderettes, totalCities]);
 
   return null;
 }
