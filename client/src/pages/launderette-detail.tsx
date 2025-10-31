@@ -83,12 +83,12 @@ export default function LaunderetteDetail() {
     
     return () => {
       // Reset title and meta description when leaving page
-      document.title = "Launderette Near Me | Find 402+ UK Launderettes & Laundrettes | LaunderetteNear.me";
+      document.title = "Launderette Near Me | Find 432+ UK Launderettes & Laundrettes | LaunderetteNear.me";
       
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute('content', 
-          "Find your nearest launderette in seconds. Search 402+ launderettes across 38 UK cities. Service wash, 24 hour, self-service & more. Real reviews, opening hours & prices."
+          "Find your nearest launderette in seconds. Search 432+ launderettes across 41 UK cities. Service wash, 24 hour, self-service & more. Real reviews, opening hours & prices."
         );
       }
     };

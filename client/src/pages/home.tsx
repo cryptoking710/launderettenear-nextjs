@@ -252,7 +252,7 @@ export default function Home() {
               Launderette Near Me | UK Laundrette Directory
             </h1>
             <p className="text-xl md:text-2xl text-white/95 mb-8 font-medium">
-              Find Your Nearest Launderette in Seconds - 402+ UK Launderettes
+              Find Your Nearest Launderette in Seconds - 432+ UK Launderettes
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 text-white/90 text-sm md:text-base mb-12">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md" data-testid="text-total-launderettes">
@@ -260,7 +260,7 @@ export default function Home() {
                 <span className="font-semibold">{launderettes.length} Launderettes</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md" data-testid="text-total-cities">
-                <span className="font-semibold">38 UK Cities</span>
+                <span className="font-semibold">41 UK Cities</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md" data-testid="text-total-nations">
                 <span className="font-semibold">All 4 Nations</span>
