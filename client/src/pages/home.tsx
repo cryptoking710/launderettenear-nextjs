@@ -265,9 +265,11 @@ export default function Home() {
                 <MapPin className="w-5 h-5" />
                 <span className="font-semibold">{launderettes.length} Launderettes</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md" data-testid="text-total-cities">
-                <span className="font-semibold">{uniqueCities} UK Cities</span>
-              </div>
+              <Link href="/cities">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md cursor-pointer hover-elevate active-elevate-2 transition-all" data-testid="link-total-cities">
+                  <span className="font-semibold">{uniqueCities} UK Cities</span>
+                </div>
+              </Link>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md" data-testid="text-total-nations">
                 <span className="font-semibold">Full UK Coverage</span>
               </div>
