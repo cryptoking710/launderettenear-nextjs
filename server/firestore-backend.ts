@@ -3,7 +3,7 @@
 // For production, use Firebase Admin SDK with service account credentials
 
 import { initializeApp, getApps, FirebaseApp } from "firebase/app";
-import { getFirestore, Firestore, collection, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc } from "firebase/firestore";
+import { getFirestore, Firestore, collection, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc, query, where, limit, WhereFilterOp } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.VITE_FIREBASE_API_KEY,
@@ -29,20 +29,48 @@ export { db };
 // Helper functions that match Firebase Admin API surface
 export const firestoreBackend = {
   collection(collectionName: string) {
-    return {
+    const collectionRef = collection(db, collectionName);
+    let queryConstraints: any[] = [];
+    
+    const queryBuilder = {
+      where(field: string, operator: WhereFilterOp, value: any) {
+        queryConstraints.push(where(field, operator, value));
+        return queryBuilder;
+      },
+      
+      limit(count: number) {
+        queryConstraints.push(limit(count));
+        return queryBuilder;
+      },
+      
       async get() {
-        const snapshot = await getDocs(collection(db, collectionName));
+        const q = queryConstraints.length > 0 ? query(collectionRef, ...queryConstraints) : collectionRef;
+        const snapshot = await getDocs(q);
         return {
           docs: snapshot.docs.map(doc => ({
             id: doc.id,
             data: () => doc.data(),
-            exists: doc.exists()
-          }))
+            exists: doc.exists(),
+            ref: {
+              update: async (data: any) => {
+                await updateDoc(doc.ref, data);
+              },
+              get: async () => {
+                const docSnap = await getDoc(doc.ref);
+                return {
+                  id: doc.id,
+                  data: () => docSnap.data(),
+                  exists: docSnap.exists()
+                };
+              }
+            }
+          })),
+          empty: snapshot.empty
         };
       },
       
       async add(data: any) {
-        const docRef = await addDoc(collection(db, collectionName), data);
+        const docRef = await addDoc(collectionRef, data);
         return {
           id: docRef.id,
           get: async () => {
@@ -79,5 +107,7 @@ export const firestoreBackend = {
         };
       }
     };
+    
+    return queryBuilder;
   }
 };

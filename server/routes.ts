@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { firestoreBackend } from "./firestore-backend";
 import { requireAuth, AuthenticatedRequest } from "./middleware/auth";
-import { insertLaunderetteSchema, insertReviewSchema, insertAnalyticsEventSchema, insertCorrectionSchema } from "@shared/schema";
+import { insertLaunderetteSchema, insertReviewSchema, insertAnalyticsEventSchema, insertCorrectionSchema, insertCityFaqSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Public endpoint - Geocoding using free Nominatim service
@@ -396,6 +396,77 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error rejecting correction:", error);
       res.status(500).json({ error: "Failed to reject correction" });
+    }
+  });
+
+  // FAQ endpoints
+
+  // Public endpoint - Get FAQs for a specific city
+  app.get("/api/faqs/:cityName", async (req, res) => {
+    try {
+      const { cityName } = req.params;
+      
+      const snapshot = await firestoreBackend
+        .collection("faqs")
+        .where("cityName", "==", cityName)
+        .limit(1)
+        .get();
+      
+      if (snapshot.empty) {
+        return res.status(404).json({ error: "FAQs not found for this city" });
+      }
+      
+      const doc = snapshot.docs[0];
+      res.json({ id: doc.id, ...doc.data() });
+    } catch (error) {
+      console.error("Error fetching FAQs:", error);
+      res.status(500).json({ error: "Failed to fetch FAQs" });
+    }
+  });
+
+  // Protected endpoint - Create or update FAQs for a city (admin only)
+  app.post("/api/faqs", requireAuth, async (req: AuthenticatedRequest, res) => {
+    try {
+      const validatedData = insertCityFaqSchema.parse(req.body);
+      
+      // Check if FAQs already exist for this city
+      const existingSnapshot = await firestoreBackend
+        .collection("faqs")
+        .where("cityName", "==", validatedData.cityName)
+        .limit(1)
+        .get();
+      
+      let docRef;
+      let isUpdate = false;
+      
+      if (!existingSnapshot.empty) {
+        // Update existing FAQs
+        docRef = existingSnapshot.docs[0].ref;
+        await docRef.update({
+          questions: validatedData.questions,
+          updatedAt: Date.now(),
+          updatedBy: req.user?.uid,
+        });
+        isUpdate = true;
+      } else {
+        // Create new FAQs
+        docRef = await firestoreBackend.collection("faqs").add({
+          ...validatedData,
+          createdAt: Date.now(),
+          createdBy: req.user?.uid,
+        });
+      }
+      
+      const doc = await docRef.get();
+      const faq = { id: doc.id, ...doc.data() };
+      
+      res.status(isUpdate ? 200 : 201).json(faq);
+    } catch (error: any) {
+      console.error("Error saving FAQs:", error);
+      if (error.name === "ZodError") {
+        return res.status(400).json({ error: "Invalid data", details: error.errors });
+      }
+      res.status(500).json({ error: "Failed to save FAQs" });
     }
   });
 
