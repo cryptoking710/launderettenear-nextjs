@@ -470,6 +470,81 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Public endpoint - Generate sitemap.xml
+  app.get("/sitemap.xml", async (req, res) => {
+    try {
+      const snapshot = await firestoreBackend.collection("launderettes").get();
+      const launderettes = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      })) as any[];
+
+      // Extract unique cities
+      const cities = Array.from(new Set(launderettes
+        .map(l => l.city)
+        .filter(Boolean)
+      )).sort();
+
+      // Build sitemap XML
+      const baseUrl = "https://launderettenear.me";
+      const now = new Date().toISOString();
+
+      let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+      xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+      // Homepage
+      xml += '  <url>\n';
+      xml += `    <loc>${baseUrl}/</loc>\n`;
+      xml += `    <lastmod>${now}</lastmod>\n`;
+      xml += '    <changefreq>daily</changefreq>\n';
+      xml += '    <priority>1.0</priority>\n';
+      xml += '  </url>\n';
+
+      // Cities index page
+      xml += '  <url>\n';
+      xml += `    <loc>${baseUrl}/cities</loc>\n`;
+      xml += `    <lastmod>${now}</lastmod>\n`;
+      xml += '    <changefreq>weekly</changefreq>\n';
+      xml += '    <priority>0.8</priority>\n';
+      xml += '  </url>\n';
+
+      // City pages
+      cities.forEach(city => {
+        const encodedCity = encodeURIComponent(city);
+        xml += '  <url>\n';
+        xml += `    <loc>${baseUrl}/city/${encodedCity}</loc>\n`;
+        xml += `    <lastmod>${now}</lastmod>\n`;
+        xml += '    <changefreq>weekly</changefreq>\n';
+        xml += '    <priority>0.9</priority>\n';
+        xml += '  </url>\n';
+      });
+
+      // Launderette detail pages
+      launderettes.forEach(launderette => {
+        const lastmod = launderette.updatedAt 
+          ? new Date(launderette.updatedAt).toISOString()
+          : launderette.createdAt 
+            ? new Date(launderette.createdAt).toISOString()
+            : now;
+
+        xml += '  <url>\n';
+        xml += `    <loc>${baseUrl}/launderette/${launderette.id}</loc>\n`;
+        xml += `    <lastmod>${lastmod}</lastmod>\n`;
+        xml += '    <changefreq>monthly</changefreq>\n';
+        xml += '    <priority>0.7</priority>\n';
+        xml += '  </url>\n';
+      });
+
+      xml += '</urlset>';
+
+      res.header('Content-Type', 'application/xml');
+      res.send(xml);
+    } catch (error) {
+      console.error("Error generating sitemap:", error);
+      res.status(500).send("Failed to generate sitemap");
+    }
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;
