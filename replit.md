@@ -1,7 +1,7 @@
 # LaunderetteNear.me
 
 ## Overview
-LaunderetteNear.me is a comprehensive UK launderette directory service designed to help users find nearby launderettes using geolocation. It features a public-facing directory with advanced search capabilities, distance calculation, premium listings, and an administrative interface for managing launderette data. The project aims to provide a user-friendly experience for finding laundry services across the UK, offering detailed information and user reviews, while also providing robust tools for administrators to maintain the directory. The project currently covers 104 major UK cities with 1,057 launderette listings, including premium listings, and has ambitions for further expansion.
+LaunderetteNear.me is a comprehensive UK launderette directory service designed to help users find nearby launderettes using geolocation. It features a public-facing directory with advanced search capabilities, distance calculation, premium listings, city-specific pillar pages, and an administrative interface for managing launderette data. The project aims to provide a user-friendly experience for finding laundry services across the UK, offering detailed information and user reviews, while also providing robust tools for administrators to maintain the directory. The project currently covers 79 UK cities with 1,057 launderette listings, including premium listings, with dedicated city landing pages for enhanced local SEO.
 
 ## User Preferences
 - **Design Style**: Hybrid approach inspired by Airbnb (card-based, clean) and Google Maps (functional search)
@@ -19,6 +19,7 @@ The **Backend** is a Node.js Express server that utilizes the Firebase Admin SDK
 
 **Key Features**:
 - **Public Directory**: Geolocation-based search, distance calculation, premium listing prominence, responsive design, advanced filtering (features, price range, opening hours), list/map view toggle with interactive markers and clustering, detailed launderette pages with photos and user reviews/ratings, and analytics tracking for searches and views.
+- **City Pillar Pages**: 79 dedicated city landing pages (/city/:cityName) with AI-generated landmark hero images, city-specific launderette listings, filtered search and map views, SEO-optimized meta tags, breadcrumb navigation, and AdSense integration. Cities index page (/cities) groups locations by UK region with search functionality.
 - **Admin Interface**: Firebase Google authentication, dashboard with statistics, full CRUD operations for listings, auto-geocoding from address input, premium listing toggle, feature tags management, analytics dashboard for search trends and popular listings, and review moderation.
 
 **Data Model**: Core data models include:
@@ -42,8 +43,13 @@ The **Backend** is a Node.js Express server that utilizes the Firebase Admin SDK
 To comply with Google AdSense policies requiring substantial content on ad-serving pages:
 - **Home Page**: No ads (primarily a search interface with minimal content)
 - **Detail Pages**: Multiple ad units (4 responsive ads) placed alongside substantial content including descriptions, reviews, opening hours, contact information, and user ratings
+- **City Pages**: Multiple ad units (4 responsive ads) on city pillar pages with substantial content including city information, multiple listings, and filtering options
 - **AutoAds**: Enabled globally via App.tsx for automatic ad placement optimization on eligible pages
 - **Ad Units**:
   - Detail page responsive ads (slots: 2411734474, 5991886839, 1240578443, 3365723499)
+  - City page responsive ads (slots: 2411734474, 5991886839, 1240578443, 3365723499)
 
 This configuration ensures compliance with AdSense policy against "Google-served ads on screens without publisher content" while maximizing revenue potential on content-rich pages.
+
+## City Images
+78 AI-generated city landmark images stored in `attached_assets/generated_images/` and mapped via `client/src/lib/city-images.ts`. Each city page features a unique hero image showcasing iconic local landmarks (e.g., York Minster, Edinburgh Castle, Brighton Pier). Images are statically imported for reliability but may benefit from dynamic imports for performance optimization in future iterations.
