@@ -42,14 +42,16 @@ The **Backend** is a Node.js Express server that utilizes the Firebase Admin SDK
 ## AdSense Implementation
 To comply with Google AdSense policies requiring substantial content on ad-serving pages:
 - **Home Page**: No ads (primarily a search interface with minimal content)
-- **Detail Pages**: Multiple ad units (4 responsive ads) placed alongside substantial content including descriptions, reviews, opening hours, contact information, and user ratings
-- **City Pages**: Multiple ad units (4 responsive ads) on city pillar pages with substantial content including city information, multiple listings, and filtering options
-- **AutoAds**: Enabled globally via App.tsx for automatic ad placement optimization on eligible pages
-- **Ad Units**:
-  - Detail page responsive ads (slots: 2411734474, 5991886839, 1240578443, 3365723499)
-  - City page responsive ads (slots: 2411734474, 5991886839, 1240578443, 3365723499)
+- **Cities Index Page**: No ads (primarily a navigation page with city lists)
+- **Detail Pages**: 4 responsive ad units placed alongside substantial content including descriptions, reviews, opening hours, contact information, and user ratings
+- **City Pillar Pages**: 4 responsive ad units on city pages with substantial content including city information, multiple listings, FAQ sections with Schema.org markup, and filtering options
+- **AutoAds**: DISABLED to prevent policy violations on content-light pages
+- **Manual Ad Placement Only**: Ads are only manually placed on pages with substantial, unique content
+- **Ad Slots Used**:
+  - Launderette detail pages: 2411734474, 5991886839, 1240578443, 3365723499
+  - City pillar pages: 2411734474, 5991886839, 1240578443, 3365723499
 
-This configuration ensures compliance with AdSense policy against "Google-served ads on screens without publisher content" while maximizing revenue potential on content-rich pages.
+This configuration ensures strict compliance with AdSense policy against "Google-served ads on screens without publisher content" by only showing ads on content-rich pages with substantial information.
 
 ## City Images
 78 AI-generated city landmark images stored in `attached_assets/generated_images/` and mapped via `client/src/lib/city-images.ts`. Each city page features a unique hero image showcasing iconic local landmarks (e.g., York Minster, Edinburgh Castle, Brighton Pier). Images are statically imported for reliability but may benefit from dynamic imports for performance optimization in future iterations.
