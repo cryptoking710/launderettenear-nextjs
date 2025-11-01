@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AutoAds } from "@/components/auto-ads";
 import Home from "@/pages/home";
 import LaunderetteDetail from "@/pages/launderette-detail";
+import Cities from "@/pages/cities";
+import CityDetail from "@/pages/city-detail";
 import AdminLogin from "@/pages/admin-login";
 import AdminLayout from "@/pages/admin-layout";
 import AdminDashboard from "@/pages/admin-dashboard";
@@ -20,6 +22,8 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/launderette/:id" component={LaunderetteDetail} />
+      <Route path="/cities" component={Cities} />
+      <Route path="/city/:cityName" component={CityDetail} />
       <Route path="/admin/login" component={AdminLogin} />
       
       <Route path="/admin">

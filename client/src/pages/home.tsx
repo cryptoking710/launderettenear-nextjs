@@ -294,15 +294,28 @@ export default function Home() {
               <span className="text-xl font-bold font-heading">LaunderetteNear.me</span>
             </div>
             
-            <Link href="/admin">
-              <Button 
-                variant="outline" 
-                className="bg-primary-foreground/10 hover:bg-primary-foreground/20 border-primary-foreground/20 text-primary-foreground"
-                data-testid="link-admin"
-              >
-                Admin
-              </Button>
-            </Link>
+            <div className="flex gap-2">
+              <Link href="/cities">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="bg-primary-foreground/10 hover:bg-primary-foreground/20 border-primary-foreground/20 text-primary-foreground"
+                  data-testid="link-browse-cities"
+                >
+                  Browse Cities
+                </Button>
+              </Link>
+              <Link href="/admin">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="bg-primary-foreground/10 hover:bg-primary-foreground/20 border-primary-foreground/20 text-primary-foreground"
+                  data-testid="link-admin"
+                >
+                  Admin
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
