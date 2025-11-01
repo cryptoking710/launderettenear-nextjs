@@ -36,3 +36,14 @@ The **Backend** is a Node.js Express server that utilizes the Firebase Admin SDK
 - **Backend Services**: Node.js, Express, Firebase Admin SDK
 - **Frontend Libraries**: React, TypeScript, Vite, Tailwind CSS, Wouter (routing), TanStack Query
 - **UI Libraries**: shadcn/ui, Radix UI
+- **Monetization**: Google AdSense (Publisher ID: ca-pub-9361445858164574)
+
+## AdSense Implementation
+To comply with Google AdSense policies requiring substantial content on ad-serving pages:
+- **Home Page**: No ads (primarily a search interface with minimal content)
+- **Detail Pages**: Multiple ad units (4 responsive ads) placed alongside substantial content including descriptions, reviews, opening hours, contact information, and user ratings
+- **AutoAds**: Enabled globally via App.tsx for automatic ad placement optimization on eligible pages
+- **Ad Units**:
+  - Detail page responsive ads (slots: 2411734474, 5991886839, 1240578443, 3365723499)
+
+This configuration ensures compliance with AdSense policy against "Google-served ads on screens without publisher content" while maximizing revenue potential on content-rich pages.

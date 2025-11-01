@@ -13,7 +13,6 @@ import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import heroImage from "@assets/generated_images/Modern_launderette_interior_scene_2912be0b.png";
-import { InFeedAd, BannerAd, ResponsiveAd } from "@/components/ad-sense";
 import { WebsiteSchema, ItemListSchema } from "@/components/schema-markup";
 
 export default function Home() {
@@ -308,15 +307,8 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Banner Ad - Above the fold */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <BannerAd slot="9763433271" className="mb-6" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
-          {/* Main Content */}
-          <main>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 font-heading">
               Launderettes Near You ({filteredAndSortedLaunderettes.length} {filteredAndSortedLaunderettes.length === 1 ? 'Result' : 'Results'})
             </h2>
@@ -358,16 +350,12 @@ export default function Home() {
               </div>
             ) : (
               <div className="grid grid-cols-1 gap-6">
-                {filteredAndSortedLaunderettes.map((listing, index) => (
-                  <div key={listing.id}>
-                    <ListingCard
-                      listing={listing}
-                      distance={listing.distance}
-                    />
-                    {(index + 1) % 3 === 0 && index < filteredAndSortedLaunderettes.length - 1 && (
-                      <InFeedAd slot="6982191410" className="my-4" />
-                    )}
-                  </div>
+                {filteredAndSortedLaunderettes.map((listing) => (
+                  <ListingCard
+                    key={listing.id}
+                    listing={listing}
+                    distance={listing.distance}
+                  />
                 ))}
               </div>
             )}
@@ -392,16 +380,7 @@ export default function Home() {
                 )}
               </TabsContent>
             </Tabs>
-          </main>
-
-          {/* Sidebar - Desktop Only */}
-          <aside className="hidden lg:block">
-            <div className="sticky top-24 space-y-6">
-              <ResponsiveAd slot="8977142822" />
-              <ResponsiveAd slot="6454921261" />
-            </div>
-          </aside>
-        </div>
+        </main>
       </div>
 
       <footer className="mt-12 border-t border-border py-6">
