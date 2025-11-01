@@ -270,7 +270,7 @@ export default function Home() {
                 <span className="font-semibold">{uniqueCities} UK Cities</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-md" data-testid="text-total-nations">
-                <span className="font-semibold">All 4 Nations</span>
+                <span className="font-semibold">Full UK Coverage</span>
               </div>
             </div>
             
