@@ -107,3 +107,27 @@ export const insertCorrectionSchema = correctionSchema.omit({
 
 export type Correction = z.infer<typeof correctionSchema>;
 export type InsertCorrection = z.infer<typeof insertCorrectionSchema>;
+
+// FAQ schema for city-specific frequently asked questions
+export const faqItemSchema = z.object({
+  question: z.string().min(1, "Question is required"),
+  answer: z.string().min(1, "Answer is required"),
+});
+
+export const cityFaqSchema = z.object({
+  id: z.string(),
+  cityName: z.string().min(1, "City name is required"),
+  questions: z.array(faqItemSchema).min(1, "At least one FAQ is required"),
+  createdAt: z.number(),
+  updatedAt: z.number().optional(),
+});
+
+export const insertCityFaqSchema = cityFaqSchema.omit({ 
+  id: true, 
+  createdAt: true,
+  updatedAt: true,
+});
+
+export type FaqItem = z.infer<typeof faqItemSchema>;
+export type CityFaq = z.infer<typeof cityFaqSchema>;
+export type InsertCityFaq = z.infer<typeof insertCityFaqSchema>;
