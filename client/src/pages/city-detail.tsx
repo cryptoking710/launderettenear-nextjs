@@ -1,6 +1,6 @@
 import { useParams, Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { Launderette, UserLocation } from "@shared/schema";
+import { Launderette, UserLocation, CityFaq } from "@shared/schema";
 import { calculateDistance } from "@/lib/distance";
 import { ListingCard } from "@/components/listing-card";
 import { FilterPanel, FilterOptions } from "@/components/filter-panel";
@@ -8,6 +8,7 @@ import { MapView } from "@/components/map-view";
 import { MapPin, Loader2, List, Map, Home, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useState, useEffect, useMemo } from "react";
 import { ResponsiveAd } from "@/components/ad-sense";
 import { trackSearch } from "@/lib/analytics";
@@ -29,6 +30,12 @@ export default function CityDetail() {
   // Fetch all launderettes
   const { data: launderettes = [], isLoading } = useQuery<Launderette[]>({
     queryKey: ["/api/launderettes"],
+  });
+
+  // Fetch FAQs for this city
+  const { data: cityFaq } = useQuery<CityFaq>({
+    queryKey: ["/api/faqs", decodedCityName],
+    enabled: !!decodedCityName,
   });
 
   // Get user's current location
@@ -398,6 +405,49 @@ export default function CityDetail() {
           </aside>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      {cityFaq && cityFaq.questions && cityFaq.questions.length > 0 && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold font-heading text-foreground mb-8">
+              Frequently Asked Questions
+            </h2>
+            
+            <Accordion type="single" collapsible className="w-full">
+              {cityFaq.questions.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} data-testid={`faq-item-${index}`}>
+                  <AccordionTrigger className="text-left font-semibold">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+
+            {/* Schema.org FAQPage Markup */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": cityFaq.questions.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": faq.answer
+                    }
+                  }))
+                })
+              }}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Bottom Ad */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
