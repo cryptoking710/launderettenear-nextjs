@@ -102,7 +102,7 @@ async function generateBlogPost(topic: typeof blogTopics[0]) {
   
   try {
     const completion = await openai.chat.completions.create({
-      model: "gpt-5-mini", // the newest OpenAI model is "gpt-5" which was released August 7, 2025
+      model: "gpt-4o-mini",
       messages: [
         {
           role: "system",
@@ -117,6 +117,9 @@ async function generateBlogPost(topic: typeof blogTopics[0]) {
     });
 
     const content = completion.choices[0].message.content || "";
+    console.log(`  Content length: ${content.length} characters`);
+    console.log(`  First 100 chars: ${content.substring(0, 100)}...`);
+    
     const readingTime = calculateReadingTime(content);
     const excerpt = createExcerpt(content);
 
@@ -131,6 +134,7 @@ async function generateBlogPost(topic: typeof blogTopics[0]) {
       readingTime: readingTime
     };
 
+    console.log(`  Excerpt length: ${excerpt.length}, Reading time: ${readingTime} min`);
     await addDoc(collection(db, "blog_posts"), blogPost);
     console.log(`✓ Generated and saved: ${topic.title} (${readingTime} min read)`);
     
