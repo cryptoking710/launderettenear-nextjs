@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { firestoreBackend } from "./firestore-backend";
 import { requireAuth, AuthenticatedRequest } from "./middleware/auth";
-import { insertLaunderetteSchema, insertReviewSchema, insertAnalyticsEventSchema, insertCorrectionSchema, insertCityFaqSchema, insertContactSubmissionSchema } from "@shared/schema";
+import { insertLaunderetteSchema, insertReviewSchema, insertAnalyticsEventSchema, insertCorrectionSchema, insertCityFaqSchema, insertContactSubmissionSchema, insertBlogPostSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Public endpoint - Geocoding using free Nominatim service
@@ -494,11 +494,84 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Public endpoint - Get all blog posts
+  app.get("/api/blog", async (req, res) => {
+    try {
+      const snapshot = await firestoreBackend.collection("blog_posts")
+        .orderBy("publishedAt", "desc")
+        .get();
+      
+      const posts = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      
+      res.json(posts);
+    } catch (error) {
+      console.error("Error fetching blog posts:", error);
+      res.status(500).json({ error: "Failed to fetch blog posts" });
+    }
+  });
+
+  // Public endpoint - Get single blog post by slug
+  app.get("/api/blog/:slug", async (req, res) => {
+    try {
+      const { slug } = req.params;
+      const snapshot = await firestoreBackend.collection("blog_posts")
+        .where("slug", "==", slug)
+        .limit(1)
+        .get();
+      
+      if (snapshot.empty) {
+        return res.status(404).json({ error: "Blog post not found" });
+      }
+      
+      const post = {
+        id: snapshot.docs[0].id,
+        ...snapshot.docs[0].data()
+      };
+      
+      res.json(post);
+    } catch (error) {
+      console.error("Error fetching blog post:", error);
+      res.status(500).json({ error: "Failed to fetch blog post" });
+    }
+  });
+
+  // Admin endpoint - Create blog post (for initial seeding)
+  app.post("/api/blog", requireAuth, async (req: AuthenticatedRequest, res) => {
+    try {
+      const validatedData = insertBlogPostSchema.parse(req.body);
+      
+      const docRef = await firestoreBackend.collection("blog_posts").add(validatedData);
+      
+      res.status(201).json({ 
+        id: docRef.id,
+        ...validatedData 
+      });
+    } catch (error: any) {
+      console.error("Error creating blog post:", error);
+      if (error.name === "ZodError") {
+        return res.status(400).json({ error: "Invalid data", details: error.errors });
+      }
+      res.status(500).json({ error: "Failed to create blog post" });
+    }
+  });
+
   // Public endpoint - Generate sitemap.xml
   app.get("/sitemap.xml", async (req, res) => {
     try {
-      const snapshot = await firestoreBackend.collection("launderettes").get();
-      const launderettes = snapshot.docs.map(doc => ({
+      const [launderettesSnapshot, blogSnapshot] = await Promise.all([
+        firestoreBackend.collection("launderettes").get(),
+        firestoreBackend.collection("blog_posts").get()
+      ]);
+      
+      const launderettes = launderettesSnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      })) as any[];
+
+      const blogPosts = blogSnapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
       })) as any[];
@@ -553,6 +626,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
         xml += '  <url>\n';
         xml += `    <loc>${baseUrl}/launderette/${launderette.id}</loc>\n`;
+        xml += `    <lastmod>${lastmod}</lastmod>\n`;
+        xml += '    <changefreq>monthly</changefreq>\n';
+        xml += '    <priority>0.7</priority>\n';
+        xml += '  </url>\n';
+      });
+
+      // Blog index page
+      xml += '  <url>\n';
+      xml += `    <loc>${baseUrl}/blog</loc>\n`;
+      xml += `    <lastmod>${now}</lastmod>\n`;
+      xml += '    <changefreq>weekly</changefreq>\n';
+      xml += '    <priority>0.8</priority>\n';
+      xml += '  </url>\n';
+
+      // Blog post pages
+      blogPosts.forEach(post => {
+        const lastmod = post.publishedAt 
+          ? new Date(post.publishedAt).toISOString()
+          : now;
+
+        xml += '  <url>\n';
+        xml += `    <loc>${baseUrl}/blog/${encodeURIComponent(post.slug)}</loc>\n`;
         xml += `    <lastmod>${lastmod}</lastmod>\n`;
         xml += '    <changefreq>monthly</changefreq>\n';
         xml += '    <priority>0.7</priority>\n';

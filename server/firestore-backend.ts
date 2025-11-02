@@ -3,7 +3,7 @@
 // For production, use Firebase Admin SDK with service account credentials
 
 import { initializeApp, getApps, FirebaseApp } from "firebase/app";
-import { getFirestore, Firestore, collection, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc, query, where, limit, WhereFilterOp } from "firebase/firestore";
+import { getFirestore, Firestore, collection, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc, query, where, limit, orderBy, WhereFilterOp, OrderByDirection } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.VITE_FIREBASE_API_KEY,
@@ -35,6 +35,11 @@ export const firestoreBackend = {
     const queryBuilder = {
       where(field: string, operator: WhereFilterOp, value: any) {
         queryConstraints.push(where(field, operator, value));
+        return queryBuilder;
+      },
+      
+      orderBy(field: string, direction: OrderByDirection = "asc") {
+        queryConstraints.push(orderBy(field, direction));
         return queryBuilder;
       },
       

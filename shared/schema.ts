@@ -151,3 +151,23 @@ export const insertContactSubmissionSchema = contactSubmissionSchema.omit({
 
 export type ContactSubmission = z.infer<typeof contactSubmissionSchema>;
 export type InsertContactSubmission = z.infer<typeof insertContactSubmissionSchema>;
+
+// Blog post schema
+export const blogPostSchema = z.object({
+  id: z.string(),
+  title: z.string().min(1, "Title is required"),
+  slug: z.string().min(1, "Slug is required"),
+  excerpt: z.string().min(1, "Excerpt is required"),
+  content: z.string().min(1, "Content is required"),
+  author: z.string().default("LaunderetteNear.me Team"),
+  publishedAt: z.number(),
+  readingTime: z.number(), // in minutes
+  imageUrl: z.string().optional(),
+});
+
+export const insertBlogPostSchema = blogPostSchema.omit({ 
+  id: true,
+});
+
+export type BlogPost = z.infer<typeof blogPostSchema>;
+export type InsertBlogPost = z.infer<typeof insertBlogPostSchema>;

@@ -11,6 +11,8 @@ import About from "@/pages/about";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
 import Contact from "@/pages/contact";
+import Blog from "@/pages/blog";
+import BlogPost from "@/pages/blog-post";
 import AdminLogin from "@/pages/admin-login";
 import AdminLayout from "@/pages/admin-layout";
 import AdminDashboard from "@/pages/admin-dashboard";
@@ -31,6 +33,8 @@ function Router() {
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/contact" component={Contact} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/admin/login" component={AdminLogin} />
       
       <Route path="/admin">
