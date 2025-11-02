@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { firestoreBackend } from "./firestore-backend";
 import { requireAuth, AuthenticatedRequest } from "./middleware/auth";
-import { insertLaunderetteSchema, insertReviewSchema, insertAnalyticsEventSchema, insertCorrectionSchema, insertCityFaqSchema } from "@shared/schema";
+import { insertLaunderetteSchema, insertReviewSchema, insertAnalyticsEventSchema, insertCorrectionSchema, insertCityFaqSchema, insertContactSubmissionSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Public endpoint - Geocoding using free Nominatim service
@@ -467,6 +467,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ error: "Invalid data", details: error.errors });
       }
       res.status(500).json({ error: "Failed to save FAQs" });
+    }
+  });
+
+  // Public endpoint - Submit contact form
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const validatedData = insertContactSubmissionSchema.parse(req.body);
+      
+      const docRef = await firestoreBackend.collection("contact_submissions").add({
+        ...validatedData,
+        status: "new",
+        createdAt: Date.now(),
+      });
+      
+      res.status(201).json({ 
+        success: true,
+        message: "Contact form submitted successfully" 
+      });
+    } catch (error: any) {
+      console.error("Error submitting contact form:", error);
+      if (error.name === "ZodError") {
+        return res.status(400).json({ error: "Invalid data", details: error.errors });
+      }
+      res.status(500).json({ error: "Failed to submit contact form" });
     }
   });
 

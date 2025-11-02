@@ -13,6 +13,7 @@ import { useState, useEffect, useMemo } from "react";
 import { ResponsiveAd } from "@/components/ad-sense";
 import { trackSearch } from "@/lib/analytics";
 import { getCityImage } from "@/lib/city-images";
+import { Footer } from "@/components/footer";
 
 type LaunderetteWithDistance = Launderette & { distance?: number };
 
@@ -454,13 +455,7 @@ export default function CityDetail() {
         <ResponsiveAd slot="3365723499" />
       </div>
 
-      <footer className="mt-12 border-t border-border py-6">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-xs text-muted-foreground">
-            Directory powered by React & Firestore
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

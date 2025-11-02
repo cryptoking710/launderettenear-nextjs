@@ -131,3 +131,23 @@ export const insertCityFaqSchema = cityFaqSchema.omit({
 export type FaqItem = z.infer<typeof faqItemSchema>;
 export type CityFaq = z.infer<typeof cityFaqSchema>;
 export type InsertCityFaq = z.infer<typeof insertCityFaqSchema>;
+
+// Contact submission schema
+export const contactSubmissionSchema = z.object({
+  id: z.string(),
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Valid email is required"),
+  subject: z.string().min(1, "Subject is required"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+  status: z.enum(["new", "read", "responded"]).default("new"),
+  createdAt: z.number(),
+});
+
+export const insertContactSubmissionSchema = contactSubmissionSchema.omit({ 
+  id: true, 
+  createdAt: true,
+  status: true,
+});
+
+export type ContactSubmission = z.infer<typeof contactSubmissionSchema>;
+export type InsertContactSubmission = z.infer<typeof insertContactSubmissionSchema>;

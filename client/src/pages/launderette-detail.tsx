@@ -13,6 +13,7 @@ import { trackView } from "@/lib/analytics";
 import { useState, useEffect } from "react";
 import { ResponsiveAd } from "@/components/ad-sense";
 import { SchemaMarkup } from "@/components/schema-markup";
+import { Footer } from "@/components/footer";
 
 export default function LaunderetteDetail() {
   const { id } = useParams();
@@ -353,6 +354,8 @@ export default function LaunderetteDetail() {
           </aside>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

@@ -14,6 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import heroImage from "@assets/generated_images/Modern_launderette_interior_scene_2912be0b.png";
 import { WebsiteSchema, ItemListSchema } from "@/components/schema-markup";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<UserLocation>({ lat: null, lng: null });
@@ -398,13 +399,7 @@ export default function Home() {
         </main>
       </div>
 
-      <footer className="mt-12 border-t border-border py-6">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-xs text-muted-foreground">
-            Directory powered by React & Firestore
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

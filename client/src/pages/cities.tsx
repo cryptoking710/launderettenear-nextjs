@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Footer } from "@/components/footer";
 import { useState, useMemo, useEffect } from "react";
 
 // UK regions for grouping
@@ -210,13 +211,7 @@ export default function Cities() {
         )}
       </div>
 
-      <footer className="mt-12 border-t border-border py-6">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-xs text-muted-foreground">
-            Directory powered by React & Firestore
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
