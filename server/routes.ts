@@ -558,6 +558,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Public endpoint - robots.txt
+  app.get("/robots.txt", (req, res) => {
+    const robotsTxt = `# Robots.txt for LaunderetteNear.me
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://launderettenear.me/sitemap.xml
+
+# Crawl delays
+Crawl-delay: 1
+
+# Disallow admin section
+User-agent: *
+Disallow: /admin
+
+# Allow search engines to index our content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+`;
+
+    res.header('Content-Type', 'text/plain');
+    res.send(robotsTxt);
+  });
+
   // Public endpoint - Generate sitemap.xml
   app.get("/sitemap.xml", async (req, res) => {
     try {
@@ -651,6 +679,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
         xml += `    <lastmod>${lastmod}</lastmod>\n`;
         xml += '    <changefreq>monthly</changefreq>\n';
         xml += '    <priority>0.7</priority>\n';
+        xml += '  </url>\n';
+      });
+
+      // Static pages
+      const staticPages = [
+        { path: '/about', priority: '0.6' },
+        { path: '/contact', priority: '0.6' },
+        { path: '/privacy', priority: '0.5' },
+        { path: '/terms', priority: '0.5' },
+        { path: '/laundry-symbols', priority: '0.8' }
+      ];
+
+      staticPages.forEach(page => {
+        xml += '  <url>\n';
+        xml += `    <loc>${baseUrl}${page.path}</loc>\n`;
+        xml += `    <lastmod>${now}</lastmod>\n`;
+        xml += '    <changefreq>monthly</changefreq>\n';
+        xml += `    <priority>${page.priority}</priority>\n`;
         xml += '  </url>\n';
       });
 

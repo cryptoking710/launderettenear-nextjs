@@ -13,7 +13,7 @@ import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import heroImage from "@assets/generated_images/Modern_launderette_interior_scene_2912be0b.png";
-import { WebsiteSchema, ItemListSchema } from "@/components/schema-markup";
+import { WebsiteSchema, ItemListSchema, OrganizationSchema } from "@/components/schema-markup";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -240,6 +240,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Schema.org Structured Data for SEO */}
+      <OrganizationSchema />
       <WebsiteSchema totalLaunderettes={launderettes.length} totalCities={uniqueCities} />
       <ItemListSchema launderettes={filteredAndSortedLaunderettes} />
       

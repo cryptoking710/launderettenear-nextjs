@@ -154,6 +154,55 @@ export function WebsiteSchema({ totalLaunderettes, totalCities }: WebsiteSchemaP
   return null;
 }
 
+export function OrganizationSchema() {
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "LaunderetteNear.me",
+      alternateName: "Launderette Near Me",
+      url: "https://launderettenear.me",
+      logo: "https://launderettenear.me/logo.png",
+      description: "The UK's most comprehensive launderette directory. Find quality laundry services across England, Scotland, Wales, and Northern Ireland.",
+      email: "info@launderettenear.me",
+      areaServed: {
+        "@type": "Country",
+        name: "United Kingdom"
+      },
+      knowsAbout: [
+        "Launderettes",
+        "Laundromats",
+        "Laundry Services",
+        "UK Laundry Directory",
+        "Service Wash",
+        "Self-Service Laundry"
+      ],
+      sameAs: []
+    };
+
+    const scriptId = 'organization-schema';
+    let scriptTag = document.getElementById(scriptId) as HTMLScriptElement;
+    
+    if (!scriptTag) {
+      scriptTag = document.createElement('script');
+      scriptTag.id = scriptId;
+      scriptTag.type = 'application/ld+json';
+      document.head.appendChild(scriptTag);
+    }
+    
+    scriptTag.textContent = JSON.stringify(schema);
+
+    return () => {
+      const existingScript = document.getElementById(scriptId);
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
+  return null;
+}
+
 interface ItemListSchemaProps {
   launderettes: Launderette[];
 }
