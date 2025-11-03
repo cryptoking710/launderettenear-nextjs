@@ -15,6 +15,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import heroImage from "@assets/generated_images/Modern_launderette_interior_scene_2912be0b.png";
 import { WebsiteSchema, ItemListSchema, OrganizationSchema } from "@/components/schema-markup";
 import { Footer } from "@/components/footer";
+import { SEOTags } from "@/components/seo-tags";
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<UserLocation>({ lat: null, lng: null });
@@ -239,6 +240,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOTags
+        title="Launderette Near Me | Find 1,057+ UK Launderettes & Laundrettes | LaunderetteNear.me"
+        description="Find your nearest launderette in seconds. Search 1,057+ launderettes across 104 UK cities. Service wash, 24 hour, self-service & more. Real reviews, opening hours & prices."
+        url="https://launderettenear.me/"
+        type="website"
+      />
+      
       {/* Schema.org Structured Data for SEO */}
       <OrganizationSchema />
       <WebsiteSchema totalLaunderettes={launderettes.length} totalCities={uniqueCities} />

@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Skeleton } from "@/components/ui/skeleton";
 import type { BlogPost } from "@shared/schema";
 import { Footer } from "@/components/footer";
+import { SEOTags } from "@/components/seo-tags";
 
 export default function Blog() {
   const { data: posts = [], isLoading } = useQuery<BlogPost[]>({
@@ -22,6 +23,12 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEOTags
+        title="Laundry Tips & Guides | Expert Fabric Care Advice | LaunderetteNear.me"
+        description="Expert advice on fabric care, stain removal, eco-friendly washing, and everything you need to know about keeping your clothes fresh and clean. Read our comprehensive laundry guides."
+        url="https://launderettenear.me/blog"
+        type="website"
+      />
       {/* Header */}
       <header className="border-b border-border bg-card sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

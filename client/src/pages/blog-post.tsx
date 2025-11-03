@@ -7,7 +7,7 @@ import type { BlogPost } from "@shared/schema";
 import { Footer } from "@/components/footer";
 import { Adsense } from "@ctrl/react-adsense";
 import { marked } from "marked";
-import { useEffect } from "react";
+import { SEOTags } from "@/components/seo-tags";
 
 // Configure marked at module level to avoid hook ordering issues
 marked.setOptions({
@@ -27,26 +27,6 @@ export default function BlogPostPage() {
     },
     enabled: !!slug,
   });
-
-  // Update document title and meta tags for SEO - must be called before any early returns
-  useEffect(() => {
-    if (post) {
-      document.title = `${post.title} | LaunderetteNear.me Blog`;
-      
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', post.excerpt);
-      }
-    }
-
-    return () => {
-      document.title = "Launderette Near Me | Find 1,057+ UK Launderettes & Laundrettes | LaunderetteNear.me";
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', "Find quality launderettes and laundromats near you across the UK. Search by location, view opening hours, prices, services, and user reviews.");
-      }
-    };
-  }, [post]);
 
   const formatDate = (timestamp: number) => {
     return new Date(timestamp).toLocaleDateString('en-GB', {
@@ -120,6 +100,14 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEOTags
+        title={`${post.title} | LaunderetteNear.me Blog`}
+        description={post.excerpt}
+        url={currentUrl}
+        type="article"
+        publishedTime={publishedDate}
+        author={post.author}
+      />
 
       {/* Schema.org Article Markup */}
       <script type="application/ld+json">

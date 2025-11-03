@@ -14,6 +14,7 @@ import { ResponsiveAd } from "@/components/ad-sense";
 import { trackSearch } from "@/lib/analytics";
 import { getCityImage } from "@/lib/city-images";
 import { Footer } from "@/components/footer";
+import { SEOTags } from "@/components/seo-tags";
 
 type LaunderetteWithDistance = Launderette & { distance?: number };
 
@@ -149,22 +150,6 @@ export default function CityDetail() {
     }
   }, [decodedCityName, cityLaunderettes.length, userLocation]);
 
-  // Update page title and meta for SEO
-  useEffect(() => {
-    if (cityLaunderettes.length > 0) {
-      const pageTitle = `Launderettes in ${decodedCityName} | Find ${cityLaunderettes.length}+ ${decodedCityName} Laundromats`;
-      document.title = pageTitle;
-
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute(
-          "content",
-          `Find launderettes in ${decodedCityName}. Browse ${cityLaunderettes.length} local laundromats with prices, reviews, and opening hours. Self-service, service wash, dry cleaning & more.`
-        );
-      }
-    }
-  }, [decodedCityName, cityLaunderettes.length]);
-
   const handleClearFilters = () => {
     setFilters({
       selectedFeatures: [],
@@ -243,9 +228,25 @@ export default function CityDetail() {
 
   // Get city-specific hero image
   const cityHeroImage = getCityImage(decodedCityName);
+  
+  // SEO metadata
+  const pageTitle = `Launderettes in ${decodedCityName} | Find ${cityLaunderettes.length}+ ${decodedCityName} Laundromats`;
+  const pageDescription = `Find launderettes in ${decodedCityName}. Browse ${cityLaunderettes.length} local laundromats with prices, reviews, and opening hours. Self-service, service wash, dry cleaning & more.`;
+  const pageUrl = `https://launderettenear.me/city/${encodeURIComponent(decodedCityName)}`;
+  const ogImage = cityHeroImage 
+    ? `https://launderettenear.me${cityHeroImage}` 
+    : 'https://launderettenear.me/og-image.jpg';
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOTags
+        title={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        image={ogImage}
+        type="business.business"
+      />
+      
       {/* Hero Section */}
       <div 
         className="relative min-h-[400px] bg-cover bg-center"

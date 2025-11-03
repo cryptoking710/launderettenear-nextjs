@@ -1,9 +1,9 @@
-import { useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "wouter";
 import { Home, ChevronRight, Info } from "lucide-react";
 import { Adsense } from "@ctrl/react-adsense";
+import { SEOTags } from "@/components/seo-tags";
 import {
   washingSymbols,
   dryingSymbols,
@@ -31,16 +31,14 @@ function SymbolCard({ symbol }: { symbol: LaundrySymbol }) {
 }
 
 export default function LaundrySymbols() {
-  useEffect(() => {
-    document.title = "UK Laundry Care Symbols Guide: What Washing Labels Mean | LaunderetteNear.me";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', "Complete visual guide to UK laundry care symbols. Learn what every washing, drying, ironing, bleaching and dry cleaning label symbol means with clear images and explanations.");
-    }
-  }, []);
-
   return (
     <>
+      <SEOTags
+        title="UK Laundry Care Symbols Guide: What Washing Labels Mean | LaunderetteNear.me"
+        description="Complete visual guide to UK laundry care symbols. Learn what every washing, drying, ironing, bleaching and dry cleaning label symbol means with clear images and explanations."
+        url="https://launderettenear.me/laundry-symbols"
+        type="website"
+      />
 
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-8 max-w-7xl">

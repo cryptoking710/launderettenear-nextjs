@@ -14,6 +14,7 @@ import { useState, useEffect } from "react";
 import { ResponsiveAd } from "@/components/ad-sense";
 import { SchemaMarkup } from "@/components/schema-markup";
 import { Footer } from "@/components/footer";
+import { SEOTags } from "@/components/seo-tags";
 
 export default function LaunderetteDetail() {
   const { id } = useParams();
@@ -59,41 +60,12 @@ export default function LaunderetteDetail() {
     }
   }, []);
 
-  // Track page view and update page title for SEO
+  // Track page view
   useEffect(() => {
     if (launderette) {
       trackView(launderette.id, launderette.name);
-      
-      // Update document title for SEO
-      const pageTitle = `${launderette.name} - Launderette in ${launderette.city} | LaunderetteNear.me`;
-      document.title = pageTitle;
-      
-      // Calculate average rating for meta description
-      const avgRating = calculateAverageRating(reviews);
-      
-      // Update meta description
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', 
-          `${launderette.name} in ${launderette.city}. ${launderette.features.slice(0, 3).join(', ')}. ` +
-          `${avgRating > 0 ? `${avgRating.toFixed(1)} star rating from ${reviews.length} reviews. ` : ''}` +
-          `Opening hours, contact details & directions.`
-        );
-      }
     }
-    
-    return () => {
-      // Reset title and meta description when leaving page
-      document.title = "Launderette Near Me | Find 1,057+ UK Launderettes & Laundrettes | LaunderetteNear.me";
-      
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', 
-          "Find your nearest launderette in seconds. Search 1,057+ launderettes across 104 UK cities. Service wash, 24 hour, self-service & more. Real reviews, opening hours & prices."
-        );
-      }
-    };
-  }, [launderette, reviews]);
+  }, [launderette]);
 
   if (isLoadingLaunderette) {
     return (
@@ -124,8 +96,22 @@ export default function LaunderetteDetail() {
     ? calculateDistance(userLocation.lat, userLocation.lng, launderette.lat, launderette.lng)
     : null;
 
+  // SEO metadata
+  const pageTitle = `${launderette.name} - Launderette in ${launderette.city} | LaunderetteNear.me`;
+  const pageDescription = `${launderette.name} in ${launderette.city}. ${launderette.features.slice(0, 3).join(', ')}. ` +
+    `${averageRating > 0 ? `${averageRating.toFixed(1)} star rating from ${reviews.length} reviews. ` : ''}` +
+    `Opening hours, contact details & directions.`;
+  const pageUrl = `https://launderettenear.me/launderette/${id}`;
+
   return (
     <div className="min-h-screen bg-background">
+      <SEOTags
+        title={pageTitle}
+        description={pageDescription}
+        url={pageUrl}
+        type="business.business"
+      />
+      
       {/* Schema.org Structured Data for Local Business SEO */}
       <SchemaMarkup 
         launderette={launderette} 
