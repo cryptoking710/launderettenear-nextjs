@@ -44,6 +44,11 @@ export function Footer() {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link href="/laundry-symbols" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-laundry-symbols">
+                  Laundry Symbols Guide
+                </Link>
+              </li>
             </ul>
           </div>
 

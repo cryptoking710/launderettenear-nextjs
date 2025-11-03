@@ -13,6 +13,7 @@ import Terms from "@/pages/terms";
 import Contact from "@/pages/contact";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
+import LaundrySymbols from "@/pages/laundry-symbols";
 import AdminLogin from "@/pages/admin-login";
 import AdminLayout from "@/pages/admin-layout";
 import AdminDashboard from "@/pages/admin-dashboard";
@@ -35,6 +36,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
+      <Route path="/laundry-symbols" component={LaundrySymbols} />
       <Route path="/admin/login" component={AdminLogin} />
       
       <Route path="/admin">
