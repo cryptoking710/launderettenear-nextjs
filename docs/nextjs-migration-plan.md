@@ -153,6 +153,49 @@ export async function generateStaticParams() {
 export const dynamicParams = true; // Allow other IDs to be SSR'd
 ```
 
+**ISR Revalidation Triggers**:
+
+To ensure launderette content stays fresh without manual rebuilds, implement on-demand revalidation:
+
+```typescript
+// app/api/revalidate/route.ts
+import { revalidatePath } from 'next/cache';
+import { NextRequest, NextResponse } from 'next/server';
+import { verifyAuth } from '@/lib/auth-utils';
+
+export async function POST(request: NextRequest) {
+  // Verify this is an authenticated admin request
+  const user = await verifyAuth(request);
+  if (!user) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+  
+  const { launderetteId, type } = await request.json();
+  
+  // Revalidate specific pages after content updates
+  if (type === 'launderette' && launderetteId) {
+    revalidatePath(`/launderette/${launderetteId}`);
+  }
+  
+  return NextResponse.json({ revalidated: true, now: Date.now() });
+}
+```
+
+**Trigger revalidation** from admin interface after CREATE/UPDATE/DELETE operations:
+```typescript
+// After updating a launderette in admin
+await fetch('/api/revalidate', {
+  method: 'POST',
+  headers: { 'Authorization': `Bearer ${token}` },
+  body: JSON.stringify({ launderetteId: id, type: 'launderette' })
+});
+```
+
+**Benefits**:
+- Content updates appear immediately without waiting for hourly ISR
+- Reduces unnecessary Firestore reads
+- Maintains fast page loads with cached content
+
 **Recommendation**: Start with SSR, evaluate ISR performance after launch.
 
 ---
@@ -258,6 +301,30 @@ if (!getApps().length) {
 
 export const adminDb = getFirestore();
 ```
+
+**Environment Variables Configuration**:
+
+**CRITICAL**: Firebase Admin SDK requires server-side credentials. These must be configured as environment variables in your deployment platform (Replit Secrets or Vercel Environment Variables).
+
+Required environment variables:
+```bash
+# Firebase Admin SDK (server-side only - NEVER expose to client)
+FIREBASE_PROJECT_ID=your-project-id
+FIREBASE_CLIENT_EMAIL=firebase-adminsdk@your-project.iam.gserviceaccount.com
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+
+# Firebase Client SDK (safe for client-side - prefixed with NEXT_PUBLIC_)
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+```
+
+**Important notes**:
+- Admin SDK variables must NOT have `NEXT_PUBLIC_` prefix (server-only)
+- Client SDK variables MUST have `NEXT_PUBLIC_` prefix to be exposed to browser
+- Private key may need newline character handling: `.replace(/\\n/g, '\n')`
+- NEVER use Edge Runtime for routes that require Admin SDK (use Node.js runtime)
 
 **Data fetching utilities**:
 ```typescript
@@ -650,7 +717,8 @@ export function AdsenseAd({ slot }: { slot: string }) {
 }
 ```
 
-**Add AdSense script** in layout:
+**Add AdSense script** in layout using Next.js Script component:
+
 ```typescript
 // app/layout.tsx
 import Script from 'next/script';
@@ -660,6 +728,7 @@ export default function RootLayout({ children }) {
     <html>
       <head>
         <Script
+          id="adsense-script"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9361445858164574"
           crossOrigin="anonymous"
@@ -671,6 +740,22 @@ export default function RootLayout({ children }) {
   );
 }
 ```
+
+**AdSense Migration Checklist**:
+- ✅ Use Next.js `<Script>` component instead of regular `<script>` tag
+- ✅ Set `strategy="afterInteractive"` to load after page becomes interactive
+- ✅ Add unique `id` to prevent duplicate scripts
+- ✅ Keep `crossOrigin="anonymous"` for proper CORS handling
+- ✅ Maintain same ad slots (2411734474, 5991886839, 1240578443, 3365723499)
+- ✅ Only place ads on content-rich pages (detail pages, city pages)
+- ✅ Keep AutoAds DISABLED to prevent policy violations
+- ✅ Test ad loading in production environment (ads don't show in dev mode)
+
+**Important**: AdSense policies require substantial content. Continue current implementation:
+- ❌ NO ads on homepage (search interface - minimal content)
+- ❌ NO ads on cities index (navigation page)
+- ✅ Ads on launderette detail pages (reviews, hours, contact info)
+- ✅ Ads on city pages (listings, FAQs, substantial content)
 
 ---
 

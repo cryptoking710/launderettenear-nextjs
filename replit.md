@@ -84,3 +84,32 @@ Comprehensive SEO improvements implemented to enhance search engine visibility a
 - Current implementation uses client-side rendering (CSR), meaning Open Graph tags are set via JavaScript after page load
 - Social media crawlers may not execute JavaScript, potentially missing dynamic meta tags
 - This limitation will be addressed in Phase 2 via Next.js migration with server-side rendering (SSR) and static site generation (SSG)
+
+**Testing Documentation:**
+- Comprehensive testing guide available at `docs/seo-testing-guide.md`
+- Includes instructions for testing Schema.org markup with Google Rich Results Test
+- Sitemap and robots.txt validation steps
+- Open Graph and Twitter Card testing procedures
+
+## Phase 2: Next.js Migration Plan
+Comprehensive migration plan documented in `docs/nextjs-migration-plan.md`:
+
+**Architecture Decision:** Next.js 15 with App Router (recommended over Pages Router)
+
+**Rendering Strategy:**
+- Homepage: SSR with streaming for dynamic search
+- City pages (79): SSG with ISR (hourly revalidation)
+- Launderette details (1,057+): SSR with optional ISR
+- Blog posts (12): SSG for static content
+- Static pages: Full SSG
+- Admin interface: Client-side rendering (CSR) with Firebase auth
+
+**Key Benefits:**
+- Server-side rendering resolves CSR limitation for social media crawlers
+- Meta tags will be in initial HTML for all pages
+- Improved Core Web Vitals and performance
+- Better SEO with static generation for city pages
+- Maintains all existing functionality (maps, admin, auth, AdSense)
+
+**Timeline:** 8 weeks with phased approach
+**Target Performance:** FCP <1.0s, LCP <1.5s, SEO score 100/100

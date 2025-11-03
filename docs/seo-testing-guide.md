@@ -310,9 +310,40 @@ Disallow: /admin
 
 ---
 
-## 8. Testing Checklist
+## 8. Canonical Tags & Alternate Links (Phase 2)
 
-### Pre-Launch Checks
+### Why Canonical Tags Matter
+Canonical tags tell search engines which version of a page is the "master" copy, preventing duplicate content issues.
+
+### Implementation in Next.js (Phase 2)
+
+**Using Metadata API**:
+```typescript
+// app/city/[cityName]/page.tsx
+export async function generateMetadata({ params }): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: `https://launderettenear.me/city/${params.cityName}`,
+    },
+  };
+}
+```
+
+**Testing canonical tags** (after Phase 2 migration):
+1. View page source (not DevTools - must be in initial HTML)
+2. Look for: `<link rel="canonical" href="https://launderettenear.me/..." />`
+3. Verify each page has correct canonical URL
+4. No parameters or tracking codes in canonical URLs
+
+**Tools**:
+- [Google Search Console URL Inspection](https://search.google.com/search-console) - Shows Google-selected canonical
+- Check for duplicate content issues in Coverage report
+
+---
+
+## 9. Testing Checklist
+
+### Pre-Launch Checks (Phase 1 - Current)
 - [ ] Sitemap accessible at /sitemap.xml
 - [ ] Robots.txt accessible and correct
 - [ ] Homepage Organization schema valid
@@ -326,6 +357,14 @@ Disallow: /admin
 - [ ] Article-specific OG tags only on blog posts
 - [ ] City pages use correct landmark images for og:image
 
+### Phase 2 Migration Checks (Next.js SSR/SSG)
+- [ ] All meta tags in initial HTML (view page source, not DevTools)
+- [ ] Canonical tags on all pages
+- [ ] Open Graph tags visible to social media crawlers (test with debuggers)
+- [ ] Schema.org markup still valid after migration
+- [ ] Sitemap generation working in Next.js
+- [ ] No duplicate pages indexed
+
 ### Post-Launch Monitoring
 - [ ] Submit sitemap to Google Search Console
 - [ ] Submit sitemap to Bing Webmaster Tools
@@ -333,10 +372,13 @@ Disallow: /admin
 - [ ] Check for rich results in search
 - [ ] Monitor for any Schema.org errors in Search Console
 - [ ] Track organic search traffic
+- [ ] Use URL Inspection tool to verify canonical URLs
+- [ ] Check Coverage report for duplicate content issues
+- [ ] Monitor Core Web Vitals in Search Console
 
 ---
 
-## 9. Phase 2 Improvements (Next.js SSR/SSG)
+## 10. Phase 2 Improvements (Next.js SSR/SSG)
 
 **Current limitations to address**:
 1. Open Graph tags are client-side rendered (crawlers may miss them)
@@ -352,7 +394,7 @@ Disallow: /admin
 
 ---
 
-## 10. Resources
+## 11. Resources
 
 **Testing Tools**:
 - [Google Rich Results Test](https://search.google.com/test/rich-results)
