@@ -55,3 +55,32 @@ This configuration ensures strict compliance with AdSense policy against "Google
 
 ## City Images
 78 AI-generated city landmark images stored in `attached_assets/generated_images/` and mapped via `client/src/lib/city-images.ts`. Each city page features a unique hero image showcasing iconic local landmarks (e.g., York Minster, Edinburgh Castle, Brighton Pier). Images are statically imported for reliability but may benefit from dynamic imports for performance optimization in future iterations.
+
+## SEO Implementation (Phase 1 - Client-Side)
+Comprehensive SEO improvements implemented to enhance search engine visibility and social media sharing:
+
+**Schema.org Structured Data:**
+- LocalBusiness schema on launderette detail pages with full business information, ratings, reviews, opening hours
+- Organization schema on homepage for brand identity and sitelinks search box
+- WebSite schema with search action functionality
+- ItemList schema for launderette listings on homepage
+- FAQPage schema on city pages with AI-generated FAQs
+- Article schema on blog posts with proper metadata
+
+**Open Graph & Twitter Cards:**
+- Comprehensive Open Graph tags (og:title, og:description, og:url, og:image, og:type) on all pages
+- Twitter Card tags (twitter:card, twitter:title, twitter:description, twitter:image) for enhanced social sharing
+- City pages use AI-generated landmark images as og:image for visually rich social shares
+- Blog posts use article type with published_time and author metadata
+- Implemented via SEOTags component (client/src/components/seo-tags.tsx) with proper cleanup to prevent stale metadata
+
+**Technical SEO:**
+- Dynamic XML sitemap at /sitemap.xml including all launderettes, cities, blog posts, and static pages with proper priorities and changefreq
+- robots.txt with crawler directives, sitemap reference, and admin section blocking
+- City-specific and keyword-rich meta descriptions on all page types
+- Proper page titles following SEO best practices
+
+**Known Limitation:**
+- Current implementation uses client-side rendering (CSR), meaning Open Graph tags are set via JavaScript after page load
+- Social media crawlers may not execute JavaScript, potentially missing dynamic meta tags
+- This limitation will be addressed in Phase 2 via Next.js migration with server-side rendering (SSR) and static site generation (SSG)
