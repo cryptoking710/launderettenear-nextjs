@@ -113,3 +113,11 @@ Comprehensive migration plan documented in `docs/nextjs-migration-plan.md`:
 
 **Timeline:** 8 weeks with phased approach
 **Target Performance:** FCP <1.0s, LCP <1.5s, SEO score 100/100
+
+**Migration Status:**
+- ✅ Week 1 COMPLETE: Project setup with Next.js 15, TypeScript, Tailwind, Firebase Admin/Client SDKs, TanStack Query, root layout with metadata, and AdSense integration. All infrastructure in `nextjs-app/` directory ready for content migration.
+- ⏳ Week 2 PENDING: Static pages migration (About, Contact, Privacy, Terms, Laundry Symbols, Cities index)
+- ⏳ Week 3-8: Dynamic pages, admin, SEO optimization, testing, deployment
+
+**Next.js Project Location:** `nextjs-app/` (separate directory from existing Vite app)
+**Installation Required:** Manual `npm install` in `nextjs-app/` directory (see `nextjs-app/SETUP.md`)
