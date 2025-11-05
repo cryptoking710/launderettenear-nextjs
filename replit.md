@@ -116,8 +116,9 @@ Comprehensive migration plan documented in `docs/nextjs-migration-plan.md`:
 
 **Migration Status:**
 - ✅ Week 1 COMPLETE: Project setup with Next.js 15, TypeScript, Tailwind, Firebase Admin/Client SDKs, TanStack Query, root layout with metadata, and AdSense integration. All infrastructure in `nextjs-app/` directory ready for content migration.
-- ⏳ Week 2 PENDING: Static pages migration (About, Contact, Privacy, Terms, Laundry Symbols, Cities index)
-- ⏳ Week 3-8: Dynamic pages, admin, SEO optimization, testing, deployment
+- ✅ Week 2 COMPLETE: Static pages migration (About, Contact, Privacy, Terms) with server-rendered metadata. Contact page demonstrates hybrid Server/Client Component pattern. Contact API route created with Firestore integration. Foundational UI components (Button, Card) created. **Architect Approved.** (Laundry Symbols and Cities pages deferred to later weeks)
+- ⏳ Week 3 PENDING: Homepage, Cities index, and City detail pages with SSG/ISR
+- ⏳ Week 4-8: Launderette detail pages, blog, admin, testing, deployment
 
 **Next.js Project Location:** `nextjs-app/` (separate directory from existing Vite app)
 **Installation Required:** Manual `npm install` in `nextjs-app/` directory (see `nextjs-app/SETUP.md`)
