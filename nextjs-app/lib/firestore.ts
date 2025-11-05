@@ -1,5 +1,5 @@
 import { getAdminDb } from './firebase-admin';
-import type { Launderette, Review } from '../../shared/schema';
+import type { Launderette, Review, BlogPost } from '../../shared/schema';
 
 export async function getLaunderetteById(id: string): Promise<Launderette | null> {
   try {
@@ -126,5 +126,46 @@ export async function getCitiesWithCounts(): Promise<{ city: string; count: numb
   } catch (error) {
     console.error('Error fetching city counts:', error);
     return [];
+  }
+}
+
+export async function getAllBlogPosts(): Promise<BlogPost[]> {
+  try {
+    const db = getAdminDb();
+    const snapshot = await db
+      .collection('blog_posts')
+      .orderBy('publishedAt', 'desc')
+      .get();
+    
+    return snapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data(),
+    })) as BlogPost[];
+  } catch (error) {
+    console.error('Error fetching blog posts:', error);
+    return [];
+  }
+}
+
+export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+  try {
+    const db = getAdminDb();
+    const snapshot = await db
+      .collection('blog_posts')
+      .where('slug', '==', slug)
+      .limit(1)
+      .get();
+    
+    if (snapshot.empty) {
+      return null;
+    }
+    
+    return {
+      id: snapshot.docs[0].id,
+      ...snapshot.docs[0].data(),
+    } as BlogPost;
+  } catch (error) {
+    console.error('Error fetching blog post:', error);
+    return null;
   }
 }
