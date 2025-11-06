@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getAllLaunderettes, getAllBlogPosts } from '@/lib/firestore';
-import { UK_CITIES } from '@/lib/uk-cities';
+import { UK_REGIONS, type City } from '@/lib/regions';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://launderettenear.me';
@@ -63,8 +63,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       },
     ];
 
-    const cityPages: MetadataRoute.Sitemap = UK_CITIES.map((city) => ({
-      url: `${baseUrl}/city/${encodeURIComponent(city.name)}`,
+    const allCities: City[] = Object.values(UK_REGIONS).flat();
+    const cityPages: MetadataRoute.Sitemap = allCities.map((city: City) => ({
+      url: `${baseUrl}/city/${encodeURIComponent(city)}`,
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
@@ -72,7 +73,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const launderettePages: MetadataRoute.Sitemap = launderettes.map((launderette) => ({
       url: `${baseUrl}/launderette/${launderette.id}`,
-      lastModified: launderette.updatedAt ? new Date(launderette.updatedAt) : now,
+      lastModified: launderette.createdAt ? new Date(launderette.createdAt) : now,
       changeFrequency: 'weekly' as const,
       priority: launderette.isPremium ? 0.8 : 0.7,
     }));
