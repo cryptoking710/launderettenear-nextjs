@@ -102,7 +102,7 @@ You'll be prompted for credentials. Use a **Personal Access Token** instead of p
 
 ### 2.4 Add Environment Variables
 
-Click **Environment Variables** and add these **10 variables**:
+Click **Environment Variables** and add these **7 variables**:
 
 #### Client-Side Variables (NEXT_PUBLIC_)
 
