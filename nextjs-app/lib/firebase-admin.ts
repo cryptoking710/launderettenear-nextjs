@@ -8,11 +8,23 @@ export function getAdminApp(): App {
   if (!adminApp) {
     const apps = getApps();
     if (apps.length === 0) {
+      const projectId = process.env.FIREBASE_PROJECT_ID;
+      const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
+      const rawKey = process.env.FIREBASE_PRIVATE_KEY;
+
+      if (!projectId || !clientEmail || !rawKey) {
+        throw new Error(
+          "Missing Firebase Admin credentials. Ensure FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, and FIREBASE_PRIVATE_KEY are set."
+        );
+      }
+
+      const privateKey = Buffer.from(rawKey, "base64").toString("utf8");
+
       adminApp = initializeApp({
         credential: cert({
-          projectId: process.env.FIREBASE_PROJECT_ID,
-          clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-          privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+          projectId,
+          clientEmail,
+          privateKey,
         }),
       });
     } else {
