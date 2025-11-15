@@ -378,7 +378,7 @@ export default async function LaunderettePage({ params }: PageProps) {
                 </CardHeader>
                 <CardContent>
                   <Badge variant="outline" className="text-base" data-testid="badge-price-range">
-                    {priceRangeLabels[launderette.priceRange]}
+                    {priceRangeLabels[launderette.priceRange as keyof typeof priceRangeLabels]}
                   </Badge>
                 </CardContent>
               </Card>
