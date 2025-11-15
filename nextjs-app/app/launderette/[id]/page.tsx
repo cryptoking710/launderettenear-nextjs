@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${launderette.name} - ${launderette.city || 'UK'}`,
       description,
       url: `https://launderettenear.me/launderette/${id}`,
-      type: 'business.business',
+      type: 'website',
     },
     twitter: {
       card: 'summary',
