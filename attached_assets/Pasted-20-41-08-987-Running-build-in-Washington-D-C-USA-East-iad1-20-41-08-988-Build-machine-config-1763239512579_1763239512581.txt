@@ -1,0 +1,1189 @@
+20:41:08.987 Running build in Washington, D.C., USA (East) – iad1
+20:41:08.988 Build machine configuration: 2 cores, 8 GB
+20:41:09.005 Cloning github.com/cryptoking710/launderettenear-nextjs (Branch: main, Commit: c3eb7c7)
+20:41:09.006 Skipping build cache, deployment was triggered without cache.
+20:41:13.799 Cloning completed: 4.794s
+20:41:14.252 Running "vercel build"
+20:41:14.663 Vercel CLI 48.10.2
+20:41:15.021 Installing dependencies...
+20:41:59.352 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+20:41:59.482 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+20:42:00.147 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+20:42:01.591 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+20:42:01.731 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+20:42:05.219 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+20:42:14.802 
+20:42:14.803 added 649 packages in 59s
+20:42:14.803 
+20:42:14.804 171 packages are looking for funding
+20:42:14.804   run `npm fund` for details
+20:42:14.889 Detected Next.js version: 15.5.6
+20:42:14.897 Running "npm run build"
+20:42:15.015 
+20:42:15.015 > launderettenear-nextjs@2.0.0 build
+20:42:15.015 > next build
+20:42:15.016 
+20:42:17.751 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+20:42:17.752 This information is used to shape Next.js' roadmap and prioritize features.
+20:42:17.752 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+20:42:17.752 https://nextjs.org/telemetry
+20:42:17.752 
+20:42:17.835    ▲ Next.js 15.5.6
+20:42:17.841 
+20:42:17.913    Creating an optimized production build ...
+20:42:33.318  ✓ Compiled successfully in 12.6s
+20:42:33.323    Skipping linting
+20:42:33.323    Checking validity of types ...
+20:42:33.589 
+20:42:33.589    We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+20:42:33.589    The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+20:42:33.590 
+20:42:33.590    	- target was set to ES2017 (For top-level `await`. Note: Next.js only polyfills for the esmodules target.)
+20:42:33.591 
+20:42:40.628    Collecting page data ...
+20:42:41.304 Error fetching blog posts: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:41.304     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:41.305     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:41.305     at l (.next/server/app/sitemap.xml/route.js:1:7818)
+20:42:41.305     at Object.q [as generateStaticParams] (.next/server/app/blog/[slug]/page.js:9:9370) {
+20:42:41.305   errorInfo: [Object],
+20:42:41.305   codePrefix: 'app'
+20:42:41.305 }
+20:42:43.021    Generating static pages (0/147) ...
+20:42:44.602 Error fetching all launderettes: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.602     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.602     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.602     at k (.next/server/app/sitemap.xml/route.js:1:7549)
+20:42:44.602     at h (.next/server/app/sitemap.xml/route.js:16:1843)
+20:42:44.602     at i (.next/server/app/sitemap.xml/route.js:1:8877) {
+20:42:44.602   errorInfo: [Object],
+20:42:44.602   codePrefix: 'app'
+20:42:44.602 }
+20:42:44.602 Error fetching blog posts: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.602     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.602     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.602     at l (.next/server/app/sitemap.xml/route.js:1:7818)
+20:42:44.602     at h (.next/server/app/sitemap.xml/route.js:16:1854)
+20:42:44.603     at i (.next/server/app/sitemap.xml/route.js:1:8877) {
+20:42:44.603   errorInfo: [Object],
+20:42:44.603   codePrefix: 'app'
+20:42:44.603 }
+20:42:44.831 Error fetching blog posts: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.831     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.832     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.832     at l (.next/server/app/sitemap.xml/route.js:1:7818)
+20:42:44.832     at o (.next/server/app/blog/page.js:1:9323) {
+20:42:44.834   errorInfo: [Object],
+20:42:44.834   codePrefix: 'app'
+20:42:44.834 }
+20:42:44.834 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.834     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.834     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.834     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.834     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.834   errorInfo: [Object],
+20:42:44.834   codePrefix: 'app'
+20:42:44.835 }
+20:42:44.835 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.835     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.835     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.835     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.835     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.835   errorInfo: [Object],
+20:42:44.835   codePrefix: 'app'
+20:42:44.835 }
+20:42:44.835 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.835     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.835     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.835     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.835     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.835   errorInfo: [Object],
+20:42:44.835   codePrefix: 'app'
+20:42:44.835 }
+20:42:44.835 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.835     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.836     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.836     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.836     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.836   errorInfo: [Object],
+20:42:44.836   codePrefix: 'app'
+20:42:44.836 }
+20:42:44.836 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.836     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.836     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.836     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.836     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.836   errorInfo: [Object],
+20:42:44.836   codePrefix: 'app'
+20:42:44.836 }
+20:42:44.836 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.836     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.836     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.836     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.836     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.837   errorInfo: [Object],
+20:42:44.837   codePrefix: 'app'
+20:42:44.837 }
+20:42:44.858 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.858     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.858     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.858     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.858     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.858   errorInfo: [Object],
+20:42:44.858   codePrefix: 'app'
+20:42:44.858 }
+20:42:44.904 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.904     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.904     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.904     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.904     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.904   errorInfo: [Object],
+20:42:44.904   codePrefix: 'app'
+20:42:44.904 }
+20:42:44.905 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.905     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.905     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.905     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.905     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.905   errorInfo: [Object],
+20:42:44.905   codePrefix: 'app'
+20:42:44.905 }
+20:42:44.905 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.905     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.905     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.905     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.905     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.905   errorInfo: [Object],
+20:42:44.905   codePrefix: 'app'
+20:42:44.905 }
+20:42:44.948 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.949     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.949     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.949     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.949     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.949   errorInfo: [Object],
+20:42:44.949   codePrefix: 'app'
+20:42:44.949 }
+20:42:44.949 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.949     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.949     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.949     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.949     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.949   errorInfo: [Object],
+20:42:44.950   codePrefix: 'app'
+20:42:44.950 }
+20:42:44.950 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.950     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.950     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.950     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.950     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.950   errorInfo: [Object],
+20:42:44.950   codePrefix: 'app'
+20:42:44.950 }
+20:42:44.950 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:44.950     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:44.950     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:44.951     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:44.951     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:44.951   errorInfo: [Object],
+20:42:44.951   codePrefix: 'app'
+20:42:44.951 }
+20:42:45.143 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.143     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.143     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.143     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.143     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.143   errorInfo: [Object],
+20:42:45.143   codePrefix: 'app'
+20:42:45.143 }
+20:42:45.143 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.143     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.143     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.143     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.144     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.144   errorInfo: [Object],
+20:42:45.144   codePrefix: 'app'
+20:42:45.144 }
+20:42:45.144 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.144     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.144     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.148     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.148     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.149   errorInfo: [Object],
+20:42:45.149   codePrefix: 'app'
+20:42:45.149 }
+20:42:45.149 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.149     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.149     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.149     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.150     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.150   errorInfo: [Object],
+20:42:45.150   codePrefix: 'app'
+20:42:45.150 }
+20:42:45.150 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.150     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.150     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.150     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.151     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.151   errorInfo: [Object],
+20:42:45.151   codePrefix: 'app'
+20:42:45.151 }
+20:42:45.151 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.151     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.151     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.152     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.152     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.152   errorInfo: [Object],
+20:42:45.152   codePrefix: 'app'
+20:42:45.152 }
+20:42:45.152 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.153     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.153     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.153     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.153     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.153   errorInfo: [Object],
+20:42:45.153   codePrefix: 'app'
+20:42:45.153 }
+20:42:45.154 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.154     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.154     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.154     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.154     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.154   errorInfo: [Object],
+20:42:45.154   codePrefix: 'app'
+20:42:45.155 }
+20:42:45.279 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.279     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.279     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.280     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.280     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.280   errorInfo: [Object],
+20:42:45.280   codePrefix: 'app'
+20:42:45.280 }
+20:42:45.281 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.281     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.281     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.281     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.281     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.282   errorInfo: [Object],
+20:42:45.282   codePrefix: 'app'
+20:42:45.282 }
+20:42:45.282 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.282     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.283     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.283     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.283     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.283   errorInfo: [Object],
+20:42:45.283   codePrefix: 'app'
+20:42:45.284 }
+20:42:45.284 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.284     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.284     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.284     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.284     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.284   errorInfo: [Object],
+20:42:45.284   codePrefix: 'app'
+20:42:45.284 }
+20:42:45.284 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.284     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.284     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.284     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.284     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.284   errorInfo: [Object],
+20:42:45.284   codePrefix: 'app'
+20:42:45.284 }
+20:42:45.284 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.284     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.284     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.284     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.285     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.285   errorInfo: [Object],
+20:42:45.285   codePrefix: 'app'
+20:42:45.285 }
+20:42:45.285 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.285     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.285     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.285     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.285     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.285   errorInfo: [Object],
+20:42:45.285   codePrefix: 'app'
+20:42:45.285 }
+20:42:45.285 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.285     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.285     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.285     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.285     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.285   errorInfo: [Object],
+20:42:45.285   codePrefix: 'app'
+20:42:45.285 }
+20:42:45.371    Generating static pages (36/147) 
+20:42:45.372 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.372     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.372     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.372     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.372     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.372   errorInfo: [Object],
+20:42:45.372   codePrefix: 'app'
+20:42:45.372 }
+20:42:45.372 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.372     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.372     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.372     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.372     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.372   errorInfo: [Object],
+20:42:45.372   codePrefix: 'app'
+20:42:45.372 }
+20:42:45.373 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.373     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.373     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.373     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.373     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.373   errorInfo: [Object],
+20:42:45.373   codePrefix: 'app'
+20:42:45.373 }
+20:42:45.373 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.373     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.373     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.373     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.373     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.373   errorInfo: [Object],
+20:42:45.373   codePrefix: 'app'
+20:42:45.373 }
+20:42:45.373 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.373     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.373     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.373     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.373     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.373   errorInfo: [Object],
+20:42:45.373   codePrefix: 'app'
+20:42:45.373 }
+20:42:45.396 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.396     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.396     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.396     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.396     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.396   errorInfo: [Object],
+20:42:45.396   codePrefix: 'app'
+20:42:45.396 }
+20:42:45.396 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.396     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.396     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.396     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.396     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.396   errorInfo: [Object],
+20:42:45.396   codePrefix: 'app'
+20:42:45.396 }
+20:42:45.469 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.470     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.470     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.470     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.470     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.470   errorInfo: [Object],
+20:42:45.470   codePrefix: 'app'
+20:42:45.470 }
+20:42:45.470 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.470     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.470     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.470     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.470     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.470   errorInfo: [Object],
+20:42:45.470   codePrefix: 'app'
+20:42:45.470 }
+20:42:45.596 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.597     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.597     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.597     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.597     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.597   errorInfo: [Object],
+20:42:45.597   codePrefix: 'app'
+20:42:45.597 }
+20:42:45.597 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.597     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.597     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.597     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.597     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.597   errorInfo: [Object],
+20:42:45.597   codePrefix: 'app'
+20:42:45.597 }
+20:42:45.597 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.597     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.598     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.598     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.598     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.598   errorInfo: [Object],
+20:42:45.598   codePrefix: 'app'
+20:42:45.598 }
+20:42:45.598 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.598     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.598     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.598     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.598     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.598   errorInfo: [Object],
+20:42:45.598   codePrefix: 'app'
+20:42:45.598 }
+20:42:45.598 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.598     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.598     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.598     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.598     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.598   errorInfo: [Object],
+20:42:45.598   codePrefix: 'app'
+20:42:45.599 }
+20:42:45.599 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.599     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.599     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.599     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.599     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.599   errorInfo: [Object],
+20:42:45.599   codePrefix: 'app'
+20:42:45.599 }
+20:42:45.599 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.599     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.599     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.599     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.599     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.599   errorInfo: [Object],
+20:42:45.599   codePrefix: 'app'
+20:42:45.599 }
+20:42:45.629 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.630     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.630     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.630     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.630     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.630   errorInfo: [Object],
+20:42:45.630   codePrefix: 'app'
+20:42:45.630 }
+20:42:45.630 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.630     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.630     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.630     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.630     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.630   errorInfo: [Object],
+20:42:45.630   codePrefix: 'app'
+20:42:45.630 }
+20:42:45.630 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.630     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.631     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.631     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.631     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.631   errorInfo: [Object],
+20:42:45.631   codePrefix: 'app'
+20:42:45.631 }
+20:42:45.655 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.655     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.655     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.663     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.663     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.663   errorInfo: [Object],
+20:42:45.664   codePrefix: 'app'
+20:42:45.664 }
+20:42:45.664 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.664     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.664     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.664     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.664     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.664   errorInfo: [Object],
+20:42:45.664   codePrefix: 'app'
+20:42:45.664 }
+20:42:45.687 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.688     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.688     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.688     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.688     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.688   errorInfo: [Object],
+20:42:45.688   codePrefix: 'app'
+20:42:45.688 }
+20:42:45.688 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.688     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.688     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.688     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.688     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.688   errorInfo: [Object],
+20:42:45.688   codePrefix: 'app'
+20:42:45.688 }
+20:42:45.689 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.689     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.689     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.689     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.689     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.689   errorInfo: [Object],
+20:42:45.689   codePrefix: 'app'
+20:42:45.689 }
+20:42:45.760 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.760     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.760     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.760     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.760     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.760   errorInfo: [Object],
+20:42:45.760   codePrefix: 'app'
+20:42:45.760 }
+20:42:45.760 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.760     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.761     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.761     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.761     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.761   errorInfo: [Object],
+20:42:45.761   codePrefix: 'app'
+20:42:45.761 }
+20:42:45.812 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.812     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.812     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.812     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.812     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.813   errorInfo: [Object],
+20:42:45.813   codePrefix: 'app'
+20:42:45.813 }
+20:42:45.813 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.813     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.813     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.813     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.813     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.813   errorInfo: [Object],
+20:42:45.813   codePrefix: 'app'
+20:42:45.813 }
+20:42:45.813 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.813     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.813     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.813     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.813     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.813   errorInfo: [Object],
+20:42:45.813   codePrefix: 'app'
+20:42:45.814 }
+20:42:45.853 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.854     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.854     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.854     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.854     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.854   errorInfo: [Object],
+20:42:45.854   codePrefix: 'app'
+20:42:45.855 }
+20:42:45.855 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.855     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.855     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.855     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.855     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.855   errorInfo: [Object],
+20:42:45.855   codePrefix: 'app'
+20:42:45.855 }
+20:42:45.855 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.855     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.855     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.855     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.856     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.856   errorInfo: [Object],
+20:42:45.856   codePrefix: 'app'
+20:42:45.856 }
+20:42:45.939 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.940     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.940     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.949     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.950     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.950   errorInfo: [Object],
+20:42:45.950   codePrefix: 'app'
+20:42:45.950 }
+20:42:45.950 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.950     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.950     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.950     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.950     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.950   errorInfo: [Object],
+20:42:45.950   codePrefix: 'app'
+20:42:45.950 }
+20:42:45.950 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.950     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.950     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.950     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.950     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.951   errorInfo: [Object],
+20:42:45.951   codePrefix: 'app'
+20:42:45.951 }
+20:42:45.987 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.987     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.987     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.987     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.987     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.987   errorInfo: [Object],
+20:42:45.987   codePrefix: 'app'
+20:42:45.987 }
+20:42:45.987 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.987     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.988     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.988     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.988     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.988   errorInfo: [Object],
+20:42:45.988   codePrefix: 'app'
+20:42:45.988 }
+20:42:45.988 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.988     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.988     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.988     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.988     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.988   errorInfo: [Object],
+20:42:45.988   codePrefix: 'app'
+20:42:45.988 }
+20:42:45.988 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:45.988     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:45.988     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:45.988     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:45.988     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:45.988   errorInfo: [Object],
+20:42:45.988   codePrefix: 'app'
+20:42:45.988 }
+20:42:46.026 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.027     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.027     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.027     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.027     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.027   errorInfo: [Object],
+20:42:46.028   codePrefix: 'app'
+20:42:46.028 }
+20:42:46.113    Generating static pages (73/147) 
+20:42:46.114 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.114     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.114     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.114     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.114     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.114   errorInfo: [Object],
+20:42:46.114   codePrefix: 'app'
+20:42:46.114 }
+20:42:46.114 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.114     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.115     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.115     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.115     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.115   errorInfo: [Object],
+20:42:46.115   codePrefix: 'app'
+20:42:46.115 }
+20:42:46.115 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.115     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.116     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.116     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.116     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.116   errorInfo: [Object],
+20:42:46.116   codePrefix: 'app'
+20:42:46.116 }
+20:42:46.116 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.116     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.117     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.117     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.117     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.117   errorInfo: [Object],
+20:42:46.117   codePrefix: 'app'
+20:42:46.117 }
+20:42:46.195 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.204     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.204     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.204     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.204     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.204   errorInfo: [Object],
+20:42:46.204   codePrefix: 'app'
+20:42:46.204 }
+20:42:46.204 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.204     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.204     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.204     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.204     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.204   errorInfo: [Object],
+20:42:46.204   codePrefix: 'app'
+20:42:46.205 }
+20:42:46.205 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.205     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.205     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.205     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.205     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.205   errorInfo: [Object],
+20:42:46.205   codePrefix: 'app'
+20:42:46.205 }
+20:42:46.205 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.205     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.205     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.205     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.205     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.205   errorInfo: [Object],
+20:42:46.205   codePrefix: 'app'
+20:42:46.205 }
+20:42:46.231 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.231     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.232     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.232     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.232     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.232   errorInfo: [Object],
+20:42:46.232   codePrefix: 'app'
+20:42:46.233 }
+20:42:46.233 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.233     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.233     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.233     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.233     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.233   errorInfo: [Object],
+20:42:46.234   codePrefix: 'app'
+20:42:46.234 }
+20:42:46.234 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.234     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.234     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.234     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.235     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.235   errorInfo: [Object],
+20:42:46.235   codePrefix: 'app'
+20:42:46.235 }
+20:42:46.235 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.235     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.235     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.236     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.236     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.236   errorInfo: [Object],
+20:42:46.236   codePrefix: 'app'
+20:42:46.236 }
+20:42:46.264 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.264     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.265     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.265     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.265     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.265   errorInfo: [Object],
+20:42:46.265   codePrefix: 'app'
+20:42:46.265 }
+20:42:46.266 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.266     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.266     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.266     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.266     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.266   errorInfo: [Object],
+20:42:46.266   codePrefix: 'app'
+20:42:46.267 }
+20:42:46.267 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.267     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.267     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.267     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.267     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.268   errorInfo: [Object],
+20:42:46.268   codePrefix: 'app'
+20:42:46.268 }
+20:42:46.283 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.284     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.284     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.284     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.284     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.284   errorInfo: [Object],
+20:42:46.284   codePrefix: 'app'
+20:42:46.284 }
+20:42:46.355 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.355     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.355     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.355     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.355     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.355   errorInfo: [Object],
+20:42:46.355   codePrefix: 'app'
+20:42:46.355 }
+20:42:46.355 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.355     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.355     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.355     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.355     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.355   errorInfo: [Object],
+20:42:46.355   codePrefix: 'app'
+20:42:46.355 }
+20:42:46.355 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.355     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.356     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.356     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.356     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.356   errorInfo: [Object],
+20:42:46.356   codePrefix: 'app'
+20:42:46.356 }
+20:42:46.400 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.400     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.400     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.400     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.400     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.400   errorInfo: [Object],
+20:42:46.401   codePrefix: 'app'
+20:42:46.401 }
+20:42:46.401 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.401     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.401     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.401     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.401     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.401   errorInfo: [Object],
+20:42:46.401   codePrefix: 'app'
+20:42:46.401 }
+20:42:46.401 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.401     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.401     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.401     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.401     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.401   errorInfo: [Object],
+20:42:46.401   codePrefix: 'app'
+20:42:46.401 }
+20:42:46.402 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.402     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.402     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.402     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.402     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.402   errorInfo: [Object],
+20:42:46.402   codePrefix: 'app'
+20:42:46.402 }
+20:42:46.453 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.460     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.460     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.460     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.460     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.460   errorInfo: [Object],
+20:42:46.460   codePrefix: 'app'
+20:42:46.460 }
+20:42:46.523 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.524     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.524     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.524     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.524     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.524   errorInfo: [Object],
+20:42:46.525   codePrefix: 'app'
+20:42:46.525 }
+20:42:46.525 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.525     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.525     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.526     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.526     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.526   errorInfo: [Object],
+20:42:46.526   codePrefix: 'app'
+20:42:46.526 }
+20:42:46.526 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.527     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.527     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.527     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.527     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.527   errorInfo: [Object],
+20:42:46.527   codePrefix: 'app'
+20:42:46.528 }
+20:42:46.528 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.528     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.528     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.528     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.529     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.529   errorInfo: [Object],
+20:42:46.529   codePrefix: 'app'
+20:42:46.529 }
+20:42:46.558 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.559     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.559     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.559     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.559     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.560   errorInfo: [Object],
+20:42:46.560   codePrefix: 'app'
+20:42:46.560 }
+20:42:46.590 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.590     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.591     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.591     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.591     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.591   errorInfo: [Object],
+20:42:46.591   codePrefix: 'app'
+20:42:46.591 }
+20:42:46.614 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.615     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.615     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.615     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.615     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.616   errorInfo: [Object],
+20:42:46.616   codePrefix: 'app'
+20:42:46.616 }
+20:42:46.643 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.643     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.644     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.644     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.644     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.644   errorInfo: [Object],
+20:42:46.644   codePrefix: 'app'
+20:42:46.645 }
+20:42:46.704    Generating static pages (110/147) 
+20:42:46.705 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.705     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.705     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.705     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.706     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.706   errorInfo: [Object],
+20:42:46.706   codePrefix: 'app'
+20:42:46.706 }
+20:42:46.706 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.707     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.707     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.707     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.707     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.707   errorInfo: [Object],
+20:42:46.708   codePrefix: 'app'
+20:42:46.708 }
+20:42:46.722 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.722     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.723     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.723     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.723     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.724   errorInfo: [Object],
+20:42:46.724   codePrefix: 'app'
+20:42:46.724 }
+20:42:46.725 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.725     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.725     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.725     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.725     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.725   errorInfo: [Object],
+20:42:46.725   codePrefix: 'app'
+20:42:46.726 }
+20:42:46.828 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.829     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.829     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.830     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.830     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.830   errorInfo: [Object],
+20:42:46.830   codePrefix: 'app'
+20:42:46.830 }
+20:42:46.830 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.831     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.831     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.831     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.831     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.833   errorInfo: [Object],
+20:42:46.833   codePrefix: 'app'
+20:42:46.833 }
+20:42:46.833 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.833     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.833     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.834     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.834     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.834   errorInfo: [Object],
+20:42:46.834   codePrefix: 'app'
+20:42:46.834 }
+20:42:46.835 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.835     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.835     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.835     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.835     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.835   errorInfo: [Object],
+20:42:46.836   codePrefix: 'app'
+20:42:46.836 }
+20:42:46.861 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.862     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.862     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.862     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.863     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.863   errorInfo: [Object],
+20:42:46.863   codePrefix: 'app'
+20:42:46.863 }
+20:42:46.863 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.864     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.864     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.864     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.864     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.864   errorInfo: [Object],
+20:42:46.865   codePrefix: 'app'
+20:42:46.865 }
+20:42:46.886 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.887     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.887     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.887     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.888     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.888   errorInfo: [Object],
+20:42:46.888   codePrefix: 'app'
+20:42:46.888 }
+20:42:46.888 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.889     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.889     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.889     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.889     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.889   errorInfo: [Object],
+20:42:46.890   codePrefix: 'app'
+20:42:46.890 }
+20:42:46.890 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.890     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.890     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.890     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.891     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.891   errorInfo: [Object],
+20:42:46.891   codePrefix: 'app'
+20:42:46.891 }
+20:42:46.904 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.905     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.905     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.905     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.905     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.906   errorInfo: [Object],
+20:42:46.906   codePrefix: 'app'
+20:42:46.906 }
+20:42:46.906 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.906     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.907     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.907     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.907     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.907   errorInfo: [Object],
+20:42:46.907   codePrefix: 'app'
+20:42:46.907 }
+20:42:46.957 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.957     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:46.958     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:46.958     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:46.958     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:46.958   errorInfo: [Object],
+20:42:46.958   codePrefix: 'app'
+20:42:46.959 }
+20:42:46.999 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:46.999     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.000     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.000     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.000     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.000   errorInfo: [Object],
+20:42:47.000   codePrefix: 'app'
+20:42:47.000 }
+20:42:47.000 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.001     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.001     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.001     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.001     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.001   errorInfo: [Object],
+20:42:47.001   codePrefix: 'app'
+20:42:47.001 }
+20:42:47.001 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.002     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.002     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.002     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.002     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.002   errorInfo: [Object],
+20:42:47.002   codePrefix: 'app'
+20:42:47.003 }
+20:42:47.034 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.034     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.035     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.035     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.035     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.035   errorInfo: [Object],
+20:42:47.035   codePrefix: 'app'
+20:42:47.036 }
+20:42:47.045 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.045     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.045     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.045     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.045     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.045   errorInfo: [Object],
+20:42:47.045   codePrefix: 'app'
+20:42:47.045 }
+20:42:47.045 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.045     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.045     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.045     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.045     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.045   errorInfo: [Object],
+20:42:47.045   codePrefix: 'app'
+20:42:47.045 }
+20:42:47.069 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.070     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.070     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.070     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.070     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.070   errorInfo: [Object],
+20:42:47.070   codePrefix: 'app'
+20:42:47.070 }
+20:42:47.070 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.070     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.070     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.070     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.070     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.070   errorInfo: [Object],
+20:42:47.070   codePrefix: 'app'
+20:42:47.070 }
+20:42:47.198 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.198     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.198     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.198     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.198     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.198   errorInfo: [Object],
+20:42:47.198   codePrefix: 'app'
+20:42:47.198 }
+20:42:47.198 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.198     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.198     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.198     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.198     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.199   errorInfo: [Object],
+20:42:47.199   codePrefix: 'app'
+20:42:47.199 }
+20:42:47.199 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.199     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.199     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.199     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.199     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.199   errorInfo: [Object],
+20:42:47.199   codePrefix: 'app'
+20:42:47.199 }
+20:42:47.199 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.199     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.199     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.199     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.199     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.199   errorInfo: [Object],
+20:42:47.199   codePrefix: 'app'
+20:42:47.199 }
+20:42:47.199 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.199     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.199     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.199     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.200     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.200   errorInfo: [Object],
+20:42:47.200   codePrefix: 'app'
+20:42:47.200 }
+20:42:47.200 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.200     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.200     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.200     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.200     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.200   errorInfo: [Object],
+20:42:47.200   codePrefix: 'app'
+20:42:47.200 }
+20:42:47.200 Error fetching launderettes by city: Error: Failed to parse private key: Error: Invalid PEM formatted message.
+20:42:47.200     at <unknown> (.next/server/app/api/contact/route.js:1:7696)
+20:42:47.200     at h (.next/server/app/api/contact/route.js:1:7762)
+20:42:47.200     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+20:42:47.200     at v (.next/server/app/city/[cityName]/page.js:2:20264) {
+20:42:47.200   errorInfo: [Object],
+20:42:47.200   codePrefix: 'app'
+20:42:47.201 }
+20:42:47.424  ✓ Generating static pages (147/147)
+20:42:49.260    Finalizing page optimization ...
+20:42:49.265    Collecting build traces ...
+20:42:56.830 
+20:42:56.834 Route (app)                                 Size  First Load JS  Revalidate  Expire
+20:42:56.835 ┌ ○ /                                      178 B         105 kB
+20:42:56.835 ├ ○ /_not-found                            994 B         103 kB
+20:42:56.835 ├ ○ /about                                 178 B         105 kB
+20:42:56.835 ├ ƒ /api/contact                           131 B         102 kB
+20:42:56.835 ├ ○ /blog                                  178 B         105 kB          1d      1y
+20:42:56.835 ├ ● /blog/[slug]                           178 B         105 kB
+20:42:56.836 ├ ○ /cities                              4.05 kB         118 kB
+20:42:56.836 ├ ● /city/[cityName]                       178 B         105 kB          1h      1y
+20:42:56.836 ├   ├ /city/London                                                       1h      1y
+20:42:56.837 ├   ├ /city/Croydon                                                      1h      1y
+20:42:56.837 ├   ├ /city/Sutton                                                       1h      1y
+20:42:56.837 ├   └ [+130 more paths]
+20:42:56.837 ├ ○ /contact                             3.35 kB         117 kB
+20:42:56.837 ├ ƒ /launderette/[id]                      954 B         106 kB
+20:42:56.837 ├ ○ /laundry-symbols                     6.06 kB         111 kB
+20:42:56.837 ├ ○ /privacy                               178 B         105 kB
+20:42:56.837 ├ ○ /robots.txt                            131 B         102 kB
+20:42:56.837 ├ ○ /sitemap.xml                           131 B         102 kB
+20:42:56.837 └ ○ /terms                                 178 B         105 kB
+20:42:56.837 + First Load JS shared by all             102 kB
+20:42:56.837   ├ chunks/255-cf2e1d3491ac955b.js       45.7 kB
+20:42:56.837   ├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB
+20:42:56.837   └ other shared chunks (total)          1.93 kB
+20:42:56.837 
+20:42:56.837 
+20:42:56.837 ○  (Static)   prerendered as static content
+20:42:56.837 ●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+20:42:56.837 ƒ  (Dynamic)  server-rendered on demand
+20:42:56.837 
+20:42:57.100 Traced Next.js server files in: 79.119ms
+20:42:57.773 Created all serverless functions in: 671.097ms
+20:42:57.792 Collected static files (public/, static/, .next/static): 8.142ms
+20:42:58.210 Build Completed in /vercel/output [2m]
+20:42:58.531 Deploying outputs...
+20:43:09.915 Deployment completed
+20:43:10.579 Creating build cache...
+20:43:34.366 Created build cache: 23.783s
+20:43:34.367 Uploading build cache [149.88 MB]
+20:43:35.913 Build cache uploaded: 1.549s
