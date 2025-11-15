@@ -8,27 +8,39 @@ export function getAdminApp(): App {
   if (!adminApp) {
     const apps = getApps();
     if (apps.length === 0) {
-      const projectId = process.env.FIREBASE_PROJECT_ID;
-      const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
-      const rawKey = process.env.FIREBASE_PRIVATE_KEY;
-
-      if (!projectId || !clientEmail || !rawKey) {
-        throw new Error(
-          "Missing Firebase Admin credentials. Ensure FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, and FIREBASE_PRIVATE_KEY are set."
+      // Try service account JSON first (more reliable)
+      const serviceAccountJson = process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
+      
+      if (serviceAccountJson) {
+        // Decode base64-encoded service account JSON
+        const serviceAccount = JSON.parse(
+          Buffer.from(serviceAccountJson, 'base64').toString('utf8')
         );
+        
+        adminApp = initializeApp({
+          credential: cert(serviceAccount),
+        });
+      } else {
+        // Fallback to individual environment variables
+        const projectId = process.env.FIREBASE_PROJECT_ID;
+        const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
+        const privateKey = process.env.FIREBASE_PRIVATE_KEY;
+
+        if (!projectId || !clientEmail || !privateKey) {
+          throw new Error(
+            "Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY"
+          );
+        }
+
+        adminApp = initializeApp({
+          credential: cert({
+            projectId,
+            clientEmail,
+            // Handle the private key - it should already have proper newlines from Vercel
+            privateKey: privateKey.replace(/\\n/g, '\n'),
+          }),
+        });
       }
-
-      // The private key from Firebase service account JSON contains literal \n characters
-      // We need to replace them with actual newlines
-      const privateKey = rawKey.replace(/\\n/g, '\n');
-
-      adminApp = initializeApp({
-        credential: cert({
-          projectId,
-          clientEmail,
-          privateKey,
-        }),
-      });
     } else {
       adminApp = apps[0];
     }
