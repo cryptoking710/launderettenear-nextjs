@@ -260,7 +260,7 @@ export default async function LaunderettePage({ params }: PageProps) {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-6">
-                    {reviews.map((review) => (
+                    {reviews.map((review: any) => (
                       <div key={review.id} className="space-y-2">
                         <div className="flex items-center justify-between">
                           <div>
@@ -274,7 +274,7 @@ export default async function LaunderettePage({ params }: PageProps) {
                             </p>
                           </div>
                           <div className="flex items-center">
-                            {[1, 2, 3, 4, 5].map((star) => (
+                            {[1, 2, 3, 4, 5].map((star: number) => (
                               <Star
                                 key={star}
                                 className={`w-4 h-4 ${
