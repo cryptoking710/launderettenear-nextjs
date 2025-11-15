@@ -12,14 +12,20 @@ export function getAdminApp(): App {
       const serviceAccountJson = process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
       
       if (serviceAccountJson) {
-        // Decode base64-encoded service account JSON
-        const serviceAccount = JSON.parse(
-          Buffer.from(serviceAccountJson, 'base64').toString('utf8')
-        );
-        
-        adminApp = initializeApp({
-          credential: cert(serviceAccount),
-        });
+        try {
+          // Decode base64-encoded service account JSON
+          const decoded = Buffer.from(serviceAccountJson, 'base64').toString('utf8');
+          const serviceAccount = JSON.parse(decoded);
+          
+          adminApp = initializeApp({
+            credential: cert(serviceAccount),
+          });
+        } catch (error) {
+          console.error('Failed to parse FIREBASE_SERVICE_ACCOUNT_JSON:', error);
+          throw new Error(
+            'Invalid FIREBASE_SERVICE_ACCOUNT_JSON. Please ensure the JSON is valid and properly base64-encoded.'
+          );
+        }
       } else {
         // Fallback to individual environment variables
         const projectId = process.env.FIREBASE_PROJECT_ID;
@@ -36,7 +42,6 @@ export function getAdminApp(): App {
           credential: cert({
             projectId,
             clientEmail,
-            // Handle the private key - it should already have proper newlines from Vercel
             privateKey: privateKey.replace(/\\n/g, '\n'),
           }),
         });
