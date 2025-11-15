@@ -233,7 +233,7 @@ export default async function CityDetail({ params }: CityPageProps) {
 
                         {launderette.features && launderette.features.length > 0 && (
                           <div className="flex flex-wrap gap-1 mt-3">
-                            {launderette.features.slice(0, 3).map((feature, index) => (
+                            {launderette.features.slice(0, 3).map((feature: string, index: number) => (
                               <Badge key={index} variant="outline" className="text-xs" data-testid={`badge-feature-${launderette.id}-${index}`}>
                                 {feature}
                               </Badge>
