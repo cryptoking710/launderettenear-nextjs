@@ -1,0 +1,51 @@
+18:42:42.568 Running build in Washington, D.C., USA (East) – iad1
+18:42:42.568 Build machine configuration: 2 cores, 8 GB
+18:42:42.578 Cloning github.com/cryptoking710/launderettenear-nextjs (Branch: main, Commit: 55dd752)
+18:42:42.579 Skipping build cache, deployment was triggered without cache.
+18:42:46.271 Cloning completed: 3.693s
+18:42:46.877 Running "vercel build"
+18:42:47.287 Vercel CLI 48.10.2
+18:42:47.640 Installing dependencies...
+18:43:43.787 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+18:43:43.880 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+18:43:44.406 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+18:43:45.819 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+18:43:46.127 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+18:43:49.367 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+18:44:00.021 
+18:44:00.022 added 645 packages in 1m
+18:44:00.022 
+18:44:00.022 171 packages are looking for funding
+18:44:00.022   run `npm fund` for details
+18:44:00.211 Detected Next.js version: 15.5.6
+18:44:00.223 Running "npm run build"
+18:44:00.382 
+18:44:00.384 > launderettenear-nextjs@2.0.0 build
+18:44:00.384 > next build
+18:44:00.384 
+18:44:01.779 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+18:44:01.780 This information is used to shape Next.js' roadmap and prioritize features.
+18:44:01.780 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+18:44:01.780 https://nextjs.org/telemetry
+18:44:01.780 
+18:44:01.864    ▲ Next.js 15.5.6
+18:44:01.865 
+18:44:01.936    Creating an optimized production build ...
+18:44:09.440 Failed to compile.
+18:44:09.440 
+18:44:09.440 ./app/blog/[slug]/page.tsx
+18:44:09.440 Module not found: Can't resolve 'marked'
+18:44:09.441 
+18:44:09.441 https://nextjs.org/docs/messages/module-not-found
+18:44:09.441 
+18:44:09.441 ./components/ui/separator.tsx
+18:44:09.441 Module not found: Can't resolve '@radix-ui/react-separator'
+18:44:09.441 
+18:44:09.441 https://nextjs.org/docs/messages/module-not-found
+18:44:09.442 
+18:44:09.442 Import trace for requested module:
+18:44:09.442 ./app/laundry-symbols/page.tsx
+18:44:09.442 
+18:44:09.447 
+18:44:09.448 > Build failed because of webpack errors
+18:44:09.479 Error: Command "npm run build" exited with 1
