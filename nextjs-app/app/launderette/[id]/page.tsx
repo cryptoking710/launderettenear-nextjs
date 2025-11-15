@@ -497,7 +497,7 @@ export default async function LaunderettePage({ params }: PageProps) {
             ...(launderette.email && { email: launderette.email }),
             ...(launderette.website && { url: launderette.website }),
             ...(launderette.openingHours && Object.keys(launderette.openingHours).length > 0 && {
-              openingHoursSpecification: Object.entries(launderette.openingHours).map(([day, hours]) => ({
+              openingHoursSpecification: Object.entries(launderette.openingHours).map(([day, hours]: [string, any]) => ({
                 '@type': 'OpeningHoursSpecification',
                 dayOfWeek: day,
                 opens: hours.split('-')[0]?.trim() || '',
@@ -514,7 +514,7 @@ export default async function LaunderettePage({ params }: PageProps) {
               },
             }),
             ...(reviews.length > 0 && {
-              review: reviews.map((review) => ({
+              review: reviews.map((review: any) => ({
                 '@type': 'Review',
                 author: {
                   '@type': 'Person',

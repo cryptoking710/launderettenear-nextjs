@@ -1,0 +1,56 @@
+19:57:37.916 Running build in Washington, D.C., USA (East) – iad1
+19:57:37.917 Build machine configuration: 2 cores, 8 GB
+19:57:38.020 Cloning github.com/cryptoking710/launderettenear-nextjs (Branch: main, Commit: 36019c2)
+19:57:38.021 Previous build caches not available.
+19:57:42.149 Cloning completed: 4.129s
+19:57:42.571 Running "vercel build"
+19:57:42.950 Vercel CLI 48.10.2
+19:57:43.292 Installing dependencies...
+19:58:28.877 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+19:58:28.903 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+19:58:29.410 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+19:58:30.805 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+19:58:31.095 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+19:58:33.817 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+19:58:43.688 
+19:58:43.689 added 649 packages in 1m
+19:58:43.689 
+19:58:43.689 171 packages are looking for funding
+19:58:43.689   run `npm fund` for details
+19:58:44.005 Detected Next.js version: 15.5.6
+19:58:44.012 Running "npm run build"
+19:58:44.253 
+19:58:44.254 > launderettenear-nextjs@2.0.0 build
+19:58:44.254 > next build
+19:58:44.254 
+19:58:45.793 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+19:58:45.796 This information is used to shape Next.js' roadmap and prioritize features.
+19:58:45.797 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+19:58:45.797 https://nextjs.org/telemetry
+19:58:45.798 
+19:58:45.916    ▲ Next.js 15.5.6
+19:58:45.916 
+19:58:46.194    Creating an optimized production build ...
+19:59:00.164  ✓ Compiled successfully in 11.3s
+19:59:00.169    Skipping linting
+19:59:00.170    Checking validity of types ...
+19:59:00.430 
+19:59:00.430    We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+19:59:00.431    The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+19:59:00.431 
+19:59:00.431    	- target was set to ES2017 (For top-level `await`. Note: Next.js only polyfills for the esmodules target.)
+19:59:00.431 
+19:59:06.917 Failed to compile.
+19:59:06.917 
+19:59:06.918 ./app/launderette/[id]/page.tsx:503:24
+19:59:06.919 Type error: 'hours' is of type 'unknown'.
+19:59:06.919 
+19:59:06.919 [0m [90m 501 |[39m                 [32m'@type'[39m[33m:[39m [32m'OpeningHoursSpecification'[39m[33m,[39m
+19:59:06.919  [90m 502 |[39m                 dayOfWeek[33m:[39m day[33m,[39m
+19:59:06.919 [31m[1m>[22m[39m[90m 503 |[39m                 opens[33m:[39m hours[33m.[39msplit([32m'-'[39m)[[35m0[39m][33m?[39m[33m.[39mtrim() [33m||[39m [32m''[39m[33m,[39m
+19:59:06.920  [90m     |[39m                        [31m[1m^[22m[39m
+19:59:06.920  [90m 504 |[39m                 closes[33m:[39m hours[33m.[39msplit([32m'-'[39m)[[35m1[39m][33m?[39m[33m.[39mtrim() [33m||[39m [32m''[39m[33m,[39m
+19:59:06.920  [90m 505 |[39m               }))[33m,[39m
+19:59:06.920  [90m 506 |[39m             })[33m,[39m[0m
+19:59:06.947 Next.js build worker exited with code: 1 and signal: null
+19:59:06.969 Error: Command "npm run build" exited with 1
