@@ -143,3 +143,4 @@ NEXT_PUBLIC_FIREBASE_APP_ID        # App ID
 ## License
 
 Private - LaunderetteNear.me
+# Trigger deployment
