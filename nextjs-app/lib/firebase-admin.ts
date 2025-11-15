@@ -18,21 +18,9 @@ export function getAdminApp(): App {
         );
       }
 
-      // Handle different private key formats:
-      // 1. Try Base64 decoding first (if it looks like Base64)
-      // 2. Try replacing escaped newlines
-      // 3. Use as-is if already in correct format
-      let privateKey = rawKey;
-      
-      // If it doesn't contain actual newlines and doesn't start with -----, try Base64 decode
-      if (!rawKey.includes('\n') && !rawKey.startsWith('-----BEGIN')) {
-        try {
-          privateKey = Buffer.from(rawKey, "base64").toString("utf8");
-        } catch (e) {
-          // If Base64 decode fails, try replacing escaped newlines
-          privateKey = rawKey.replace(/\\n/g, '\n');
-        }
-      }
+      // The private key from Firebase service account JSON contains literal \n characters
+      // We need to replace them with actual newlines
+      const privateKey = rawKey.replace(/\\n/g, '\n');
 
       adminApp = initializeApp({
         credential: cert({
