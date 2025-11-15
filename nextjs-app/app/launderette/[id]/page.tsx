@@ -209,7 +209,7 @@ export default async function LaunderettePage({ params }: PageProps) {
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
-                    {launderette.features.map((feature, index) => (
+                    {launderette.features.map((feature: string, index: number) => (
                       <Badge key={index} variant="outline" data-testid={`badge-feature-${index}`}>
                         {feature}
                       </Badge>
