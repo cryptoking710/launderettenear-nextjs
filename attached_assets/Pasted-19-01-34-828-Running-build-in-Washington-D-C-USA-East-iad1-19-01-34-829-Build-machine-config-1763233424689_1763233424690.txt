@@ -1,0 +1,51 @@
+19:01:34.828 Running build in Washington, D.C., USA (East) – iad1
+19:01:34.829 Build machine configuration: 2 cores, 8 GB
+19:01:34.993 Cloning github.com/cryptoking710/launderettenear-nextjs (Branch: main, Commit: 12a15cc)
+19:01:34.994 Previous build caches not available.
+19:01:39.205 Cloning completed: 4.211s
+19:01:39.642 Running "vercel build"
+19:01:40.059 Vercel CLI 48.10.2
+19:01:40.412 Installing dependencies...
+19:02:35.236 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+19:02:35.237 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+19:02:35.965 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+19:02:37.308 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+19:02:37.522 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+19:02:40.616 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+19:02:50.692 
+19:02:50.693 added 649 packages in 1m
+19:02:50.694 
+19:02:50.695 171 packages are looking for funding
+19:02:50.695   run `npm fund` for details
+19:02:50.935 Detected Next.js version: 15.5.6
+19:02:50.942 Running "npm run build"
+19:02:51.832 
+19:02:51.833 > launderettenear-nextjs@2.0.0 build
+19:02:51.833 > next build
+19:02:51.834 
+19:02:53.103 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+19:02:53.104 This information is used to shape Next.js' roadmap and prioritize features.
+19:02:53.105 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+19:02:53.105 https://nextjs.org/telemetry
+19:02:53.105 
+19:02:53.283    ▲ Next.js 15.5.6
+19:02:53.284 
+19:02:53.467    Creating an optimized production build ...
+19:03:07.591  ✓ Compiled successfully in 11.5s
+19:03:07.595    Skipping linting
+19:03:07.595    Checking validity of types ...
+19:03:07.848 
+19:03:07.849    We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+19:03:07.850    The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+19:03:07.850 
+19:03:07.850    	- target was set to ES2017 (For top-level `await`. Note: Next.js only polyfills for the esmodules target.)
+19:03:07.850 
+19:03:14.648 Failed to compile.
+19:03:14.649 
+19:03:14.649 app/blog/[slug]/page.tsx
+19:03:14.650 Type error: Type '{ params: { slug: string; }; }' does not satisfy the constraint 'PageProps'.
+19:03:14.650   Types of property 'params' are incompatible.
+19:03:14.650     Type '{ slug: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+19:03:14.651 
+19:03:14.683 Next.js build worker exited with code: 1 and signal: null
+19:03:14.707 Error: Command "npm run build" exited with 1
