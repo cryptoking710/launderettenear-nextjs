@@ -1,5 +1,5 @@
 import { getAdminDb } from './firebase-admin';
-import type { Launderette, Review, BlogPost } from '../../shared/schema';
+import type { Launderette, Review, BlogPost } from '@/types';
 
 export async function getLaunderetteById(id: string): Promise<Launderette | null> {
   try {

@@ -1,34 +1,31 @@
-// Shared types for the Next.js app
+// Shared types for the Next.js app (matches Firestore schema)
 export interface Launderette {
   id: string;
   name: string;
   address: string;
-  city: string;
-  postcode: string;
+  city?: string;
   lat: number;
   lng: number;
+  features: string[];
+  isPremium: boolean;
+  description?: string;
   phone?: string;
   email?: string;
   website?: string;
-  description?: string;
-  features: string[];
-  openingHours?: string;
-  priceRange?: string;
-  isPremium: boolean;
-  photos?: string[];
-  rating?: number;
-  reviewCount?: number;
-  createdAt?: string;
-  updatedAt?: string;
+  photoUrls: string[];
+  openingHours?: Record<string, string>;
+  priceRange?: "budget" | "moderate" | "premium";
+  createdAt?: number;
 }
 
 export interface Review {
   id: string;
   launderetteId: string;
+  userName: string;
+  userEmail?: string;
   rating: number;
   comment: string;
-  reviewerName: string;
-  timestamp: number;
+  createdAt: number;
 }
 
 export interface BlogPost {
@@ -38,8 +35,9 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   author: string;
-  publishedAt: string;
-  readingTime?: number;
+  publishedAt: number;
+  readingTime: number;
+  imageUrl?: string;
 }
 
 export interface AnalyticsEvent {
