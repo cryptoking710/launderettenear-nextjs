@@ -1,0 +1,773 @@
+14:16:59.008 Running build in Washington, D.C., USA (East) – iad1
+14:16:59.009 Build machine configuration: 2 cores, 8 GB
+14:16:59.018 Cloning github.com/cryptoking710/launderettenear-nextjs (Branch: main, Commit: c5f1841)
+14:16:59.019 Skipping build cache, deployment was triggered without cache.
+14:17:03.489 Cloning completed: 4.470s
+14:17:03.952 Running "vercel build"
+14:17:04.359 Vercel CLI 48.10.3
+14:17:04.702 Installing dependencies...
+14:17:49.923 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+14:17:50.076 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+14:17:50.667 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+14:17:51.966 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+14:17:52.190 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+14:17:55.241 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+14:18:05.253 
+14:18:05.254 added 649 packages in 1m
+14:18:05.254 
+14:18:05.254 171 packages are looking for funding
+14:18:05.255   run `npm fund` for details
+14:18:05.583 Detected Next.js version: 15.5.6
+14:18:05.591 Running "npm run build"
+14:18:05.717 
+14:18:05.718 > launderettenear-nextjs@2.0.0 build
+14:18:05.718 > next build
+14:18:05.718 
+14:18:07.020 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+14:18:07.022 This information is used to shape Next.js' roadmap and prioritize features.
+14:18:07.023 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+14:18:07.023 https://nextjs.org/telemetry
+14:18:07.023 
+14:18:07.153    ▲ Next.js 15.5.6
+14:18:07.154 
+14:18:07.432    Creating an optimized production build ...
+14:18:21.534  ✓ Compiled successfully in 11.6s
+14:18:21.539    Skipping linting
+14:18:21.541    Checking validity of types ...
+14:18:21.807 
+14:18:21.807    We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+14:18:21.807    The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+14:18:21.807 
+14:18:21.807    	- target was set to ES2017 (For top-level `await`. Note: Next.js only polyfills for the esmodules target.)
+14:18:21.807 
+14:18:28.296    Collecting page data ...
+14:18:35.715 Error fetching blog posts: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:35.716   code: 2,
+14:18:35.717   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:35.717   metadata: [Metadata]
+14:18:35.717 }
+14:18:37.581    Generating static pages (0/147) ...
+14:18:45.360 Error fetching all launderettes: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:45.361   code: 2,
+14:18:45.361   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:45.362   metadata: [Metadata]
+14:18:45.362 }
+14:18:45.440 Error fetching blog posts: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:45.440   code: 2,
+14:18:45.441   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:45.441   metadata: [Metadata]
+14:18:45.441 }
+14:18:51.659 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:51.660   code: 2,
+14:18:51.660   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:51.660   metadata: [Metadata]
+14:18:51.660 }
+14:18:52.013 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:52.014   code: 2,
+14:18:52.014   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:52.014   metadata: [Metadata]
+14:18:52.014 }
+14:18:52.062 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:52.062   code: 2,
+14:18:52.062   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:52.062   metadata: [Metadata]
+14:18:52.063 }
+14:18:52.489 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:52.491   code: 2,
+14:18:52.492   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:52.492   metadata: [Metadata]
+14:18:52.492 }
+14:18:52.524 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:52.524   code: 2,
+14:18:52.525   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:52.525   metadata: [Metadata]
+14:18:52.525 }
+14:18:52.540 Error fetching blog posts: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:52.540   code: 2,
+14:18:52.540   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:52.540   metadata: [Metadata]
+14:18:52.540 }
+14:18:52.578 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:52.578   code: 2,
+14:18:52.578   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:52.578   metadata: [Metadata]
+14:18:52.578 }
+14:18:52.639 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:52.640   code: 2,
+14:18:52.640   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:52.640   metadata: [Metadata]
+14:18:52.640 }
+14:18:59.350 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:59.350   code: 2,
+14:18:59.350   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:59.350   metadata: [Metadata]
+14:18:59.350 }
+14:18:59.499 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:59.500   code: 2,
+14:18:59.500   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:59.500   metadata: [Metadata]
+14:18:59.500 }
+14:18:59.522 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:59.522   code: 2,
+14:18:59.522   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:59.523   metadata: [Metadata]
+14:18:59.524 }
+14:18:59.666 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:59.666   code: 2,
+14:18:59.666   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:59.667   metadata: [Metadata]
+14:18:59.667 }
+14:18:59.779 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:18:59.781   code: 2,
+14:18:59.782   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:18:59.782   metadata: [Metadata]
+14:18:59.782 }
+14:19:00.051 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:00.051   code: 2,
+14:19:00.052   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:00.052   metadata: [Metadata]
+14:19:00.052 }
+14:19:00.094 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:00.094   code: 2,
+14:19:00.094   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:00.094   metadata: [Metadata]
+14:19:00.094 }
+14:19:00.149 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:00.149   code: 2,
+14:19:00.150   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:00.150   metadata: [Metadata]
+14:19:00.150 }
+14:19:06.484 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:06.485   code: 2,
+14:19:06.485   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:06.485   metadata: [Metadata]
+14:19:06.485 }
+14:19:06.554 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:06.555   code: 2,
+14:19:06.555   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:06.555   metadata: [Metadata]
+14:19:06.555 }
+14:19:07.036 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:07.036   code: 2,
+14:19:07.037   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:07.037   metadata: [Metadata]
+14:19:07.037 }
+14:19:07.174 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:07.175   code: 2,
+14:19:07.175   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:07.175   metadata: [Metadata]
+14:19:07.176 }
+14:19:07.222 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:07.222   code: 2,
+14:19:07.223   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:07.223   metadata: [Metadata]
+14:19:07.223 }
+14:19:07.236 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:07.236   code: 2,
+14:19:07.236   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:07.236   metadata: [Metadata]
+14:19:07.236 }
+14:19:07.635 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:07.636   code: 2,
+14:19:07.640   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:07.640   metadata: [Metadata]
+14:19:07.641 }
+14:19:07.747 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:07.748   code: 2,
+14:19:07.749   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:07.749   metadata: [Metadata]
+14:19:07.749 }
+14:19:13.897 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:13.897   code: 2,
+14:19:13.897   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:13.897   metadata: [Metadata]
+14:19:13.898 }
+14:19:14.653 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:14.653   code: 2,
+14:19:14.653   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:14.653   metadata: [Metadata]
+14:19:14.653 }
+14:19:14.663 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:14.663   code: 2,
+14:19:14.663   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:14.663   metadata: [Metadata]
+14:19:14.663 }
+14:19:14.987 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:14.987   code: 2,
+14:19:14.987   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:14.990   metadata: [Metadata]
+14:19:14.990 }
+14:19:14.998    Generating static pages (36/147) 
+14:19:15.054 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:15.055   code: 2,
+14:19:15.055   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:15.055   metadata: [Metadata]
+14:19:15.056 }
+14:19:15.108 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:15.109   code: 2,
+14:19:15.109   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:15.109   metadata: [Metadata]
+14:19:15.109 }
+14:19:15.423 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:15.423   code: 2,
+14:19:15.423   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:15.423   metadata: [Metadata]
+14:19:15.423 }
+14:19:15.477 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:15.477   code: 2,
+14:19:15.477   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:15.478   metadata: [Metadata]
+14:19:15.478 }
+14:19:21.783 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:21.783   code: 2,
+14:19:21.783   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:21.783   metadata: [Metadata]
+14:19:21.783 }
+14:19:21.893 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:21.893   code: 2,
+14:19:21.893   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:21.893   metadata: [Metadata]
+14:19:21.893 }
+14:19:22.181 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:22.182   code: 2,
+14:19:22.182   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:22.182   metadata: [Metadata]
+14:19:22.182 }
+14:19:22.329 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:22.330   code: 2,
+14:19:22.330   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:22.330   metadata: [Metadata]
+14:19:22.330 }
+14:19:22.546 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:22.546   code: 2,
+14:19:22.546   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:22.546   metadata: [Metadata]
+14:19:22.546 }
+14:19:22.606 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:22.606   code: 2,
+14:19:22.607   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:22.607   metadata: [Metadata]
+14:19:22.607 }
+14:19:23.052 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:23.053   code: 2,
+14:19:23.053   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:23.053   metadata: [Metadata]
+14:19:23.053 }
+14:19:23.207 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:23.207   code: 2,
+14:19:23.207   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:23.208   metadata: [Metadata]
+14:19:23.208 }
+14:19:29.563 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:29.563   code: 2,
+14:19:29.566   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:29.573   metadata: [Metadata]
+14:19:29.573 }
+14:19:29.607 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:29.607   code: 2,
+14:19:29.607   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:29.607   metadata: [Metadata]
+14:19:29.607 }
+14:19:29.660 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:29.661   code: 2,
+14:19:29.661   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:29.661   metadata: [Metadata]
+14:19:29.661 }
+14:19:30.436 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:30.437   code: 2,
+14:19:30.437   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:30.437   metadata: [Metadata]
+14:19:30.437 }
+14:19:30.786 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:30.787   code: 2,
+14:19:30.787   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:30.787   metadata: [Metadata]
+14:19:30.787 }
+14:19:30.825 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:30.827   code: 2,
+14:19:30.827   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:30.827   metadata: [Metadata]
+14:19:30.828 }
+14:19:30.841 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:30.842   code: 2,
+14:19:30.842   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:30.842   metadata: [Metadata]
+14:19:30.843 }
+14:19:30.864 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:30.865   code: 2,
+14:19:30.865   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:30.865   metadata: [Metadata]
+14:19:30.865 }
+14:19:37.239 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:37.239   code: 2,
+14:19:37.239   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:37.240   metadata: [Metadata]
+14:19:37.240 }
+14:19:37.751 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:37.751   code: 2,
+14:19:37.751   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:37.751   metadata: [Metadata]
+14:19:37.751 }
+14:19:37.796 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:37.796   code: 2,
+14:19:37.797   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:37.797   metadata: [Metadata]
+14:19:37.797 }
+14:19:37.835 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:37.835   code: 2,
+14:19:37.835   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:37.835   metadata: [Metadata]
+14:19:37.835 }
+14:19:37.865 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:37.866   code: 2,
+14:19:37.866   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:37.866   metadata: [Metadata]
+14:19:37.866 }
+14:19:37.896 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:37.897   code: 2,
+14:19:37.897   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:37.897   metadata: [Metadata]
+14:19:37.897 }
+14:19:38.159 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:38.163   code: 2,
+14:19:38.164   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:38.164   metadata: [Metadata]
+14:19:38.164 }
+14:19:38.221 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:38.221   code: 2,
+14:19:38.221   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:38.221   metadata: [Metadata]
+14:19:38.221 }
+14:19:44.454 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:44.455   code: 2,
+14:19:44.455   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:44.457   metadata: [Metadata]
+14:19:44.457 }
+14:19:45.039 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:45.042   code: 2,
+14:19:45.043   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:45.043   metadata: [Metadata]
+14:19:45.043 }
+14:19:45.134 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:45.134   code: 2,
+14:19:45.135   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:45.135   metadata: [Metadata]
+14:19:45.135 }
+14:19:45.141 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:45.141   code: 2,
+14:19:45.142   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:45.142   metadata: [Metadata]
+14:19:45.142 }
+14:19:45.145 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:45.146   code: 2,
+14:19:45.146   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:45.146   metadata: [Metadata]
+14:19:45.146 }
+14:19:45.638 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:45.639   code: 2,
+14:19:45.639   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:45.640   metadata: [Metadata]
+14:19:45.640 }
+14:19:45.684 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:45.685   code: 2,
+14:19:45.685   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:45.685   metadata: [Metadata]
+14:19:45.685 }
+14:19:45.850 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:45.851   code: 2,
+14:19:45.851   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:45.851   metadata: [Metadata]
+14:19:45.851 }
+14:19:51.986 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:51.986   code: 2,
+14:19:51.987   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:51.987   metadata: [Metadata]
+14:19:51.987 }
+14:19:51.993    Generating static pages (73/147) 
+14:19:52.564 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:52.564   code: 2,
+14:19:52.564   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:52.564   metadata: [Metadata]
+14:19:52.564 }
+14:19:52.589 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:52.589   code: 2,
+14:19:52.589   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:52.589   metadata: [Metadata]
+14:19:52.589 }
+14:19:52.866 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:52.869   code: 2,
+14:19:52.869   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:52.869   metadata: [Metadata]
+14:19:52.870 }
+14:19:52.901 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:52.902   code: 2,
+14:19:52.902   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:52.902   metadata: [Metadata]
+14:19:52.902 }
+14:19:52.997 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:52.997   code: 2,
+14:19:52.997   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:52.997   metadata: [Metadata]
+14:19:52.997 }
+14:19:53.044 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:53.045   code: 2,
+14:19:53.045   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:53.045   metadata: [Metadata]
+14:19:53.045 }
+14:19:53.648 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:53.648   code: 2,
+14:19:53.648   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:53.648   metadata: [Metadata]
+14:19:53.648 }
+14:19:59.776 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:19:59.777   code: 2,
+14:19:59.777   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:19:59.777   metadata: [Metadata]
+14:19:59.777 }
+14:20:00.298 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:00.298   code: 2,
+14:20:00.299   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:00.299   metadata: [Metadata]
+14:20:00.299 }
+14:20:00.336 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:00.336   code: 2,
+14:20:00.336   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:00.336   metadata: [Metadata]
+14:20:00.336 }
+14:20:00.352 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:00.352   code: 2,
+14:20:00.352   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:00.352   metadata: [Metadata]
+14:20:00.352 }
+14:20:00.520 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:00.520   code: 2,
+14:20:00.520   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:00.520   metadata: [Metadata]
+14:20:00.521 }
+14:20:00.987 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:00.988   code: 2,
+14:20:00.988   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:00.988   metadata: [Metadata]
+14:20:00.988 }
+14:20:01.220 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:01.221   code: 2,
+14:20:01.221   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:01.221   metadata: [Metadata]
+14:20:01.221 }
+14:20:01.279 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:01.279   code: 2,
+14:20:01.280   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:01.280   metadata: [Metadata]
+14:20:01.280 }
+14:20:07.527 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:07.527   code: 2,
+14:20:07.527   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:07.527   metadata: [Metadata]
+14:20:07.528 }
+14:20:07.992 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:07.992   code: 2,
+14:20:07.992   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:07.992   metadata: [Metadata]
+14:20:07.992 }
+14:20:08.175 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:08.175   code: 2,
+14:20:08.175   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:08.175   metadata: [Metadata]
+14:20:08.175 }
+14:20:08.383 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:08.384   code: 2,
+14:20:08.387   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:08.387   metadata: [Metadata]
+14:20:08.387 }
+14:20:08.420 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:08.421   code: 2,
+14:20:08.421   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:08.422   metadata: [Metadata]
+14:20:08.422 }
+14:20:08.690 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:08.691   code: 2,
+14:20:08.691   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:08.692   metadata: [Metadata]
+14:20:08.692 }
+14:20:08.719 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:08.719   code: 2,
+14:20:08.719   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:08.719   metadata: [Metadata]
+14:20:08.719 }
+14:20:09.026 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:09.026   code: 2,
+14:20:09.027   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:09.027   metadata: [Metadata]
+14:20:09.027 }
+14:20:15.309 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:15.313   code: 2,
+14:20:15.313   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:15.313   metadata: [Metadata]
+14:20:15.313 }
+14:20:15.426 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:15.427   code: 2,
+14:20:15.427   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:15.427   metadata: [Metadata]
+14:20:15.427 }
+14:20:15.554 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:15.555   code: 2,
+14:20:15.555   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:15.555   metadata: [Metadata]
+14:20:15.555 }
+14:20:15.803 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:15.803   code: 2,
+14:20:15.803   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:15.803   metadata: [Metadata]
+14:20:15.803 }
+14:20:16.003 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:16.004   code: 2,
+14:20:16.004   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:16.004   metadata: [Metadata]
+14:20:16.004 }
+14:20:16.335 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:16.335   code: 2,
+14:20:16.336   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:16.336   metadata: [Metadata]
+14:20:16.336 }
+14:20:16.722 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:16.722   code: 2,
+14:20:16.722   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:16.722   metadata: [Metadata]
+14:20:16.722 }
+14:20:16.960 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:16.961   code: 2,
+14:20:16.961   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:16.961   metadata: [Metadata]
+14:20:16.961 }
+14:20:23.695 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:23.695   code: 2,
+14:20:23.695   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:23.695   metadata: [Metadata]
+14:20:23.695 }
+14:20:23.700 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:23.701   code: 2,
+14:20:23.701   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:23.701   metadata: [Metadata]
+14:20:23.701 }
+14:20:23.780 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:23.781   code: 2,
+14:20:23.782   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:23.782   metadata: [Metadata]
+14:20:23.782 }
+14:20:23.807 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:23.807   code: 2,
+14:20:23.807   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:23.808   metadata: [Metadata]
+14:20:23.809 }
+14:20:24.123 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:24.123   code: 2,
+14:20:24.124   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:24.124   metadata: [Metadata]
+14:20:24.124 }
+14:20:24.234 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:24.234   code: 2,
+14:20:24.235   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:24.235   metadata: [Metadata]
+14:20:24.235 }
+14:20:24.243    Generating static pages (110/147) 
+14:20:24.415 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:24.415   code: 2,
+14:20:24.415   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:24.415   metadata: [Metadata]
+14:20:24.415 }
+14:20:24.636 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:24.638   code: 2,
+14:20:24.638   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:24.638   metadata: [Metadata]
+14:20:24.638 }
+14:20:31.143 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:31.143   code: 2,
+14:20:31.143   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:31.143   metadata: [Metadata]
+14:20:31.143 }
+14:20:31.364 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:31.364   code: 2,
+14:20:31.364   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:31.365   metadata: [Metadata]
+14:20:31.365 }
+14:20:31.413 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:31.414   code: 2,
+14:20:31.414   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:31.414   metadata: [Metadata]
+14:20:31.414 }
+14:20:31.513 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:31.513   code: 2,
+14:20:31.513   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:31.513   metadata: [Metadata]
+14:20:31.513 }
+14:20:31.603 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:31.604   code: 2,
+14:20:31.604   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:31.604   metadata: [Metadata]
+14:20:31.604 }
+14:20:31.855 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:31.856   code: 2,
+14:20:31.856   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:31.856   metadata: [Metadata]
+14:20:31.856 }
+14:20:32.000 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:32.000   code: 2,
+14:20:32.000   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:32.000   metadata: [Metadata]
+14:20:32.001 }
+14:20:32.137 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:32.139   code: 2,
+14:20:32.139   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:32.139   metadata: [Metadata]
+14:20:32.139 }
+14:20:38.372 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:38.373   code: 2,
+14:20:38.373   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:38.373   metadata: [Metadata]
+14:20:38.373 }
+14:20:38.697 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:38.699   code: 2,
+14:20:38.699   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:38.700   metadata: [Metadata]
+14:20:38.700 }
+14:20:38.890 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:38.890   code: 2,
+14:20:38.890   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:38.890   metadata: [Metadata]
+14:20:38.890 }
+14:20:38.950 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:38.950   code: 2,
+14:20:38.952   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:38.952   metadata: [Metadata]
+14:20:38.952 }
+14:20:39.120 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:39.120   code: 2,
+14:20:39.120   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:39.120   metadata: [Metadata]
+14:20:39.121 }
+14:20:39.178 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:39.179   code: 2,
+14:20:39.179   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:39.179   metadata: [Metadata]
+14:20:39.179 }
+14:20:39.678 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:39.678   code: 2,
+14:20:39.679   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:39.680   metadata: [Metadata]
+14:20:39.680 }
+14:20:39.743 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:39.744   code: 2,
+14:20:39.744   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:39.744   metadata: [Metadata]
+14:20:39.744 }
+14:20:46.161 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:46.162   code: 2,
+14:20:46.162   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:46.162   metadata: [Metadata]
+14:20:46.162 }
+14:20:46.764 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:46.765   code: 2,
+14:20:46.765   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:46.765   metadata: [Metadata]
+14:20:46.765 }
+14:20:46.880 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:46.880   code: 2,
+14:20:46.880   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:46.884   metadata: [Metadata]
+14:20:46.885 }
+14:20:46.903 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:46.903   code: 2,
+14:20:46.903   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:46.903   metadata: [Metadata]
+14:20:46.903 }
+14:20:46.933 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:46.934   code: 2,
+14:20:46.934   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:46.934   metadata: [Metadata]
+14:20:46.934 }
+14:20:47.095 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:47.099   code: 2,
+14:20:47.099   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:47.100   metadata: [Metadata]
+14:20:47.100 }
+14:20:47.390 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:47.390   code: 2,
+14:20:47.390   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:47.390   metadata: [Metadata]
+14:20:47.390 }
+14:20:47.482 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:47.483   code: 2,
+14:20:47.483   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:47.484   metadata: [Metadata]
+14:20:47.484 }
+14:20:53.859 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:53.859   code: 2,
+14:20:53.859   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:53.859   metadata: [Metadata]
+14:20:53.859 }
+14:20:54.102 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:54.103   code: 2,
+14:20:54.103   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:54.103   metadata: [Metadata]
+14:20:54.103 }
+14:20:54.224 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:54.224   code: 2,
+14:20:54.224   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:54.224   metadata: [Metadata]
+14:20:54.224 }
+14:20:54.713 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:54.713   code: 2,
+14:20:54.713   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:54.713   metadata: [Metadata]
+14:20:54.713 }
+14:20:54.741 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:54.741   code: 2,
+14:20:54.741   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:54.741   metadata: [Metadata]
+14:20:54.741 }
+14:20:54.970 Error fetching launderettes by city: [Error: 2 UNKNOWN: Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported] {
+14:20:54.972   code: 2,
+14:20:54.973   details: 'Getting metadata from plugin failed with error: error:1E08010C:DECODER routines::unsupported',
+14:20:54.973   metadata: [Metadata]
+14:20:54.973 }
+14:20:55.061  ✓ Generating static pages (147/147)
+14:20:55.080    Finalizing page optimization ...
+14:20:55.083    Collecting build traces ...
+14:20:55.096 
+14:20:55.101 Route (app)                                 Size  First Load JS  Revalidate  Expire
+14:20:55.101 ┌ ○ /                                      178 B         105 kB
+14:20:55.101 ├ ○ /_not-found                            994 B         103 kB
+14:20:55.101 ├ ○ /about                                 178 B         105 kB
+14:20:55.101 ├ ƒ /api/contact                           131 B         102 kB
+14:20:55.102 ├ ○ /blog                                  178 B         105 kB          1d      1y
+14:20:55.102 ├ ● /blog/[slug]                           178 B         105 kB
+14:20:55.102 ├ ○ /cities                              4.05 kB         118 kB
+14:20:55.102 ├ ● /city/[cityName]                       178 B         105 kB          1h      1y
+14:20:55.102 ├   ├ /city/London                                                       1h      1y
+14:20:55.102 ├   ├ /city/Croydon                                                      1h      1y
+14:20:55.103 ├   ├ /city/Sutton                                                       1h      1y
+14:20:55.103 ├   └ [+130 more paths]
+14:20:55.103 ├ ○ /contact                             3.35 kB         117 kB
+14:20:55.103 ├ ƒ /launderette/[id]                      954 B         106 kB
+14:20:55.103 ├ ○ /laundry-symbols                     6.06 kB         111 kB
+14:20:55.103 ├ ○ /privacy                               178 B         105 kB
+14:20:55.104 ├ ○ /robots.txt                            131 B         102 kB
+14:20:55.104 ├ ○ /sitemap.xml                           131 B         102 kB
+14:20:55.104 └ ○ /terms                                 178 B         105 kB
+14:20:55.104 + First Load JS shared by all             102 kB
+14:20:55.104   ├ chunks/255-cf2e1d3491ac955b.js       45.7 kB
+14:20:55.104   ├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB
+14:20:55.105   └ other shared chunks (total)          1.93 kB
+14:20:55.105 
+14:20:55.105 
+14:20:55.105 ○  (Static)   prerendered as static content
+14:20:55.105 ●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+14:20:55.106 ƒ  (Dynamic)  server-rendered on demand
+14:20:55.106 
+14:20:55.466 Traced Next.js server files in: 76.295ms
+14:20:56.114 Created all serverless functions in: 647.323ms
+14:20:56.136 Collected static files (public/, static/, .next/static): 12.799ms
+14:20:56.578 Build Completed in /vercel/output [4m]
+14:20:56.873 Deploying outputs...
+14:21:08.581 Deployment completed
+14:21:09.199 Creating build cache...
