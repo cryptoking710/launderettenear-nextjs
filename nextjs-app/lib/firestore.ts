@@ -1,18 +1,29 @@
-import { getAdminDb } from './firebase-admin';
+import { getClientDb } from './firebase-client';
+import { 
+  collection, 
+  doc, 
+  getDoc, 
+  getDocs, 
+  query, 
+  where, 
+  orderBy, 
+  limit 
+} from 'firebase/firestore';
 import type { Launderette, Review, BlogPost } from '@/types';
 
 export async function getLaunderetteById(id: string): Promise<Launderette | null> {
   try {
-    const db = getAdminDb();
-    const doc = await db.collection('launderettes').doc(id).get();
+    const db = getClientDb();
+    const docRef = doc(db, 'launderettes', id);
+    const docSnap = await getDoc(docRef);
     
-    if (!doc.exists) {
+    if (!docSnap.exists()) {
       return null;
     }
     
     return {
-      id: doc.id,
-      ...doc.data(),
+      id: docSnap.id,
+      ...docSnap.data(),
     } as Launderette;
   } catch (error) {
     console.error('Error fetching launderette:', error);
@@ -22,13 +33,14 @@ export async function getLaunderetteById(id: string): Promise<Launderette | null
 
 export async function getLaunderettesByCity(cityName: string): Promise<Launderette[]> {
   try {
-    const db = getAdminDb();
-    const snapshot = await db
-      .collection('launderettes')
-      .where('city', '==', cityName)
-      .orderBy('isPremium', 'desc')
-      .orderBy('name', 'asc')
-      .get();
+    const db = getClientDb();
+    const q = query(
+      collection(db, 'launderettes'),
+      where('city', '==', cityName),
+      orderBy('isPremium', 'desc'),
+      orderBy('name', 'asc')
+    );
+    const snapshot = await getDocs(q);
     
     return snapshot.docs.map(doc => ({
       id: doc.id,
@@ -42,13 +54,14 @@ export async function getLaunderettesByCity(cityName: string): Promise<Launderet
 
 export async function getReviewsForLaunderette(launderetteId: string): Promise<Review[]> {
   try {
-    const db = getAdminDb();
-    const snapshot = await db
-      .collection('reviews')
-      .where('launderetteId', '==', launderetteId)
-      .orderBy('createdAt', 'desc')
-      .limit(50)
-      .get();
+    const db = getClientDb();
+    const q = query(
+      collection(db, 'reviews'),
+      where('launderetteId', '==', launderetteId),
+      orderBy('createdAt', 'desc'),
+      limit(50)
+    );
+    const snapshot = await getDocs(q);
     
     return snapshot.docs.map(doc => ({
       id: doc.id,
@@ -62,11 +75,12 @@ export async function getReviewsForLaunderette(launderetteId: string): Promise<R
 
 export async function getAverageRating(launderetteId: string): Promise<{ average: number; count: number }> {
   try {
-    const db = getAdminDb();
-    const snapshot = await db
-      .collection('reviews')
-      .where('launderetteId', '==', launderetteId)
-      .get();
+    const db = getClientDb();
+    const q = query(
+      collection(db, 'reviews'),
+      where('launderetteId', '==', launderetteId)
+    );
+    const snapshot = await getDocs(q);
     
     if (snapshot.empty) {
       return { average: 0, count: 0 };
@@ -87,13 +101,14 @@ export async function getAverageRating(launderetteId: string): Promise<{ average
 
 export async function getAllLaunderettes(): Promise<Launderette[]> {
   try {
-    const db = getAdminDb();
-    const snapshot = await db
-      .collection('launderettes')
-      .orderBy('city', 'asc')
-      .orderBy('isPremium', 'desc')
-      .orderBy('name', 'asc')
-      .get();
+    const db = getClientDb();
+    const q = query(
+      collection(db, 'launderettes'),
+      orderBy('city', 'asc'),
+      orderBy('isPremium', 'desc'),
+      orderBy('name', 'asc')
+    );
+    const snapshot = await getDocs(q);
     
     return snapshot.docs.map(doc => ({
       id: doc.id,
@@ -107,8 +122,8 @@ export async function getAllLaunderettes(): Promise<Launderette[]> {
 
 export async function getCitiesWithCounts(): Promise<{ city: string; count: number }[]> {
   try {
-    const db = getAdminDb();
-    const snapshot = await db.collection('launderettes').get();
+    const db = getClientDb();
+    const snapshot = await getDocs(collection(db, 'launderettes'));
     
     const cityCounts = new Map<string, number>();
     
@@ -131,11 +146,12 @@ export async function getCitiesWithCounts(): Promise<{ city: string; count: numb
 
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
   try {
-    const db = getAdminDb();
-    const snapshot = await db
-      .collection('blog_posts')
-      .orderBy('publishedAt', 'desc')
-      .get();
+    const db = getClientDb();
+    const q = query(
+      collection(db, 'blog_posts'),
+      orderBy('publishedAt', 'desc')
+    );
+    const snapshot = await getDocs(q);
     
     return snapshot.docs.map(doc => ({
       id: doc.id,
@@ -149,12 +165,13 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
 
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
   try {
-    const db = getAdminDb();
-    const snapshot = await db
-      .collection('blog_posts')
-      .where('slug', '==', slug)
-      .limit(1)
-      .get();
+    const db = getClientDb();
+    const q = query(
+      collection(db, 'blog_posts'),
+      where('slug', '==', slug),
+      limit(1)
+    );
+    const snapshot = await getDocs(q);
     
     if (snapshot.empty) {
       return null;

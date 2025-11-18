@@ -539,3 +539,6 @@ export default async function LaunderettePage({ params }: PageProps) {
     </div>
   );
 }
+
+// Configure ISR with hourly revalidation
+export const revalidate = 3600; // Revalidate every hour
