@@ -16,6 +16,15 @@ export async function POST(request: Request) {
 
     // Store contact submission in Firestore
     const db = getAdminDb();
+    
+    if (!db) {
+      console.error("Firebase Admin SDK not configured");
+      return NextResponse.json(
+        { error: "Contact form temporarily unavailable" },
+        { status: 503 }
+      );
+    }
+    
     await db.collection("contactSubmissions").add({
       name,
       email,

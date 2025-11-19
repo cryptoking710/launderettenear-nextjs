@@ -4,7 +4,7 @@ import { getFirestore, Firestore } from "firebase-admin/firestore";
 let adminApp: App;
 let adminDb: Firestore;
 
-export function getAdminApp(): App {
+export function getAdminApp(): App | null {
   if (!adminApp) {
     const apps = getApps();
     if (apps.length === 0) {
@@ -22,9 +22,7 @@ export function getAdminApp(): App {
           });
         } catch (error) {
           console.error('Failed to parse FIREBASE_SERVICE_ACCOUNT_JSON:', error);
-          throw new Error(
-            'Invalid FIREBASE_SERVICE_ACCOUNT_JSON. Please ensure the JSON is valid and properly base64-encoded.'
-          );
+          return null;
         }
       } else {
         // Fallback to individual environment variables
@@ -33,9 +31,9 @@ export function getAdminApp(): App {
         const privateKey = process.env.FIREBASE_PRIVATE_KEY;
 
         if (!projectId || !clientEmail || !privateKey) {
-          throw new Error(
-            "Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY"
-          );
+          // Return null instead of throwing - Admin SDK not available during build
+          console.warn('Firebase Admin SDK not configured - admin features disabled');
+          return null;
         }
 
         adminApp = initializeApp({
@@ -53,9 +51,12 @@ export function getAdminApp(): App {
   return adminApp;
 }
 
-export function getAdminDb(): Firestore {
+export function getAdminDb(): Firestore | null {
   if (!adminDb) {
     const app = getAdminApp();
+    if (!app) {
+      return null;
+    }
     adminDb = getFirestore(app);
   }
   return adminDb;

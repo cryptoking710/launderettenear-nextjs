@@ -1,0 +1,785 @@
+17:27:21.746 Running build in Washington, D.C., USA (East) – iad1
+17:27:21.747 Build machine configuration: 2 cores, 8 GB
+17:27:21.757 Cloning github.com/cryptoking710/launderettenear-nextjs (Branch: main, Commit: 84774f1)
+17:27:21.758 Skipping build cache, deployment was triggered without cache.
+17:27:28.736 Cloning completed: 6.979s
+17:27:29.167 Running "vercel build"
+17:27:29.666 Vercel CLI 48.10.3
+17:27:30.015 Installing dependencies...
+17:28:32.109 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+17:28:32.159 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+17:28:32.850 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+17:28:34.398 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+17:28:34.603 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+17:28:37.898 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+17:28:47.943 
+17:28:47.944 added 627 packages in 1m
+17:28:47.944 
+17:28:47.945 161 packages are looking for funding
+17:28:47.945   run `npm fund` for details
+17:28:47.997 Detected Next.js version: 15.5.6
+17:28:48.005 Running "npm run build"
+17:28:48.119 
+17:28:48.119 > launderettenear-nextjs@2.0.0 build
+17:28:48.120 > next build
+17:28:48.120 
+17:28:49.175 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+17:28:49.176 This information is used to shape Next.js' roadmap and prioritize features.
+17:28:49.177 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+17:28:49.177 https://nextjs.org/telemetry
+17:28:49.177 
+17:28:49.259    ▲ Next.js 15.5.6
+17:28:49.259 
+17:28:49.341    Creating an optimized production build ...
+17:29:01.743 
+17:29:01.743 
+17:29:01.744 Retrying 1/3...
+17:29:01.745 
+17:29:01.746 
+17:29:01.746 Retrying 1/3...
+17:29:05.308  ✓ Compiled successfully in 13.4s
+17:29:05.313    Skipping linting
+17:29:05.314    Checking validity of types ...
+17:29:05.587 
+17:29:05.587    We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+17:29:05.587    The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+17:29:05.587 
+17:29:05.587    	- target was set to ES2017 (For top-level `await`. Note: Next.js only polyfills for the esmodules target.)
+17:29:05.587 
+17:29:12.446    Collecting page data ...
+17:29:13.072 Error fetching blog posts: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:13.072     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:13.073     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:13.073     at l (.next/server/app/sitemap.xml/route.js:1:7818)
+17:29:13.073     at Object.q [as generateStaticParams] (.next/server/app/blog/[slug]/page.js:9:9370)
+17:29:14.866    Generating static pages (0/147) ...
+17:29:15.818 Error fetching all launderettes: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:15.819     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:15.819     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:15.819     at k (.next/server/app/sitemap.xml/route.js:1:7549)
+17:29:15.820     at h (.next/server/app/sitemap.xml/route.js:16:2209)
+17:29:15.820     at i (.next/server/app/sitemap.xml/route.js:1:8877)
+17:29:15.820 Error fetching blog posts: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:15.820     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:15.820     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:15.821     at l (.next/server/app/sitemap.xml/route.js:1:7818)
+17:29:15.821     at h (.next/server/app/sitemap.xml/route.js:16:2220)
+17:29:15.821     at i (.next/server/app/sitemap.xml/route.js:1:8877)
+17:29:16.468 Error fetching blog posts: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.469     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.469     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.469     at l (.next/server/app/sitemap.xml/route.js:1:7818)
+17:29:16.469     at o (.next/server/app/blog/page.js:1:9323)
+17:29:16.469     at stringify (<anonymous>)
+17:29:16.469 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.470     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.470     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.470     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.470     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.470 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.470     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.470     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.470     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.471     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.471 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.471     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.471     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.471     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.471     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.474 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.474     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.474     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.474     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.474     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.474 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.474     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.475     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.475     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.475     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.475 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.475     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.475     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.475     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.475     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.475 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.475     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.475     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.476     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.476     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.714 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.714     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.714     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.714     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.714     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.715 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.715     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.715     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.715     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.715     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.715 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.715     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.715     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.715     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.715     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.716 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.716     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.716     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.716     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.716     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.716 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.716     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.716     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.716     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.716     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.716 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.716     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.716     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.716     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.717     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.717 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.717     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.717     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.717     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.717     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.717 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.717     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.717     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.717     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.717     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.717 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.717     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.718     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.718     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.718     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.718 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.718     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.718     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.718     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.718     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.718 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.718     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.718     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.719     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.719     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.719 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.719     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.719     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.719     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.719     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.764 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.764     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.764     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.765     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.765     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.765 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.765     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.765     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.765     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.765     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.765 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.766     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.766     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.766     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.766     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.766 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.766     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.766     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.766     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.767     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.948 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.949     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.949     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.949     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.949     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.949 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.949     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.949     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.949     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.950     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.950 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.950     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.950     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.950     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.950     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.950 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.950     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.951     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.951     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.951     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.951 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.951     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.952     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.952     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.952     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.952 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.952     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.952     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.952     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.952     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.952 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.953     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.953     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.953     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.953     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:16.953 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:16.953     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:16.953     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:16.953     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:16.953     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.022    Generating static pages (36/147) 
+17:29:17.022 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.022     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.023     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.023     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.023     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.023 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.023     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.023     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.023     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.024     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.024 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.024     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.024     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.024     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.024     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.024 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.024     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.024     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.025     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.025     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.025 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.025     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.025     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.025     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.025     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.254 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.254     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.254     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.254     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.254     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.254 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.254     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.254     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.254     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.254     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.254 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.254     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.254     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.254     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.254     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.255 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.255     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.255     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.255     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.255     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.255 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.255     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.255     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.255     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.255     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.255 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.255     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.255     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.255     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.255     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.256 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.256     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.256     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.256     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.256     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.256 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.256     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.256     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.256     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.256     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.256 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.256     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.256     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.256     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.256     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.256 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.256     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.256     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.256     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.256     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.256 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.256     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.256     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.256     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.256     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.362 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.363     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.363     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.363     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.364     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.364 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.364     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.364     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.365     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.365     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.365 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.365     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.365     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.366     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.366     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.428 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.428     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.428     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.429     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.429     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.429 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.429     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.429     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.429     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.429     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.429 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.429     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.429     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.429     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.430     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.430 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.430     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.430     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.430     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.430     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.430 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.430     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.430     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.430     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.430     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.567 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.567     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.567     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.567     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.567     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.567 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.567     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.567     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.567     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.567     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.567 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.567     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.567     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.568     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.568     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.568 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.568     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.568     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.568     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.568     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.568 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.568     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.568     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.568     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.568     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.568 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.568     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.568     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.568     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.568     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.568 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.568     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.568     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.568     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.568     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.568 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.568     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.568     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.568     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.568     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.609 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.609     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.609     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.610     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.610     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.610 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.610     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.610     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.610     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.610     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.640 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.641     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.641     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.641     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.641     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.641 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.641     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.642     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.642     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.642     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.642 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.642     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.642     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.642     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.642     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.695 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.696     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.696     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.696     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.696     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.696 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.696     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.697     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.697     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.697     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.697 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.697     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.697     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.697     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.697     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.771    Generating static pages (73/147) 
+17:29:17.771 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.772     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.772     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.772     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.772     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.772 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.772     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.772     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.772     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.773     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.773 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.773     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.773     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.773     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.773     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.773 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.773     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.773     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.773     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.774     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.820 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.825     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.825     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.825     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.825     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.825 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.825     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.825     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.825     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.825     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.825 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.825     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.825     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.826     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.826     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.826 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.826     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.826     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.826     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.826     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.885 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.886     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.886     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.886     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.886     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.886 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.886     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.886     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.887     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.887     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.887 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.887     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.887     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.887     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.887     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.917 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.917     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.918     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.918     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.918     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.918 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.918     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.918     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.918     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.918     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.919 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.919     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.919     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.919     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.919     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.919 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.919     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.919     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.919     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.920     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:17.976 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:17.976     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:17.977     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:17.977     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:17.978     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.031 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.031     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.031     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.031     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.032     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.032 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.032     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.032     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.032     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.032     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.032 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.032     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.032     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.033     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.033     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.033 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.033     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.033     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.033     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.033     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.033 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.033     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.034     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.034     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.034     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.094 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.094     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.094     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.094     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.095     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.095 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.095     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.095     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.095     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.095     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.095 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.095     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.095     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.095     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.096     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.192 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.192     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.192     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.192     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.192     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.192 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.193     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.193     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.193     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.193     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.193 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.193     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.193     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.193     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.194     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.229 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.230     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.230     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.230     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.230     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.231 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.231     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.231     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.231     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.231     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.232 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.232     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.232     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.232     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.232     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.262 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.264     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.264     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.264     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.264     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.264 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.264     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.264     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.264     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.264     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.322    Generating static pages (110/147) 
+17:29:18.323 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.323     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.323     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.323     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.323     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.323 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.324     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.324     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.324     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.324     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.324 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.324     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.324     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.324     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.324     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.360 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.360     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.360     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.360     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.360     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.361 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.371     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.371     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.371     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.371     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.371 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.372     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.372     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.372     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.372     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.372 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.372     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.372     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.372     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.372     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.402 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.402     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.403     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.403     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.403     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.440 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.441     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.441     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.442     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.442     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.442 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.442     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.442     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.442     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.442     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.443 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.443     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.443     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.443     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.443     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.459 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.459     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.459     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.460     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.460     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.460 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.460     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.460     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.460     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.460     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.507 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.508     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.508     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.508     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.508     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.508 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.508     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.509     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.509     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.509     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.509 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.509     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.509     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.509     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.510     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.611 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.613     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.613     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.614     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.614     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.614 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.614     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.614     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.614     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.615     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.615 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.615     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.615     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.615     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.615     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.615 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.616     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.616     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.616     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.616     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.616 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.616     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.616     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.616     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.616     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.658 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.658     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.659     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.659     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.659     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.659 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.659     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.660     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.660     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.660     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.660 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.660     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.660     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.661     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.661     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.783 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.784     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.784     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.784     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.784     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.784 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.785     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.785     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.785     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.785     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.785 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.785     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.785     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.786     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.786     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.786 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.786     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.786     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.786     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.786     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.787 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.787     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.787     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.787     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.787     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.787 Error fetching launderettes by city: Error: Missing Firebase credentials. Set either FIREBASE_SERVICE_ACCOUNT_JSON or all of: FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY
+17:29:18.787     at <unknown> (.next/server/app/api/contact/route.js:1:7840)
+17:29:18.787     at h (.next/server/app/api/contact/route.js:1:8128)
+17:29:18.788     at h (.next/server/app/sitemap.xml/route.js:1:6668)
+17:29:18.788     at v (.next/server/app/city/[cityName]/page.js:2:20630)
+17:29:18.939  ✓ Generating static pages (147/147)
+17:29:20.315    Finalizing page optimization ...
+17:29:20.318    Collecting build traces ...
+17:29:28.454 
+17:29:28.458 Route (app)                                 Size  First Load JS  Revalidate  Expire
+17:29:28.459 ┌ ○ /                                      178 B         105 kB
+17:29:28.459 ├ ○ /_not-found                            994 B         103 kB
+17:29:28.459 ├ ○ /about                                 178 B         105 kB
+17:29:28.459 ├ ƒ /api/contact                           131 B         102 kB
+17:29:28.459 ├ ○ /blog                                  178 B         105 kB          1d      1y
+17:29:28.459 ├ ● /blog/[slug]                           178 B         105 kB
+17:29:28.460 ├ ○ /cities                              4.05 kB         118 kB
+17:29:28.460 ├ ● /city/[cityName]                       178 B         105 kB          1h      1y
+17:29:28.460 ├   ├ /city/London                                                       1h      1y
+17:29:28.460 ├   ├ /city/Croydon                                                      1h      1y
+17:29:28.460 ├   ├ /city/Sutton                                                       1h      1y
+17:29:28.460 ├   └ [+130 more paths]
+17:29:28.460 ├ ○ /contact                             3.35 kB         117 kB
+17:29:28.461 ├ ƒ /launderette/[id]                      954 B         106 kB
+17:29:28.461 ├ ○ /laundry-symbols                     6.06 kB         111 kB
+17:29:28.461 ├ ○ /privacy                               178 B         105 kB
+17:29:28.461 ├ ○ /robots.txt                            131 B         102 kB
+17:29:28.462 ├ ○ /sitemap.xml                           131 B         102 kB
+17:29:28.462 └ ○ /terms                                 178 B         105 kB
+17:29:28.462 + First Load JS shared by all             102 kB
+17:29:28.462   ├ chunks/255-cf2e1d3491ac955b.js       45.7 kB
+17:29:28.462   ├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB
+17:29:28.462   └ other shared chunks (total)          1.93 kB
+17:29:28.462 
+17:29:28.462 
+17:29:28.462 ○  (Static)   prerendered as static content
+17:29:28.462 ●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+17:29:28.462 ƒ  (Dynamic)  server-rendered on demand
+17:29:28.462 
+17:29:28.726 Traced Next.js server files in: 82.637ms
+17:29:29.412 Created all serverless functions in: 680.379ms
+17:29:29.433 Collected static files (public/, static/, .next/static): 11.695ms
+17:29:29.882 Build Completed in /vercel/output [2m]
+17:29:30.200 Deploying outputs...
+17:29:42.636 Deployment completed
+17:29:43.269 Creating build cache...
+17:30:06.758 Created build cache: 23.489s
+17:30:06.760 Uploading build cache [149.27 MB]
+17:30:08.809 Build cache uploaded: 2.049s
